@@ -1,0 +1,51 @@
+{
+  "name": "@openjsfoundation/cna-tools",
+  "version": "1.0.0-alpha.1",
+  "description": "CLI and library for the OpenJS Foundation CNA API",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "bin": {
+    "openjs-cna": "./bin/openjs-cna.js"
+  },
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./review": "./lib/review/index.js",
+    "./convert": "./lib/convert/ghsa.js"
+  },
+  "files": [
+    "bin/",
+    "components/",
+    "lib/",
+    "lib/review/schemas/**/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "scripts": {
+    "test": "node --test 'test/**/*.test.js'",
+    "test:coverage": "node --test --experimental-test-coverage 'test/**/*.test.js'",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openjs-foundation/cna-tools.git"
+  },
+  "keywords": [
+    "cna",
+    "cve",
+    "openjs",
+    "security"
+  ]
+}

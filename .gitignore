@@ -1,0 +1,32 @@
+# Local project-scope credentials. The CLI reads `./.openjs-cna.json` if
+# present, so contributors experimenting against a staging bucket can drop
+# their token here without risk of committing it.
+.openjs-cna.json
+
+# Environment files (any flavor). Token-bearing values belong in
+# ~/.config/openjs-cna/config.json or the shell environment, not in a
+# committed file.
+.env
+.env.*
+!.env.example
+
+# Dependencies (zero today, but future-proofing)
+node_modules/
+
+# Lint cache
+.eslintcache
+
+# Test artifacts
+test/tmp-*/
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+
+# OTHER
+BACKLOG.md
+NOTES.md
