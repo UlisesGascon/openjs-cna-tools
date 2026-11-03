@@ -1,4 +1,4 @@
-// openjs-cna llm-review-prompt <record.json>
+// openjs-cna-experimental llm-review-prompt <record.json>
 //
 // Print a prompt for an LLM-driven editorial review of the record's
 // natural-language fields (title + description). The tool does not call
@@ -54,7 +54,7 @@ function buildBanner () {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna llm-review-prompt <record.json>
+`openjs-cna-experimental llm-review-prompt <record.json>
 
 Build a prompt that asks an LLM for an editorial review of the record's
 title and description. The prompt includes the OpenJS naming and tone
@@ -73,12 +73,12 @@ captures the prompt itself.
 
 Pipeline use (audit a freshly converted draft before publish):
 
-  openjs-cna convert https://github.com/<owner>/<repo>/security/advisories/<GHSA> \\
+  openjs-cna-experimental convert https://github.com/<owner>/<repo>/security/advisories/<GHSA> \\
     | tee draft.json \\
-    | openjs-cna llm-review-prompt - | pbcopy
+    | openjs-cna-experimental llm-review-prompt - | pbcopy
 
 Open the LLM, paste, attach \`draft.json\`, then iterate before
-\`openjs-cna publish\`.
+\`openjs-cna-experimental publish\`.
 `
   )
 }

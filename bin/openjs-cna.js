@@ -34,10 +34,10 @@ function listVerbs () {
 function showHelp () {
   const verbs = listVerbs()
   process.stderr.write(
-`openjs-cna — operate the OpenJS Foundation CNA API
+`openjs-cna-experimental — operate the OpenJS Foundation CNA API
 
 Usage:
-  openjs-cna <command> [options]
+  openjs-cna-experimental <command> [options]
 
 Commands:
 ${verbs.map(v => '  ' + v).join('\n')}
@@ -54,7 +54,7 @@ Global flags:
   --version, -v
   --help, -h
 
-Run 'openjs-cna <command> --help' for command-specific options.
+Run 'openjs-cna-experimental <command> --help' for command-specific options.
 `
   )
 }

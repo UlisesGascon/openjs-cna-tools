@@ -130,7 +130,7 @@ describe('mapAdvisoryToRecord — shape', () => {
     const c = mapAdvisoryToRecord(sampleAdvisory())
     assert.ok(c.containers.cna.x_generator)
     assert.equal(c.containers.cna.x_generator.engine, ENGINE_ID)
-    assert.match(c.containers.cna.x_generator.engine, /^@openjsfoundation\/cna-tools \d+\.\d+\.\d+/)
+    assert.match(c.containers.cna.x_generator.engine, /^@ulisesgascon\/openjs-cna-tools \d+\.\d+\.\d+/)
   })
 
   it('allows overriding x_generator.engine via engineId option', () => {

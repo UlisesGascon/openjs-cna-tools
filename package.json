@@ -1,14 +1,17 @@
 {
-  "name": "@openjsfoundation/cna-tools",
+  "name": "@ulisesgascon/openjs-cna-tools",
   "version": "1.0.0-alpha.1",
-  "description": "CLI and library for the OpenJS Foundation CNA API",
+  "description": "EXPERIMENTAL fork of the OpenJS Foundation CNA tools: CLI and library for the OpenJS CNA API",
   "type": "module",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=22.0.0"
   },
   "bin": {
-    "openjs-cna": "./bin/openjs-cna.js"
+    "openjs-cna-experimental": "./bin/openjs-cna.js"
   },
   "main": "./lib/index.js",
   "exports": {
@@ -40,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openjs-foundation/cna-tools.git"
+    "url": "git+https://github.com/UlisesGascon/openjs-cna-tools.git"
   },
   "keywords": [
     "cna",

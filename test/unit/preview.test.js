@@ -50,7 +50,7 @@ describe('renderPreview — single-package advisory', () => {
     assert.match(text, /References:.*https:\/\/example\.com\/a/)
     // Every reference is listed on its own line (no "+N more" elision).
     assert.match(text, /https:\/\/example\.com\/b/)
-    assert.match(text, /Generator:.*@openjsfoundation\/cna-tools/)
+    assert.match(text, /Generator:.*@ulisesgascon\/openjs-cna-tools/)
   })
 
   it('renders multi-line descriptions across multiple lines', () => {

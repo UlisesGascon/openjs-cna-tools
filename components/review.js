@@ -1,4 +1,4 @@
-// openjs-cna review <container.json> [--no-strict] [--no-preview] [--tier <name>] [--json]
+// openjs-cna-experimental review <container.json> [--no-strict] [--no-preview] [--tier <name>] [--json]
 //
 // Runs the offline reviewer against a CNA Container. Strict by default
 // (warnings block); --no-strict surfaces them as warnings. Renders the
@@ -105,7 +105,7 @@ function printHumanReport (cli, report, { tierFilter } = {}) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna review <container.json>
+`openjs-cna-experimental review <container.json>
 
 Run the offline reviewer against a CNA Container. Strict by default —
 warnings are treated as blockers because publishing to MITRE is
