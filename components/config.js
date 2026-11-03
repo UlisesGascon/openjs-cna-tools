@@ -1,4 +1,4 @@
-// openjs-cna config <set|get|list|delete> ...
+// openjs-cna-experimental config <set|get|list|delete> ...
 
 import {
   parseComponentArgs,
@@ -12,7 +12,7 @@ import {
 } from '../lib/config.js'
 
 export const command = 'config'
-export const describe = 'Read / write openjs-cna configuration.'
+export const describe = 'Read / write openjs-cna-experimental configuration.'
 
 export async function handler (argv) {
   const parsed = parseComponentArgs(argv, {
@@ -28,7 +28,7 @@ export async function handler (argv) {
     case 'set': {
       const [key, value] = rest
       if (!key || value === undefined) {
-        process.stderr.write('✖ Usage: openjs-cna config set <key> <value> [--project]\n')
+        process.stderr.write('✖ Usage: openjs-cna-experimental config set <key> <value> [--project]\n')
         process.exit(64)
       }
       const target = setConfigValue(key, value, { scope })
@@ -38,7 +38,7 @@ export async function handler (argv) {
     case 'get': {
       const [key] = rest
       if (!key) {
-        process.stderr.write('✖ Usage: openjs-cna config get <key>\n')
+        process.stderr.write('✖ Usage: openjs-cna-experimental config get <key>\n')
         process.exit(64)
       }
       const value = getConfigValue(key)
@@ -57,7 +57,7 @@ export async function handler (argv) {
     case 'delete': {
       const [key] = rest
       if (!key) {
-        process.stderr.write('✖ Usage: openjs-cna config delete <key> [--project]\n')
+        process.stderr.write('✖ Usage: openjs-cna-experimental config delete <key> [--project]\n')
         process.exit(64)
       }
       const removed = deleteConfigValue(key, { scope })
@@ -74,7 +74,7 @@ export async function handler (argv) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna config <subcommand> [options]
+`openjs-cna-experimental config <subcommand> [options]
 
 Subcommands:
   set <key> <value>    write a value (plaintext at ~/.config/openjs-cna/config.json,

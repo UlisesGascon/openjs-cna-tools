@@ -1,4 +1,4 @@
-// openjs-cna publish <cve-id> [-f container.json] [--skip-review] [--no-strict]
+// openjs-cna-experimental publish <cve-id> [-f container.json] [--skip-review] [--no-strict]
 //
 // Cross-checks the CLI <cve-id> against `container.cveMetadata.cveId` if
 // present (hard-error on mismatch); fills cveMetadata in when absent.
@@ -29,7 +29,7 @@ export async function handler (argv) {
 
   const cveId = parsed.positionals[0]
   if (!cveId) {
-    process.stderr.write('✖ Missing CVE id. Usage: openjs-cna publish <CVE-...> -f container.json\n')
+    process.stderr.write('✖ Missing CVE id. Usage: openjs-cna-experimental publish <CVE-...> -f container.json\n')
     process.exit(64)
   }
 
@@ -117,7 +117,7 @@ export async function handler (argv) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna publish <cve-id> [-f container.json]
+`openjs-cna-experimental publish <cve-id> [-f container.json]
 
 Publish a v5.2 CNA Container against an already-reserved CVE id. Default
 behavior runs the reviewer first (strict — warnings block too) and aborts

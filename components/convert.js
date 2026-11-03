@@ -1,8 +1,8 @@
-// openjs-cna convert <advisory-url> [--cve <CVE-...>]
+// openjs-cna-experimental convert <advisory-url> [--cve <CVE-...>]
 //
 // Reads a public GitHub Security Advisory and emits a v5.2 CNA Container
 // draft on stdout. Two URL shapes accepted: per-repository and global-
-// database. Pre-fetched JSON can be piped via stdin (`openjs-cna convert -`).
+// database. Pre-fetched JSON can be piped via stdin (`openjs-cna-experimental convert -`).
 // When `--cve` is provided, the produced container carries
 // `cveMetadata.cveId` so a downstream publish/update can cross-check the
 // id against its CLI argument.
@@ -35,8 +35,8 @@ export async function handler (argv) {
   } else {
     process.stderr.write(
       '✖ Missing advisory URL. Usage:\n' +
-      '    openjs-cna convert <advisory-url>\n' +
-      '    openjs-cna convert -                  (read raw GHSA JSON from stdin)\n'
+      '    openjs-cna-experimental convert <advisory-url>\n' +
+      '    openjs-cna-experimental convert -                  (read raw GHSA JSON from stdin)\n'
     )
     process.exit(64)
   }
@@ -49,27 +49,27 @@ export async function handler (argv) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna convert <advisory-url>
+`openjs-cna-experimental convert <advisory-url>
 
 Convert a GitHub Security Advisory into a v5.2 CNA Container draft. The
 result is the CNA-container portion of a CVE Record (cveMetadata is
-supplied by 'openjs-cna publish' at publish time). Output is a starting
-point — run 'openjs-cna review' on it before publish.
+supplied by 'openjs-cna-experimental publish' at publish time). Output is a starting
+point — run 'openjs-cna-experimental review' on it before publish.
 
 This tool only reads PUBLIC published advisories. Both URL shapes hit
 api.github.com anonymously.
 
 Input shapes:
 
-  openjs-cna convert https://github.com/<owner>/<repo>/security/advisories/<GHSA>
+  openjs-cna-experimental convert https://github.com/<owner>/<repo>/security/advisories/<GHSA>
     Per-repository advisory URL. Resolves via
     GET https://api.github.com/repos/<owner>/<repo>/security-advisories/<GHSA>.
 
-  openjs-cna convert https://github.com/advisories/<GHSA>
+  openjs-cna-experimental convert https://github.com/advisories/<GHSA>
     Global advisory database URL. Resolves via
     GET https://api.github.com/advisories/<GHSA>.
 
-  openjs-cna convert -
+  openjs-cna-experimental convert -
     Read raw GHSA advisory JSON from stdin (for pre-fetched payloads
     or private/draft advisories the operator has fetched themselves).
 

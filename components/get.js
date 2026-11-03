@@ -1,4 +1,4 @@
-// openjs-cna get <cve-id>
+// openjs-cna-experimental get <cve-id>
 // Fetches the v5.2 container for a published CVE from MITRE via the CNA API.
 
 import { parseComponentArgs, buildClient, buildCli } from '../lib/component-utils.js'
@@ -11,7 +11,7 @@ export async function handler (argv) {
   if (parsed.values.help) return printHelp()
   const cveId = parsed.positionals[0]
   if (!cveId) {
-    process.stderr.write('✖ Missing CVE id. Usage: openjs-cna get <CVE-...>\n')
+    process.stderr.write('✖ Missing CVE id. Usage: openjs-cna-experimental get <CVE-...>\n')
     process.exit(64)
   }
   const cli = buildCli(parsed)
@@ -26,7 +26,7 @@ export async function handler (argv) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna get <cve-id>
+`openjs-cna-experimental get <cve-id>
 
 Fetch a published CVE's v5.2 container from MITRE. Prints the container
 JSON on stdout.

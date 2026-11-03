@@ -1,4 +1,4 @@
-// openjs-cna update <cve-id> [-f container.json] [--skip-review] [--no-strict]
+// openjs-cna-experimental update <cve-id> [-f container.json] [--skip-review] [--no-strict]
 //
 // Same shape as `publish`, but issues the update-cve operation. Same
 // cveMetadata.cveId cross-check, same strict-by-default reviewer, same
@@ -26,7 +26,7 @@ export async function handler (argv) {
 
   const cveId = parsed.positionals[0]
   if (!cveId) {
-    process.stderr.write('✖ Missing CVE id. Usage: openjs-cna update <CVE-...> -f container.json\n')
+    process.stderr.write('✖ Missing CVE id. Usage: openjs-cna-experimental update <CVE-...> -f container.json\n')
     process.exit(64)
   }
 
@@ -90,7 +90,7 @@ export async function handler (argv) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna update <cve-id> [-f container.json]
+`openjs-cna-experimental update <cve-id> [-f container.json]
 
 Update a published CVE record. Same review semantics as publish (strict
 by default — warnings block too).

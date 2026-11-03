@@ -1,4 +1,4 @@
-// openjs-cna list
+// openjs-cna-experimental list
 // Lists all CVE ids in the bucket. One id per line by default; --json for array.
 
 import { parseComponentArgs, buildClient, buildCli } from '../lib/component-utils.js'
@@ -25,7 +25,7 @@ export async function handler (argv) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna list
+`openjs-cna-experimental list
 
 List every CVE id in the bucket. Default output: one id per line.
 

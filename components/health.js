@@ -1,4 +1,4 @@
-// openjs-cna health
+// openjs-cna-experimental health
 // Unauthenticated liveness check against the configured CNA API.
 
 import { parseComponentArgs, buildClient, buildCli } from '../lib/component-utils.js'
@@ -18,13 +18,13 @@ export async function handler (argv) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna health
+`openjs-cna-experimental health
 
 Probe the configured CNA API's /health endpoint. Useful to catch base-url
 misconfiguration before burning a workflow dispatch.
 
 Usage:
-  openjs-cna health [global flags]
+  openjs-cna-experimental health [global flags]
 `
   )
 }
