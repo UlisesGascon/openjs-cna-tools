@@ -2,7 +2,7 @@ import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 
 import { USER_AGENT } from '../../lib/client.js'
-import { DATA_VERSION, buildCvssMetric, buildProblemType, buildRecordEnvelope } from '../../lib/record.js'
+import { DATA_VERSION, buildCvssMetric, buildDescription, buildProblemType, buildRecordEnvelope, stripMarkdown } from '../../lib/record.js'
 import { reviewRecord } from '../../lib/review/index.js'
 import { OPENJS_CNA_ORG_ID } from '../../lib/review/schema.js'
 
@@ -70,6 +70,44 @@ const cna = () => ({
     versions: [{ version: '0', lessThan: '1.2.3', status: 'affected', versionType: 'semver' }]
   }],
   references: [{ url: 'https://example.com/a' }]
+})
+
+describe('stripMarkdown', () => {
+  it('collapses emphasis, code spans, links, headings, bullets and quotes to text', () => {
+    const md = '## Impact\r\n\r\nA flaw in `dns.resolve()` lets **remote** attackers _crash_ the process.\n\n- see [the advisory](https://example.com)\n> quoted\n\n\n\nEnd.'
+    assert.equal(stripMarkdown(md),
+      // the bullet marker regex also eats the blank line before the list
+      'Impact:\n\nA flaw in dns.resolve() lets remote attackers crash the process.\nsee the advisory\nquoted\n\nEnd.')
+  })
+
+  it('leaves plain text alone and tolerates non-strings', () => {
+    assert.equal(stripMarkdown('Plain text with 2 * 3 and a_b_c.'), 'Plain text with 2 * 3 and a_b_c.')
+    assert.equal(stripMarkdown(undefined), '')
+  })
+})
+
+describe('buildDescription', () => {
+  it('puts plain text in value and keeps the Markdown in supportingMedia', () => {
+    assert.deepEqual(buildDescription('A flaw in `dns.resolve()` affects **22.x**.'), {
+      lang: 'en',
+      value: 'A flaw in dns.resolve() affects 22.x.',
+      supportingMedia: [{ type: 'text/markdown', base64: false, value: 'A flaw in `dns.resolve()` affects **22.x**.' }]
+    })
+  })
+
+  it('omits supportingMedia when there is no Markdown, and normalises line endings', () => {
+    assert.deepEqual(buildDescription('  First line.\r\n\r\nSecond line.  '), {
+      lang: 'en',
+      value: 'First line.\n\nSecond line.'
+    })
+  })
+
+  it('returns null for empty input and honours lang', () => {
+    assert.equal(buildDescription(''), null)
+    assert.equal(buildDescription('   '), null)
+    assert.equal(buildDescription(undefined), null)
+    assert.equal(buildDescription('Texto', { lang: 'es' }).lang, 'es')
+  })
 })
 
 describe('buildProblemType', () => {

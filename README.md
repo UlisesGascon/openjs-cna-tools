@@ -286,13 +286,14 @@ hardcodes the OpenJS CNA org id, the generator string or the CVSS block
 layout:
 
 ```js
-import { buildCvssMetric, buildProblemType, buildRecordEnvelope } from '@ulisesgascon/openjs-cna-tools/record'
+import { buildCvssMetric, buildDescription, buildProblemType, buildRecordEnvelope } from '@ulisesgascon/openjs-cna-tools/record'
 
 const record = buildRecordEnvelope({
   cveId: 'CVE-2026-0001',
   cna: {
     title: '…',
-    descriptions: [{ lang: 'en', value: '…' }],
+    // plain text in `value`; the Markdown, if any, kept in supportingMedia
+    descriptions: [buildDescription('A flaw in `dns.resolve()` allows **remote** attackers …')],
     affected: [/* … */],
     references: [/* … */],
     // id normalised to CWE-<number>; description is the name, or the id
