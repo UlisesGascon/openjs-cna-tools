@@ -32,5 +32,16 @@ jobs:
       - name: Upgrade npm
         run: npm install -g npm@latest
 
+      # npm refuses to publish a prerelease without an explicit dist-tag, so a
+      # prerelease would otherwise never be tagged `latest` by accident. Use
+      # the prerelease identifier (alpha, beta, rc, ...) as the tag; stable
+      # versions go to `latest`.
+      - name: Resolve dist-tag
+        id: dist_tag
+        run: |
+          tag="$(node -p "require('./package.json').version.match(/-([0-9A-Za-z]+)/)?.[1] ?? 'latest'")"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "Publishing with dist-tag: $tag"
+
       - name: Stage publish to npm
-        run: npm stage publish
+        run: npm stage publish --tag "${{ steps.dist_tag.outputs.tag }}"

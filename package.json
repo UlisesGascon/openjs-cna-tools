@@ -11,7 +11,7 @@
     "node": ">=22.0.0"
   },
   "bin": {
-    "openjs-cna-experimental": "./bin/openjs-cna.js"
+    "openjs-cna-experimental": "bin/openjs-cna.js"
   },
   "main": "./lib/index.js",
   "exports": {
