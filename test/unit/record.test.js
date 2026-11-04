@@ -2,7 +2,7 @@ import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 
 import { USER_AGENT } from '../../lib/client.js'
-import { DATA_VERSION, buildCvssMetric, buildRecordEnvelope } from '../../lib/record.js'
+import { DATA_VERSION, buildCvssMetric, buildProblemType, buildRecordEnvelope } from '../../lib/record.js'
 import { reviewRecord } from '../../lib/review/index.js'
 import { OPENJS_CNA_ORG_ID } from '../../lib/review/schema.js'
 
@@ -60,19 +60,49 @@ describe('buildCvssMetric', () => {
   })
 })
 
-describe('buildRecordEnvelope', () => {
-  const cna = () => ({
-    title: 'demo: vulnerable to demonstration',
-    descriptions: [{ lang: 'en', value: 'A short description.' }],
-    affected: [{
-      vendor: 'npm',
-      product: 'demo',
-      defaultStatus: 'unaffected',
-      versions: [{ version: '0', lessThan: '1.2.3', status: 'affected', versionType: 'semver' }]
-    }],
-    references: [{ url: 'https://example.com/a' }]
+const cna = () => ({
+  title: 'demo: vulnerable to demonstration',
+  descriptions: [{ lang: 'en', value: 'A short description.' }],
+  affected: [{
+    vendor: 'npm',
+    product: 'demo',
+    defaultStatus: 'unaffected',
+    versions: [{ version: '0', lessThan: '1.2.3', status: 'affected', versionType: 'semver' }]
+  }],
+  references: [{ url: 'https://example.com/a' }]
+})
+
+describe('buildProblemType', () => {
+  it('builds one entry with the CWE name as description', () => {
+    assert.deepEqual(buildProblemType({ cweId: 'CWE-400', name: 'Uncontrolled Resource Consumption' }), {
+      descriptions: [{ lang: 'en', type: 'CWE', cweId: 'CWE-400', description: 'Uncontrolled Resource Consumption' }]
+    })
   })
 
+  it('normalises bare and lowercase ids and falls back to the id as description', () => {
+    assert.deepEqual(buildProblemType([{ cweId: 400 }, { cweId: 'cwe-284', name: ' ' }]), {
+      descriptions: [
+        { lang: 'en', type: 'CWE', cweId: 'CWE-400', description: 'CWE-400' },
+        { lang: 'en', type: 'CWE', cweId: 'CWE-284', description: 'CWE-284' }
+      ]
+    })
+  })
+
+  it('rejects ids MITRE would not accept', () => {
+    for (const cweId of ['', 'CWE-0', 'CWE-', 'noidea', '26.5', undefined]) {
+      assert.throws(() => buildProblemType({ cweId }), TypeError, String(cweId))
+    }
+    assert.throws(() => buildProblemType([]), TypeError)
+  })
+
+  it('passes the MITRE schema check inside a record', () => {
+    const container = { ...cna(), problemTypes: [buildProblemType({ cweId: 400 })] }
+    const report = reviewRecord(buildRecordEnvelope({ cveId: 'CVE-2026-0001', cna: container }))
+    assert.deepEqual(report.issues.filter(i => i.rule === 'mitre-schema' || i.rule === 'cwe-id-format'), [])
+  })
+})
+
+describe('buildRecordEnvelope', () => {
   it('wraps the container with the OpenJS defaults', () => {
     const record = buildRecordEnvelope({ cveId: 'CVE-2026-0001', cna: cna() })
     assert.equal(record.dataType, 'CVE_RECORD')
