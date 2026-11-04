@@ -260,7 +260,7 @@ hardcodes the OpenJS CNA org id, the generator string or the CVSS block
 layout:
 
 ```js
-import { buildCvssMetric, buildRecordEnvelope } from '@ulisesgascon/openjs-cna-tools/record'
+import { buildCvssMetric, buildProblemType, buildRecordEnvelope } from '@ulisesgascon/openjs-cna-tools/record'
 
 const record = buildRecordEnvelope({
   cveId: 'CVE-2026-0001',
@@ -269,6 +269,8 @@ const record = buildRecordEnvelope({
     descriptions: [{ lang: 'en', value: '…' }],
     affected: [/* … */],
     references: [/* … */],
+    // id normalised to CWE-<number>; description is the name, or the id
+    problemTypes: [buildProblemType({ cweId: 400, name: 'Uncontrolled Resource Consumption' })],
     // key (cvssV3_0 / cvssV3_1 / cvssV4_0) follows the vector prefix;
     // a missing v3.x score is computed, a v4.0 score must be passed in
     metrics: [buildCvssMetric('CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N')]
@@ -278,7 +280,7 @@ const record = buildRecordEnvelope({
 // and x_generator.engine filled on the container unless already present.
 ```
 
-The GHSA converter is built on the same two helpers.
+The GHSA converter is built on the same helpers.
 
 The same calculator backs two behaviours:
 
