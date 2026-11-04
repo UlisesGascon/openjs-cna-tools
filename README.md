@@ -182,9 +182,35 @@ await cna.publishCve(cveId, record.containers.cna)
 
 Error classes (`CnaAuthError`, `CnaTimeoutError`, `CnaOperationError`, `CnaReviewBlockedError`) are exported from the package root.
 
+### CVSS
+
+Trackers such as HackerOne store only the CVSS vector, while MITRE requires
+`baseScore` and `baseSeverity` on every metric block. The package ships a
+dependency-free CVSS v3.0 / v3.1 base score calculator for that gap:
+
+```js
+import { calculateBaseScore } from '@ulisesgascon/openjs-cna-tools/cvss'
+
+calculateBaseScore('CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N')
+// { version: '3.0', vectorString: 'CVSS:3.0/…', baseScore: 6.5, baseSeverity: 'MEDIUM' }
+```
+
+Only the base metric group is scored; temporal and environmental components
+are kept in the vector string and ignored. `parseCvssVector`, `roundUp` and
+`severityFromScore` are exported as well. CVSS 4.0 is not supported yet.
+
+The same calculator backs two behaviours:
+
+- the reviewer's `cvss-score-matches-vector` rule (blocker) recomputes the
+  score of every v3.x block and rejects a `baseScore` that disagrees with its
+  vector, since MITRE accepts the record as sent and never re-scores it;
+- the GHSA converter fills `baseScore` and `baseSeverity` from the vector when
+  the advisory carries a v3.1 vector without a score.
+
 ## Design
 
 - **Two runtime dependencies.** Built on Node.js 22+ built-ins (`fetch`, `node:test`, `node:util parseArgs`, `node:readline/promises`) with [`ajv`](https://github.com/ajv-validator/ajv) + [`ajv-formats`](https://github.com/ajv-validator/ajv-formats) — used only for validating containers against MITRE's official v5.2 schema before publish.
+- **Scores vectors itself.** A bundled CVSS v3.0 / v3.1 calculator (`lib/cvss.js`) lets the reviewer verify that every `baseScore` matches its vector and lets converters fill a missing score. No external calculator, no network.
 - **Validates against MITRE's official schema.** The CVE Record Format schema and its companion files (CVSS v2/v3/v4, CNA/ADP/reference tags) ship bundled from the [CVE Project](https://github.com/CVEProject/cve-schema). `openjs-cna-experimental review` and the default behavior of `openjs-cna-experimental publish` catch anything that would fail at MITRE.
 - **Two-tier rule classification.** Issues carry a `tier`: `mitre-common` (MITRE's schema itself would reject) or `openjs-extra` (OpenJS Foundation editorial preference, stricter than MITRE). The `--tier mitre-common` flag on `review` filters the printed list without changing the exit code.
 - **Preview before commit.** `openjs-cna-experimental preview` and the default `openjs-cna-experimental review` render a full summary of the container (title, full description, every affected package, CVSS, CWE, credits, references) so an operator can see *exactly* what they're about to send. The output includes a tip to edit the JSON visually at <https://vulnogram.org/#source>.

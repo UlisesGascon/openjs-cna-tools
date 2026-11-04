@@ -208,6 +208,30 @@ describe('reviewRecord — CVSS rules', () => {
     const issue = report.issues.find(i => i.rule === 'cvss-score-matches-band')
     assert.equal(issue?.path, 'metrics[].cvssV3_0')
   })
+
+  it('blocks a baseScore that does not match its vector', () => {
+    const c = goodContainer()
+    c.containers.cna.metrics[0].cvssV3_1.baseScore = 7.8
+    const report = reviewRecord(c)
+    const issue = report.issues.find(i => i.rule === 'cvss-score-matches-vector')
+    assert.equal(issue?.severity, 'blocker')
+    assert.equal(issue?.path, 'metrics[].cvssV3_1.baseScore')
+    assert.match(issue?.message, /baseScore is 7\.8 but the vector scores 7\.5/)
+  })
+
+  it('accepts a baseScore that matches a cvssV3_0 vector', () => {
+    const c = goodContainer()
+    c.containers.cna.metrics = [cvssV30()]
+    const report = reviewRecord(c)
+    assert.ok(!report.issues.some(i => i.rule === 'cvss-score-matches-vector'))
+  })
+
+  it('leaves score verification to the parseable rule when the vector is malformed', () => {
+    const c = goodContainer()
+    c.containers.cna.metrics[0].cvssV3_1.vectorString = 'totally bogus'
+    const report = reviewRecord(c)
+    assert.ok(!report.issues.some(i => i.rule === 'cvss-score-matches-vector'))
+  })
 })
 
 describe('reviewRecord — affected rules', () => {

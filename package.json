@@ -18,7 +18,8 @@
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
     "./review": "./lib/review/index.js",
-    "./convert": "./lib/convert/ghsa.js"
+    "./convert": "./lib/convert/ghsa.js",
+    "./cvss": "./lib/cvss.js"
   },
   "files": [
     "bin/",
