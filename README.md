@@ -199,6 +199,34 @@ Only the base metric group is scored; temporal and environmental components
 are kept in the vector string and ignored. `parseCvssVector`, `roundUp` and
 `severityFromScore` are exported as well. CVSS 4.0 is not supported yet.
 
+### Record helpers
+
+Converters only know their own source. The parts of a record that are about
+MITRE's format rather than the source live in one place, so no consumer
+hardcodes the OpenJS CNA org id, the generator string or the CVSS block
+layout:
+
+```js
+import { buildCvssMetric, buildRecordEnvelope } from '@ulisesgascon/openjs-cna-tools/record'
+
+const record = buildRecordEnvelope({
+  cveId: 'CVE-2026-0001',
+  cna: {
+    title: '…',
+    descriptions: [{ lang: 'en', value: '…' }],
+    affected: [/* … */],
+    references: [/* … */],
+    // key (cvssV3_0 / cvssV3_1 / cvssV4_0) follows the vector prefix;
+    // a missing v3.x score is computed, a v4.0 score must be passed in
+    metrics: [buildCvssMetric('CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N')]
+  }
+})
+// record.dataType / dataVersion / cveMetadata set, providerMetadata.orgId
+// and x_generator.engine filled on the container unless already present.
+```
+
+The GHSA converter is built on the same two helpers.
+
 The same calculator backs two behaviours:
 
 - the reviewer's `cvss-score-matches-vector` rule (blocker) recomputes the
