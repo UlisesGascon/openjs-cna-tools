@@ -20,7 +20,8 @@
     "./review": "./lib/review/index.js",
     "./convert": "./lib/convert/ghsa.js",
     "./cvss": "./lib/cvss.js",
-    "./record": "./lib/record.js"
+    "./record": "./lib/record.js",
+    "./batch": "./lib/batch.js"
   },
   "files": [
     "bin/",
