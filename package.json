@@ -21,7 +21,8 @@
     "./convert": "./lib/convert/ghsa.js",
     "./cvss": "./lib/cvss.js",
     "./record": "./lib/record.js",
-    "./batch": "./lib/batch.js"
+    "./batch": "./lib/batch.js",
+    "./hackerone": "./lib/hackerone/index.js"
   },
   "files": [
     "bin/",

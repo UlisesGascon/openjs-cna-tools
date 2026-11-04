@@ -1,0 +1,6550 @@
+{
+  "_generated": {
+    "date": "2026-11-04",
+    "source": "HackerOne GraphQL team_weaknesses dump, see scripts/build-hackerone-weaknesses.js",
+    "entries": 1635,
+    "withCwe": 991
+  },
+  "weaknesses": {
+    "1": {
+      "cwe": "CWE-113",
+      "name": "HTTP Response Splitting"
+    },
+    "2": {
+      "cwe": "CWE-119",
+      "name": "Memory Corruption - Generic"
+    },
+    "3": {
+      "cwe": "CWE-120",
+      "name": "Classic Buffer Overflow"
+    },
+    "4": {
+      "cwe": "CWE-121",
+      "name": "Stack Overflow"
+    },
+    "5": {
+      "cwe": "CWE-122",
+      "name": "Heap Overflow"
+    },
+    "6": {
+      "cwe": "CWE-123",
+      "name": "Write-what-where Condition"
+    },
+    "7": {
+      "cwe": "CWE-124",
+      "name": "Buffer Underflow"
+    },
+    "8": {
+      "cwe": "CWE-125",
+      "name": "Out-of-bounds Read"
+    },
+    "9": {
+      "cwe": "CWE-126",
+      "name": "Buffer Over-read"
+    },
+    "10": {
+      "cwe": "CWE-127",
+      "name": "Buffer Under-read"
+    },
+    "11": {
+      "cwe": "CWE-128",
+      "name": "Wrap-around Error"
+    },
+    "12": {
+      "cwe": "CWE-129",
+      "name": "Array Index Underflow"
+    },
+    "13": {
+      "cwe": "CWE-131",
+      "name": "Incorrect Calculation of Buffer Size"
+    },
+    "14": {
+      "cwe": "CWE-170",
+      "name": "Improper Null Termination"
+    },
+    "15": {
+      "cwe": "CWE-190",
+      "name": "Integer Overflow"
+    },
+    "16": {
+      "cwe": "CWE-191",
+      "name": "Integer Underflow"
+    },
+    "17": {
+      "cwe": "CWE-193",
+      "name": "Off-by-one Error"
+    },
+    "18": {
+      "cwe": "CWE-200",
+      "name": "Information Disclosure"
+    },
+    "19": {
+      "cwe": "CWE-22",
+      "name": "Path Traversal"
+    },
+    "20": {
+      "cwe": "CWE-242",
+      "name": "Use of Inherently Dangerous Function"
+    },
+    "21": {
+      "cwe": "CWE-256",
+      "name": "Plaintext Storage of a Password"
+    },
+    "22": {
+      "cwe": "CWE-257",
+      "name": "Storing Passwords in a Recoverable Format"
+    },
+    "23": {
+      "cwe": "CWE-259",
+      "name": "Use of Hard-coded Password"
+    },
+    "24": {
+      "cwe": "CWE-260",
+      "name": "Password in Configuration File"
+    },
+    "25": {
+      "cwe": "CWE-261",
+      "name": "Weak Cryptography for Passwords"
+    },
+    "26": {
+      "cwe": "CWE-284",
+      "name": "Improper Access Control - Generic"
+    },
+    "27": {
+      "cwe": "CWE-287",
+      "name": "Improper Authentication - Generic"
+    },
+    "28": {
+      "cwe": "CWE-295",
+      "name": "Improper Certificate Validation"
+    },
+    "29": {
+      "cwe": "CWE-296",
+      "name": "Improper Following of a Certificate's Chain of Trust"
+    },
+    "30": {
+      "cwe": "CWE-300",
+      "name": "Man-in-the-Middle"
+    },
+    "31": {
+      "cwe": "CWE-307",
+      "name": "Improper Restriction of Authentication Attempts"
+    },
+    "32": {
+      "cwe": "CWE-310",
+      "name": "Cryptographic Issues - Generic"
+    },
+    "33": {
+      "cwe": "CWE-312",
+      "name": "Cleartext Storage of Sensitive Information"
+    },
+    "34": {
+      "cwe": "CWE-319",
+      "name": "Cleartext Transmission of Sensitive Information"
+    },
+    "35": {
+      "cwe": "CWE-321",
+      "name": "Use of Hard-coded Cryptographic Key"
+    },
+    "36": {
+      "cwe": "CWE-322",
+      "name": "Key Exchange without Entity Authentication"
+    },
+    "37": {
+      "cwe": "CWE-323",
+      "name": "Reusing a Nonce, Key Pair in Encryption"
+    },
+    "38": {
+      "cwe": "CWE-324",
+      "name": "Use of a Key Past its Expiration Date"
+    },
+    "39": {
+      "cwe": "CWE-325",
+      "name": "Missing Required Cryptographic Step"
+    },
+    "40": {
+      "cwe": "CWE-326",
+      "name": "Inadequate Encryption Strength"
+    },
+    "41": {
+      "cwe": "CWE-327",
+      "name": "Use of a Broken or Risky Cryptographic Algorithm"
+    },
+    "42": {
+      "cwe": "CWE-328",
+      "name": "Reversible One-Way Hash"
+    },
+    "43": {
+      "cwe": "CWE-330",
+      "name": "Use of Insufficiently Random Values"
+    },
+    "44": {
+      "cwe": "CWE-338",
+      "name": "Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+    },
+    "45": {
+      "cwe": "CWE-352",
+      "name": "Cross-Site Request Forgery (CSRF)"
+    },
+    "46": {
+      "cwe": "CWE-359",
+      "name": "Privacy Violation"
+    },
+    "47": {
+      "cwe": "CWE-384",
+      "name": "Session Fixation"
+    },
+    "48": {
+      "cwe": "CWE-400",
+      "name": "Uncontrolled Resource Consumption"
+    },
+    "49": {
+      "cwe": "CWE-415",
+      "name": "Double Free"
+    },
+    "50": {
+      "cwe": "CWE-416",
+      "name": "Use After Free"
+    },
+    "51": {
+      "cwe": "CWE-476",
+      "name": "NULL Pointer Dereference"
+    },
+    "52": {
+      "cwe": "CWE-502",
+      "name": "Deserialization of Untrusted Data"
+    },
+    "53": {
+      "cwe": "CWE-601",
+      "name": "Open Redirect"
+    },
+    "54": {
+      "cwe": "CWE-611",
+      "name": "XML External Entities (XXE)"
+    },
+    "55": {
+      "cwe": "CWE-639",
+      "name": "Insecure Direct Object Reference (IDOR)"
+    },
+    "56": {
+      "cwe": "CWE-656",
+      "name": "Security Through Obscurity"
+    },
+    "57": {
+      "cwe": "CWE-657",
+      "name": "Violation of Secure Design Principles"
+    },
+    "58": {
+      "cwe": "CWE-77",
+      "name": "Command Injection - Generic"
+    },
+    "59": {
+      "cwe": "CWE-78",
+      "name": "OS Command Injection"
+    },
+    "60": {
+      "cwe": "CWE-79",
+      "name": "Cross-site Scripting (XSS) - Generic"
+    },
+    "61": {
+      "cwe": "CWE-79",
+      "name": "Cross-site Scripting (XSS) - Reflected"
+    },
+    "62": {
+      "cwe": "CWE-79",
+      "name": "Cross-site Scripting (XSS) - Stored"
+    },
+    "63": {
+      "cwe": "CWE-79",
+      "name": "Cross-site Scripting (XSS) - DOM"
+    },
+    "64": {
+      "cwe": "CWE-798",
+      "name": "Use of Hard-coded Credentials"
+    },
+    "65": {
+      "cwe": "CWE-840",
+      "name": "Business Logic Errors"
+    },
+    "66": {
+      "cwe": "CWE-843",
+      "name": "Type Confusion"
+    },
+    "67": {
+      "cwe": "CWE-89",
+      "name": "SQL Injection"
+    },
+    "68": {
+      "cwe": "CWE-918",
+      "name": "Server-Side Request Forgery (SSRF)"
+    },
+    "69": {
+      "cwe": "CWE-93",
+      "name": "CRLF Injection"
+    },
+    "70": {
+      "cwe": "CWE-94",
+      "name": "Code Injection"
+    },
+    "71": {
+      "cwe": "CWE-98",
+      "name": "Remote File Inclusion"
+    },
+    "72": {
+      "cwe": "CWE-99",
+      "name": "Resource Injection"
+    },
+    "73": {
+      "cwe": null,
+      "name": "Phishing"
+    },
+    "74": {
+      "cwe": null,
+      "name": "UI Redressing (Clickjacking)"
+    },
+    "75": {
+      "cwe": null,
+      "name": "Privilege Escalation"
+    },
+    "76": {
+      "cwe": null,
+      "name": "Malware"
+    },
+    "81": {
+      "cwe": "CWE-134",
+      "name": "Use of Externally-Controlled Format String"
+    },
+    "82": {
+      "cwe": "CWE-209",
+      "name": "Information Exposure Through an Error Message"
+    },
+    "83": {
+      "cwe": "CWE-215",
+      "name": "Information Exposure Through Debug Information"
+    },
+    "84": {
+      "cwe": "CWE-311",
+      "name": "Missing Encryption of Sensitive Data"
+    },
+    "85": {
+      "cwe": "CWE-425",
+      "name": "Forced Browsing"
+    },
+    "86": {
+      "cwe": "CWE-444",
+      "name": "HTTP Request Smuggling"
+    },
+    "87": {
+      "cwe": "CWE-522",
+      "name": "Insufficiently Protected Credentials"
+    },
+    "88": {
+      "cwe": "CWE-523",
+      "name": "Unprotected Transport of Credentials"
+    },
+    "89": {
+      "cwe": "CWE-548",
+      "name": "Information Exposure Through Directory Listing"
+    },
+    "90": {
+      "cwe": "CWE-613",
+      "name": "Insufficient Session Expiration"
+    },
+    "91": {
+      "cwe": "CWE-620",
+      "name": "Unverified Password Change"
+    },
+    "92": {
+      "cwe": "CWE-640",
+      "name": "Weak Password Recovery Mechanism for Forgotten Password"
+    },
+    "93": {
+      "cwe": "CWE-644",
+      "name": "Improper Neutralization of HTTP Headers for Scripting Syntax"
+    },
+    "96": {
+      "cwe": "CWE-776",
+      "name": "XML Entity Expansion"
+    },
+    "97": {
+      "cwe": "CWE-784",
+      "name": "Reliance on Cookies without Validation and Integrity Checking in a Security Decision"
+    },
+    "99": {
+      "cwe": "CWE-90",
+      "name": "LDAP Injection"
+    },
+    "100": {
+      "cwe": "CWE-91",
+      "name": "XML Injection"
+    },
+    "101": {
+      "cwe": "CWE-922",
+      "name": "Insecure Storage of Sensitive Information"
+    },
+    "102": {
+      "cwe": "CWE-602",
+      "name": "Client-Side Enforcement of Server-Side Security"
+    },
+    "103": {
+      "cwe": "CWE-489",
+      "name": "Leftover Debug Code (Backdoor)"
+    },
+    "105": {
+      "cwe": "CWE-367",
+      "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+    },
+    "106": {
+      "cwe": "CWE-471",
+      "name": "Modification of Assumed-Immutable Data (MAID)"
+    },
+    "107": {
+      "cwe": "CWE-20",
+      "name": "Improper Input Validation"
+    },
+    "108": {
+      "cwe": "CWE-506",
+      "name": "Embedded Malicious Code"
+    },
+    "109": {
+      "cwe": "CWE-409",
+      "name": "Improper Handling of Highly Compressed Data (Data Amplification)"
+    },
+    "110": {
+      "cwe": "CWE-509",
+      "name": "Replicating Malicious Code (Virus or Worm)"
+    },
+    "111": {
+      "cwe": "CWE-610",
+      "name": "Externally Controlled Reference to a Resource in Another Sphere"
+    },
+    "112": {
+      "cwe": "CWE-80",
+      "name": "Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS)"
+    },
+    "113": {
+      "cwe": "CWE-201",
+      "name": "Information Exposure Through Sent Data"
+    },
+    "114": {
+      "cwe": "CWE-377",
+      "name": "Insecure Temporary File"
+    },
+    "115": {
+      "cwe": "CWE-703",
+      "name": "Improper Check or Handling of Exceptional Conditions"
+    },
+    "116": {
+      "cwe": "CWE-208",
+      "name": "Information Exposure Through Timing Discrepancy"
+    },
+    "117": {
+      "cwe": "CWE-391",
+      "name": "Unchecked Error Condition"
+    },
+    "118": {
+      "cwe": "CWE-697",
+      "name": "Incorrect Comparison"
+    },
+    "119": {
+      "cwe": "CWE-35",
+      "name": "Path Traversal: '.../...//'"
+    },
+    "120": {
+      "cwe": "CWE-770",
+      "name": "Allocation of Resources Without Limits or Throttling"
+    },
+    "121": {
+      "cwe": "CWE-177",
+      "name": "Improper Handling of URL Encoding (Hex Encoding)"
+    },
+    "122": {
+      "cwe": "CWE-269",
+      "name": "Improper Privilege Management"
+    },
+    "123": {
+      "cwe": "CWE-642",
+      "name": "External Control of Critical State Data"
+    },
+    "124": {
+      "cwe": "CWE-285",
+      "name": "Improper Authorization"
+    },
+    "125": {
+      "cwe": "CWE-23",
+      "name": "Relative Path Traversal"
+    },
+    "126": {
+      "cwe": "CWE-538",
+      "name": "File and Directory Information Exposure"
+    },
+    "127": {
+      "cwe": "CWE-360",
+      "name": "Trust of System Event Data"
+    },
+    "128": {
+      "cwe": "CWE-863",
+      "name": "Incorrect Authorization"
+    },
+    "129": {
+      "cwe": "CWE-184",
+      "name": "Incomplete Blacklist"
+    },
+    "130": {
+      "cwe": "CWE-350",
+      "name": "Reliance on Reverse DNS Resolution for a Security-Critical Action"
+    },
+    "131": {
+      "cwe": "CWE-150",
+      "name": "Improper Neutralization of Escape, Meta, or Control Sequences"
+    },
+    "132": {
+      "cwe": "CWE-451",
+      "name": "User Interface (UI) Misrepresentation of Critical Information"
+    },
+    "133": {
+      "cwe": "CWE-807",
+      "name": "Reliance on Untrusted Inputs in a Security Decision"
+    },
+    "134": {
+      "cwe": "CWE-674",
+      "name": "Uncontrolled Recursion"
+    },
+    "135": {
+      "cwe": "CWE-280",
+      "name": "Improper Handling of Insufficient Permissions or Privileges"
+    },
+    "136": {
+      "cwe": "CWE-75",
+      "name": "Failure to Sanitize Special Elements into a Different Plane (Special Element Injection)"
+    },
+    "137": {
+      "cwe": "CWE-749",
+      "name": "Exposed Dangerous Method or Function"
+    },
+    "138": {
+      "cwe": null,
+      "name": "XSS Using MIME Type Mismatch"
+    },
+    "139": {
+      "cwe": "CWE-203",
+      "name": "Information Exposure Through Discrepancy"
+    },
+    "140": {
+      "cwe": "CWE-362",
+      "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+    },
+    "141": {
+      "cwe": "CWE-926",
+      "name": "Improper Export of Android Application Components"
+    },
+    "142": {
+      "cwe": "CWE-288",
+      "name": "Authentication Bypass Using an Alternate Path or Channel"
+    },
+    "144": {
+      "cwe": "CWE-426",
+      "name": "Untrusted Search Path"
+    },
+    "145": {
+      "cwe": "CWE-16",
+      "name": "Misconfiguration"
+    },
+    "146": {
+      "cwe": "CWE-250",
+      "name": "Execution with Unnecessary Privileges"
+    },
+    "147": {
+      "cwe": "CWE-306",
+      "name": "Missing Authentication for Critical Function"
+    },
+    "148": {
+      "cwe": "CWE-434",
+      "name": "Unrestricted Upload of File with Dangerous Type"
+    },
+    "149": {
+      "cwe": "CWE-494",
+      "name": "Download of Code Without Integrity Check"
+    },
+    "150": {
+      "cwe": "CWE-732",
+      "name": "Incorrect Permission Assignment for Critical Resource"
+    },
+    "151": {
+      "cwe": "CWE-829",
+      "name": "Inclusion of Functionality from Untrusted Control Sphere"
+    },
+    "152": {
+      "cwe": "CWE-862",
+      "name": "Missing Authorization"
+    },
+    "154": {
+      "cwe": null,
+      "name": "Lack of Binary Hardening"
+    },
+    "156": {
+      "cwe": "CWE-1035",
+      "name": "Using Components with Known Vulnerabilities"
+    },
+    "157": {
+      "cwe": "CWE-345",
+      "name": "Insufficient Verification of Data Authenticity"
+    },
+    "158": {
+      "cwe": "CWE-799",
+      "name": "Improper Control of Interaction Frequency"
+    },
+    "159": {
+      "cwe": "CWE-304",
+      "name": "Missing Critical Step in Authentication"
+    },
+    "160": {
+      "cwe": "CWE-138",
+      "name": "Improper Neutralization of Special Elements"
+    },
+    "161": {
+      "cwe": "CWE-706",
+      "name": "Use of Incorrectly-Resolved Name or Reference"
+    },
+    "162": {
+      "cwe": "CWE-941",
+      "name": "Incorrectly Specified Destination in a Communication Channel"
+    },
+    "163": {
+      "cwe": "CWE-223",
+      "name": "Omission of Security-relevant Information"
+    },
+    "164": {
+      "cwe": "CWE-778",
+      "name": "Insufficient Logging"
+    },
+    "165": {
+      "cwe": "CWE-357",
+      "name": "Insufficient UI Warning of Dangerous Operations"
+    },
+    "166": {
+      "cwe": "CWE-787",
+      "name": "Out-of-bounds Write"
+    },
+    "170": {
+      "cwe": "CWE-61",
+      "name": "UNIX Symbolic Link (Symlink) Following"
+    },
+    "171": {
+      "cwe": "CWE-617",
+      "name": "Reachable Assertion"
+    },
+    "172": {
+      "cwe": "CWE-457",
+      "name": "Use of Uninitialized Variable"
+    },
+    "173": {
+      "cwe": "CWE-921",
+      "name": "Storage of Sensitive Data in a Mechanism without Access Control"
+    },
+    "174": {
+      "cwe": "CWE-1286",
+      "name": "Improper Validation of Syntactic Correctness of Input"
+    },
+    "175": {
+      "cwe": null,
+      "name": "Cache Poisoning"
+    },
+    "176": {
+      "cwe": null,
+      "name": "PHP Local File Inclusion"
+    },
+    "177": {
+      "cwe": null,
+      "name": "DNS Zone Transfers"
+    },
+    "178": {
+      "cwe": null,
+      "name": "DLL Side-Loading"
+    },
+    "179": {
+      "cwe": null,
+      "name": "Search Order Hijacking"
+    },
+    "180": {
+      "cwe": "CWE-525",
+      "name": "Use of Web Browser Cache Containing Sensitive Information"
+    },
+    "181": {
+      "cwe": "CWE-1021",
+      "name": "Improper Restriction of Rendered UI Layers or Frames"
+    },
+    "182": {
+      "cwe": "CWE-266",
+      "name": "Incorrect Privilege Assignment"
+    },
+    "183": {
+      "cwe": "CWE-427",
+      "name": "Uncontrolled Search Path Element"
+    },
+    "184": {
+      "cwe": "CWE-305",
+      "name": "Authentication Bypass by Primary Weakness"
+    },
+    "185": {
+      "cwe": "CWE-841",
+      "name": "Improper Enforcement of Behavioral Workflow"
+    },
+    "186": {
+      "cwe": "CWE-1004",
+      "name": "Sensitive Cookie Without 'HttpOnly' Flag"
+    },
+    "187": {
+      "cwe": "CWE-1007",
+      "name": "Insufficient Visual Distinction of Homoglyphs Presented to User"
+    },
+    "188": {
+      "cwe": "CWE-102",
+      "name": "Struts: Duplicate Validation Forms"
+    },
+    "189": {
+      "cwe": "CWE-1022",
+      "name": "Use of Web Link to Untrusted Target with window.opener Access"
+    },
+    "190": {
+      "cwe": "CWE-1023",
+      "name": "Incomplete Comparison with Missing Factors"
+    },
+    "191": {
+      "cwe": "CWE-1024",
+      "name": "Comparison of Incompatible Types"
+    },
+    "192": {
+      "cwe": "CWE-1025",
+      "name": "Comparison Using Wrong Factors"
+    },
+    "193": {
+      "cwe": "CWE-103",
+      "name": "Struts: Incomplete validate() Method Definition"
+    },
+    "194": {
+      "cwe": "CWE-1037",
+      "name": "Processor Optimization Removal or Modification of Security-critical Code"
+    },
+    "195": {
+      "cwe": "CWE-1038",
+      "name": "Insecure Automated Optimizations"
+    },
+    "196": {
+      "cwe": "CWE-1039",
+      "name": "Automated Recognition Mechanism with Inadequate Detection or Handling of Adversarial Input Perturbations"
+    },
+    "197": {
+      "cwe": "CWE-104",
+      "name": "Struts: Form Bean Does Not Extend Validation Class"
+    },
+    "198": {
+      "cwe": "CWE-1041",
+      "name": "Use of Redundant Code"
+    },
+    "199": {
+      "cwe": "CWE-1042",
+      "name": "Static Member Data Element outside of a Singleton Class Element"
+    },
+    "200": {
+      "cwe": "CWE-1043",
+      "name": "Data Element Aggregating an Excessively Large Number of Non-Primitive Elements"
+    },
+    "201": {
+      "cwe": "CWE-1044",
+      "name": "Architecture with Number of Horizontal Layers Outside of Expected Range"
+    },
+    "202": {
+      "cwe": "CWE-1045",
+      "name": "Parent Class with a Virtual Destructor and a Child Class without a Virtual Destructor"
+    },
+    "203": {
+      "cwe": "CWE-1046",
+      "name": "Creation of Immutable Text Using String Concatenation"
+    },
+    "204": {
+      "cwe": "CWE-1047",
+      "name": "Modules with Circular Dependencies"
+    },
+    "205": {
+      "cwe": "CWE-1048",
+      "name": "Invokable Control Element with Large Number of Outward Calls"
+    },
+    "206": {
+      "cwe": "CWE-1049",
+      "name": "Excessive Data Query Operations in a Large Data Table"
+    },
+    "207": {
+      "cwe": "CWE-105",
+      "name": "Struts: Form Field Without Validator"
+    },
+    "208": {
+      "cwe": "CWE-1050",
+      "name": "Excessive Platform Resource Consumption within a Loop"
+    },
+    "209": {
+      "cwe": "CWE-1051",
+      "name": "Initialization with Hard-Coded Network Resource Configuration Data"
+    },
+    "210": {
+      "cwe": "CWE-1052",
+      "name": "Excessive Use of Hard-Coded Literals in Initialization"
+    },
+    "211": {
+      "cwe": "CWE-1053",
+      "name": "Missing Documentation for Design"
+    },
+    "212": {
+      "cwe": "CWE-1054",
+      "name": "Invocation of a Control Element at an Unnecessarily Deep Horizontal Layer"
+    },
+    "213": {
+      "cwe": "CWE-1055",
+      "name": "Multiple Inheritance from Concrete Classes"
+    },
+    "214": {
+      "cwe": "CWE-1056",
+      "name": "Invokable Control Element with Variadic Parameters"
+    },
+    "215": {
+      "cwe": "CWE-1057",
+      "name": "Data Access Operations Outside of Expected Data Manager Component"
+    },
+    "216": {
+      "cwe": "CWE-1058",
+      "name": "Invokable Control Element in Multi-Thread Context with non-Final Static Storable or Member Element"
+    },
+    "217": {
+      "cwe": "CWE-1059",
+      "name": "Insufficient Technical Documentation"
+    },
+    "218": {
+      "cwe": "CWE-106",
+      "name": "Struts: Plug-in Framework not in Use"
+    },
+    "219": {
+      "cwe": "CWE-1060",
+      "name": "Excessive Number of Inefficient Server-Side Data Accesses"
+    },
+    "220": {
+      "cwe": "CWE-1061",
+      "name": "Insufficient Encapsulation"
+    },
+    "221": {
+      "cwe": "CWE-1062",
+      "name": "Parent Class with References to Child Class"
+    },
+    "222": {
+      "cwe": "CWE-1063",
+      "name": "Creation of Class Instance within a Static Code Block"
+    },
+    "223": {
+      "cwe": "CWE-1064",
+      "name": "Invokable Control Element with Signature Containing an Excessive Number of Parameters"
+    },
+    "224": {
+      "cwe": "CWE-1065",
+      "name": "Runtime Resource Management Control Element in a Component Built to Run on Application Servers"
+    },
+    "225": {
+      "cwe": "CWE-1066",
+      "name": "Missing Serialization Control Element"
+    },
+    "226": {
+      "cwe": "CWE-1067",
+      "name": "Excessive Execution of Sequential Searches of Data Resource"
+    },
+    "227": {
+      "cwe": "CWE-1068",
+      "name": "Inconsistency Between Implementation and Documented Design"
+    },
+    "228": {
+      "cwe": "CWE-1069",
+      "name": "Empty Exception Block"
+    },
+    "229": {
+      "cwe": "CWE-107",
+      "name": "Struts: Unused Validation Form"
+    },
+    "230": {
+      "cwe": "CWE-1070",
+      "name": "Serializable Data Element Containing non-Serializable Item Elements"
+    },
+    "231": {
+      "cwe": "CWE-1071",
+      "name": "Empty Code Block"
+    },
+    "232": {
+      "cwe": "CWE-1072",
+      "name": "Data Resource Access without Use of Connection Pooling"
+    },
+    "233": {
+      "cwe": "CWE-1073",
+      "name": "Non-SQL Invokable Control Element with Excessive Number of Data Resource Accesses"
+    },
+    "234": {
+      "cwe": "CWE-1074",
+      "name": "Class with Excessively Deep Inheritance"
+    },
+    "235": {
+      "cwe": "CWE-1075",
+      "name": "Unconditional Control Flow Transfer outside of Switch Block"
+    },
+    "236": {
+      "cwe": "CWE-1076",
+      "name": "Insufficient Adherence to Expected Conventions"
+    },
+    "237": {
+      "cwe": "CWE-1077",
+      "name": "Floating Point Comparison with Incorrect Operator"
+    },
+    "238": {
+      "cwe": "CWE-1078",
+      "name": "Inappropriate Source Code Style or Formatting"
+    },
+    "239": {
+      "cwe": "CWE-1079",
+      "name": "Parent Class without Virtual Destructor Method"
+    },
+    "240": {
+      "cwe": "CWE-108",
+      "name": "Struts: Unvalidated Action Form"
+    },
+    "241": {
+      "cwe": "CWE-1080",
+      "name": "Source Code File with Excessive Number of Lines of Code"
+    },
+    "242": {
+      "cwe": "CWE-1082",
+      "name": "Class Instance Self Destruction Control Element"
+    },
+    "243": {
+      "cwe": "CWE-1083",
+      "name": "Data Access from Outside Expected Data Manager Component"
+    },
+    "244": {
+      "cwe": "CWE-1084",
+      "name": "Invokable Control Element with Excessive File or Data Access Operations"
+    },
+    "245": {
+      "cwe": "CWE-1085",
+      "name": "Invokable Control Element with Excessive Volume of Commented-out Code"
+    },
+    "246": {
+      "cwe": "CWE-1086",
+      "name": "Class with Excessive Number of Child Classes"
+    },
+    "247": {
+      "cwe": "CWE-1087",
+      "name": "Class with Virtual Method without a Virtual Destructor"
+    },
+    "248": {
+      "cwe": "CWE-1088",
+      "name": "Synchronous Access of Remote Resource without Timeout"
+    },
+    "249": {
+      "cwe": "CWE-1089",
+      "name": "Large Data Table with Excessive Number of Indices"
+    },
+    "250": {
+      "cwe": "CWE-109",
+      "name": "Struts: Validator Turned Off"
+    },
+    "251": {
+      "cwe": "CWE-1090",
+      "name": "Method Containing Access of a Member Element from Another Class"
+    },
+    "252": {
+      "cwe": "CWE-1091",
+      "name": "Use of Object without Invoking Destructor Method"
+    },
+    "253": {
+      "cwe": "CWE-1092",
+      "name": "Use of Same Invokable Control Element in Multiple Architectural Layers"
+    },
+    "254": {
+      "cwe": "CWE-1093",
+      "name": "Excessively Complex Data Representation"
+    },
+    "255": {
+      "cwe": "CWE-1094",
+      "name": "Excessive Index Range Scan for a Data Resource"
+    },
+    "256": {
+      "cwe": "CWE-1095",
+      "name": "Loop Condition Value Update within the Loop"
+    },
+    "257": {
+      "cwe": "CWE-1096",
+      "name": "Singleton Class Instance Creation without Proper Locking or Synchronization"
+    },
+    "258": {
+      "cwe": "CWE-1097",
+      "name": "Persistent Storable Data Element without Associated Comparison Control Element"
+    },
+    "259": {
+      "cwe": "CWE-1098",
+      "name": "Data Element containing Pointer Item without Proper Copy Control Element"
+    },
+    "260": {
+      "cwe": "CWE-1099",
+      "name": "Inconsistent Naming Conventions for Identifiers"
+    },
+    "261": {
+      "cwe": "CWE-11",
+      "name": "ASP.NET Misconfiguration: Creating Debug Binary"
+    },
+    "262": {
+      "cwe": "CWE-110",
+      "name": "Struts: Validator Without Form Field"
+    },
+    "263": {
+      "cwe": "CWE-1100",
+      "name": "Insufficient Isolation of System-Dependent Functions"
+    },
+    "264": {
+      "cwe": "CWE-1101",
+      "name": "Reliance on Runtime Component in Generated Code"
+    },
+    "265": {
+      "cwe": "CWE-1102",
+      "name": "Reliance on Machine-Dependent Data Representation"
+    },
+    "266": {
+      "cwe": "CWE-115",
+      "name": "Misinterpretation of Input"
+    },
+    "267": {
+      "cwe": "CWE-1103",
+      "name": "Use of Platform-Dependent Third Party Components"
+    },
+    "268": {
+      "cwe": "CWE-1104",
+      "name": "Use of Unmaintained Third Party Components"
+    },
+    "269": {
+      "cwe": "CWE-1105",
+      "name": "Insufficient Encapsulation of Machine-Dependent Functionality"
+    },
+    "270": {
+      "cwe": "CWE-1106",
+      "name": "Insufficient Use of Symbolic Constants"
+    },
+    "271": {
+      "cwe": "CWE-1107",
+      "name": "Insufficient Isolation of Symbolic Constant Definitions"
+    },
+    "272": {
+      "cwe": "CWE-1108",
+      "name": "Excessive Reliance on Global Variables"
+    },
+    "273": {
+      "cwe": "CWE-1109",
+      "name": "Use of Same Variable for Multiple Purposes"
+    },
+    "274": {
+      "cwe": "CWE-111",
+      "name": "Direct Use of Unsafe JNI"
+    },
+    "275": {
+      "cwe": "CWE-1110",
+      "name": "Incomplete Design Documentation"
+    },
+    "276": {
+      "cwe": "CWE-1111",
+      "name": "Incomplete I/O Documentation"
+    },
+    "277": {
+      "cwe": "CWE-1112",
+      "name": "Incomplete Documentation of Program Execution"
+    },
+    "278": {
+      "cwe": "CWE-1113",
+      "name": "Inappropriate Comment Style"
+    },
+    "279": {
+      "cwe": "CWE-1114",
+      "name": "Inappropriate Whitespace Style"
+    },
+    "280": {
+      "cwe": "CWE-1115",
+      "name": "Source Code Element without Standard Prologue"
+    },
+    "281": {
+      "cwe": "CWE-1116",
+      "name": "Inaccurate Comments"
+    },
+    "282": {
+      "cwe": "CWE-1117",
+      "name": "Callable with Insufficient Behavioral Summary"
+    },
+    "283": {
+      "cwe": "CWE-1118",
+      "name": "Insufficient Documentation of Error Handling Techniques"
+    },
+    "284": {
+      "cwe": "CWE-1119",
+      "name": "Excessive Use of Unconditional Branching"
+    },
+    "285": {
+      "cwe": "CWE-112",
+      "name": "Missing XML Validation"
+    },
+    "286": {
+      "cwe": "CWE-1120",
+      "name": "Excessive Code Complexity"
+    },
+    "287": {
+      "cwe": "CWE-1121",
+      "name": "Excessive McCabe Cyclomatic Complexity"
+    },
+    "288": {
+      "cwe": "CWE-1122",
+      "name": "Excessive Halstead Complexity"
+    },
+    "289": {
+      "cwe": "CWE-1123",
+      "name": "Excessive Use of Self-Modifying Code"
+    },
+    "290": {
+      "cwe": "CWE-1124",
+      "name": "Excessively Deep Nesting"
+    },
+    "291": {
+      "cwe": "CWE-1125",
+      "name": "Excessive Attack Surface"
+    },
+    "292": {
+      "cwe": "CWE-1126",
+      "name": "Declaration of Variable with Unnecessarily Wide Scope"
+    },
+    "293": {
+      "cwe": "CWE-1127",
+      "name": "Compilation with Insufficient Warnings or Errors"
+    },
+    "294": {
+      "cwe": "CWE-114",
+      "name": "Process Control"
+    },
+    "295": {
+      "cwe": "CWE-116",
+      "name": "Improper Encoding or Escaping of Output"
+    },
+    "296": {
+      "cwe": "CWE-1164",
+      "name": "Irrelevant Code"
+    },
+    "297": {
+      "cwe": "CWE-117",
+      "name": "Improper Output Neutralization for Logs"
+    },
+    "298": {
+      "cwe": "CWE-1173",
+      "name": "Improper Use of Validation Framework"
+    },
+    "299": {
+      "cwe": "CWE-1174",
+      "name": "ASP.NET Misconfiguration: Improper Model Validation"
+    },
+    "300": {
+      "cwe": "CWE-1176",
+      "name": "Inefficient CPU Computation"
+    },
+    "301": {
+      "cwe": "CWE-1177",
+      "name": "Use of Prohibited Code"
+    },
+    "302": {
+      "cwe": "CWE-118",
+      "name": "Incorrect Access of Indexable Resource ('Range Error')"
+    },
+    "303": {
+      "cwe": "CWE-1187",
+      "name": "DEPRECATED: Use of Uninitialized Resource"
+    },
+    "304": {
+      "cwe": "CWE-1188",
+      "name": "Insecure Default Initialization of Resource"
+    },
+    "305": {
+      "cwe": "CWE-1189",
+      "name": "Improper Isolation of Shared Resources on System-on-a-Chip (SoC)"
+    },
+    "306": {
+      "cwe": "CWE-1190",
+      "name": "DMA Device Enabled Too Early in Boot Phase"
+    },
+    "307": {
+      "cwe": "CWE-1191",
+      "name": "On-Chip Debug and Test Interface With Improper Access Control"
+    },
+    "308": {
+      "cwe": "CWE-1192",
+      "name": "System-on-Chip (SoC) Using Components without Unique, Immutable Identifiers"
+    },
+    "309": {
+      "cwe": "CWE-1193",
+      "name": "Power-On of Untrusted Execution Core Before Enabling Fabric Access Control"
+    },
+    "310": {
+      "cwe": "CWE-12",
+      "name": "ASP.NET Misconfiguration: Missing Custom Error Page"
+    },
+    "311": {
+      "cwe": "CWE-1204",
+      "name": "Generation of Weak Initialization Vector (IV)"
+    },
+    "312": {
+      "cwe": "CWE-1209",
+      "name": "Failure to Disable Reserved Bits"
+    },
+    "313": {
+      "cwe": "CWE-1220",
+      "name": "Insufficient Granularity of Access Control"
+    },
+    "314": {
+      "cwe": "CWE-1221",
+      "name": "Incorrect Register Defaults or Module Parameters"
+    },
+    "315": {
+      "cwe": "CWE-1250",
+      "name": "Improper Preservation of Consistency Between Independent Representations of Shared State"
+    },
+    "316": {
+      "cwe": "CWE-1222",
+      "name": "Insufficient Granularity of Address Regions Protected by Register Locks"
+    },
+    "317": {
+      "cwe": "CWE-1223",
+      "name": "Race Condition for Write-Once Attributes"
+    },
+    "318": {
+      "cwe": "CWE-1224",
+      "name": "Improper Restriction of Write-Once Bit Fields"
+    },
+    "319": {
+      "cwe": "CWE-1229",
+      "name": "Creation of Emergent Resource"
+    },
+    "320": {
+      "cwe": "CWE-1230",
+      "name": "Exposure of Sensitive Information Through Metadata"
+    },
+    "321": {
+      "cwe": "CWE-1231",
+      "name": "Improper Prevention of Lock Bit Modification"
+    },
+    "322": {
+      "cwe": "CWE-1232",
+      "name": "Improper Lock Behavior After Power State Transition"
+    },
+    "323": {
+      "cwe": "CWE-1233",
+      "name": "Security-Sensitive Hardware Controls with Missing Lock Bit Protection"
+    },
+    "324": {
+      "cwe": "CWE-1234",
+      "name": "Hardware Internal or Debug Modes Allow Override of Locks"
+    },
+    "325": {
+      "cwe": "CWE-1235",
+      "name": "Incorrect Use of Autoboxing and Unboxing for Performance Critical Operations"
+    },
+    "326": {
+      "cwe": "CWE-1236",
+      "name": "Improper Neutralization of Formula Elements in a CSV File"
+    },
+    "327": {
+      "cwe": "CWE-1239",
+      "name": "Improper Zeroization of Hardware Register"
+    },
+    "328": {
+      "cwe": "CWE-1240",
+      "name": "Use of a Cryptographic Primitive with a Risky Implementation"
+    },
+    "329": {
+      "cwe": "CWE-1241",
+      "name": "Use of Predictable Algorithm in Random Number Generator"
+    },
+    "330": {
+      "cwe": "CWE-1242",
+      "name": "Inclusion of Undocumented Features or Chicken Bits"
+    },
+    "331": {
+      "cwe": "CWE-1243",
+      "name": "Sensitive Non-Volatile Information Not Protected During Debug"
+    },
+    "332": {
+      "cwe": "CWE-1244",
+      "name": "Internal Asset Exposed to Unsafe Debug Access Level or State"
+    },
+    "333": {
+      "cwe": "CWE-1245",
+      "name": "Improper Finite State Machines (FSMs) in Hardware Logic"
+    },
+    "334": {
+      "cwe": "CWE-1246",
+      "name": "Improper Write Handling in Limited-write Non-Volatile Memories"
+    },
+    "335": {
+      "cwe": "CWE-1247",
+      "name": "Improper Protection Against Voltage and Clock Glitches"
+    },
+    "336": {
+      "cwe": "CWE-1248",
+      "name": "Semiconductor Defects in Hardware Logic with Security-Sensitive Implications"
+    },
+    "337": {
+      "cwe": "CWE-1249",
+      "name": "Application-Level Admin Tool with Inconsistent View of Underlying Operating System"
+    },
+    "338": {
+      "cwe": "CWE-1251",
+      "name": "Mirrored Regions with Different Values"
+    },
+    "339": {
+      "cwe": "CWE-1252",
+      "name": "CPU Hardware Not Configured to Support Exclusivity of Write and Execute Operations"
+    },
+    "340": {
+      "cwe": "CWE-1253",
+      "name": "Incorrect Selection of Fuse Values"
+    },
+    "341": {
+      "cwe": "CWE-1254",
+      "name": "Incorrect Comparison Logic Granularity"
+    },
+    "342": {
+      "cwe": "CWE-1255",
+      "name": "Comparison Logic is Vulnerable to Power Side-Channel Attacks"
+    },
+    "343": {
+      "cwe": "CWE-1256",
+      "name": "Improper Restriction of Software Interfaces to Hardware Features"
+    },
+    "344": {
+      "cwe": "CWE-1257",
+      "name": "Improper Access Control Applied to Mirrored or Aliased Memory Regions"
+    },
+    "345": {
+      "cwe": "CWE-1258",
+      "name": "Exposure of Sensitive System Information Due to Uncleared Debug Information"
+    },
+    "346": {
+      "cwe": "CWE-1259",
+      "name": "Improper Restriction of Security Token Assignment"
+    },
+    "347": {
+      "cwe": "CWE-1260",
+      "name": "Improper Handling of Overlap Between Protected Memory Ranges"
+    },
+    "348": {
+      "cwe": "CWE-1261",
+      "name": "Improper Handling of Single Event Upsets"
+    },
+    "349": {
+      "cwe": "CWE-1262",
+      "name": "Improper Access Control for Register Interface"
+    },
+    "350": {
+      "cwe": "CWE-1263",
+      "name": "Improper Physical Access Control"
+    },
+    "351": {
+      "cwe": "CWE-1264",
+      "name": "Hardware Logic with Insecure De-Synchronization between Control and Data Channels"
+    },
+    "352": {
+      "cwe": "CWE-1265",
+      "name": "Unintended Reentrant Invocation of Non-reentrant Code Via Nested Calls"
+    },
+    "353": {
+      "cwe": "CWE-1266",
+      "name": "Improper Scrubbing of Sensitive Data from Decommissioned Device"
+    },
+    "354": {
+      "cwe": "CWE-1267",
+      "name": "Policy Uses Obsolete Encoding"
+    },
+    "355": {
+      "cwe": "CWE-1268",
+      "name": "Policy Privileges are not Assigned Consistently Between Control and Data Agents"
+    },
+    "356": {
+      "cwe": "CWE-1269",
+      "name": "Product Released in Non-Release Configuration"
+    },
+    "357": {
+      "cwe": "CWE-1270",
+      "name": "Generation of Incorrect Security Tokens"
+    },
+    "358": {
+      "cwe": "CWE-1271",
+      "name": "Uninitialized Value on Reset for Registers Holding Security Settings"
+    },
+    "359": {
+      "cwe": "CWE-1272",
+      "name": "Sensitive Information Uncleared Before Debug/Power State Transition"
+    },
+    "360": {
+      "cwe": "CWE-1273",
+      "name": "Device Unlock Credential Sharing"
+    },
+    "361": {
+      "cwe": "CWE-1274",
+      "name": "Improper Access Control for Volatile Memory Containing Boot Code"
+    },
+    "362": {
+      "cwe": "CWE-1275",
+      "name": "Sensitive Cookie with Improper SameSite Attribute"
+    },
+    "363": {
+      "cwe": "CWE-1276",
+      "name": "Hardware Child Block Incorrectly Connected to Parent System"
+    },
+    "364": {
+      "cwe": "CWE-1277",
+      "name": "Firmware Not Updateable"
+    },
+    "365": {
+      "cwe": "CWE-1278",
+      "name": "Missing Protection Against Hardware Reverse Engineering Using Integrated Circuit (IC) Imaging Techniques"
+    },
+    "366": {
+      "cwe": "CWE-1279",
+      "name": "Cryptographic Operations are run Before Supporting Units are Ready"
+    },
+    "367": {
+      "cwe": "CWE-1280",
+      "name": "Access Control Check Implemented After Asset is Accessed"
+    },
+    "368": {
+      "cwe": "CWE-1281",
+      "name": "Sequence of Processor Instructions Leads to Unexpected Behavior"
+    },
+    "369": {
+      "cwe": "CWE-1282",
+      "name": "Assumed-Immutable Data is Stored in Writable Memory"
+    },
+    "370": {
+      "cwe": "CWE-1283",
+      "name": "Mutable Attestation or Measurement Reporting Data"
+    },
+    "371": {
+      "cwe": "CWE-1284",
+      "name": "Improper Validation of Specified Quantity in Input"
+    },
+    "372": {
+      "cwe": "CWE-1285",
+      "name": "Improper Validation of Specified Index, Position, or Offset in Input"
+    },
+    "373": {
+      "cwe": "CWE-1287",
+      "name": "Improper Validation of Specified Type of Input"
+    },
+    "374": {
+      "cwe": "CWE-1288",
+      "name": "Improper Validation of Consistency within Input"
+    },
+    "375": {
+      "cwe": "CWE-1289",
+      "name": "Improper Validation of Unsafe Equivalence in Input"
+    },
+    "376": {
+      "cwe": "CWE-1290",
+      "name": "Incorrect Decoding of Security Identifiers"
+    },
+    "377": {
+      "cwe": "CWE-1291",
+      "name": "Public Key Re-Use for Signing both Debug and Production Code"
+    },
+    "378": {
+      "cwe": "CWE-1292",
+      "name": "Incorrect Conversion of Security Identifiers"
+    },
+    "379": {
+      "cwe": "CWE-1293",
+      "name": "Missing Source Correlation of Multiple Independent Data"
+    },
+    "380": {
+      "cwe": "CWE-1294",
+      "name": "Insecure Security Identifier Mechanism"
+    },
+    "381": {
+      "cwe": "CWE-1295",
+      "name": "Debug Messages Revealing Unnecessary Information"
+    },
+    "382": {
+      "cwe": "CWE-1296",
+      "name": "Incorrect Chaining or Granularity of Debug Components"
+    },
+    "383": {
+      "cwe": "CWE-1297",
+      "name": "Unprotected Confidential Information on Device is Accessible by OSAT Vendors"
+    },
+    "384": {
+      "cwe": "CWE-1298",
+      "name": "Hardware Logic Contains Race Conditions"
+    },
+    "385": {
+      "cwe": "CWE-1299",
+      "name": "Missing Protection Mechanism for Alternate Hardware Interface"
+    },
+    "386": {
+      "cwe": "CWE-13",
+      "name": "ASP.NET Misconfiguration: Password in Configuration File"
+    },
+    "387": {
+      "cwe": "CWE-130",
+      "name": "Improper Handling of Length Parameter Inconsistency"
+    },
+    "388": {
+      "cwe": "CWE-1300",
+      "name": "Improper Protection of Physical Side Channels"
+    },
+    "389": {
+      "cwe": "CWE-1301",
+      "name": "Insufficient or Incomplete Data Removal within Hardware Component"
+    },
+    "390": {
+      "cwe": "CWE-1302",
+      "name": "Missing Security Identifier"
+    },
+    "391": {
+      "cwe": "CWE-1303",
+      "name": "Non-Transparent Sharing of Microarchitectural Resources"
+    },
+    "392": {
+      "cwe": "CWE-1304",
+      "name": "Improperly Preserved Integrity of Hardware Configuration State During a Power Save/Restore Operation"
+    },
+    "393": {
+      "cwe": "CWE-1310",
+      "name": "Missing Ability to Patch ROM Code"
+    },
+    "394": {
+      "cwe": "CWE-1311",
+      "name": "Improper Translation of Security Attributes by Fabric Bridge"
+    },
+    "395": {
+      "cwe": "CWE-1312",
+      "name": "Missing Protection for Mirrored Regions in On-Chip Fabric Firewall"
+    },
+    "396": {
+      "cwe": "CWE-1313",
+      "name": "Hardware Allows Activation of Test or Debug Logic at Runtime"
+    },
+    "397": {
+      "cwe": "CWE-1314",
+      "name": "Missing Write Protection for Parametric Data Values"
+    },
+    "398": {
+      "cwe": "CWE-1315",
+      "name": "Improper Setting of Bus Controlling Capability in Fabric End-point"
+    },
+    "399": {
+      "cwe": "CWE-1316",
+      "name": "Fabric-Address Map Allows Programming of Unwarranted Overlaps of Protected and Unprotected Ranges"
+    },
+    "400": {
+      "cwe": "CWE-1317",
+      "name": "Missing Security Checks in Fabric Bridge"
+    },
+    "401": {
+      "cwe": "CWE-1318",
+      "name": "Missing Support for Security Features in On-chip Fabrics or Buses"
+    },
+    "402": {
+      "cwe": "CWE-1319",
+      "name": "Improper Protection against Electromagnetic Fault Injection (EM-FI)"
+    },
+    "403": {
+      "cwe": "CWE-132",
+      "name": "DEPRECATED: Miscalculated Null Termination"
+    },
+    "404": {
+      "cwe": "CWE-1320",
+      "name": "Improper Protection for Out of Bounds Signal Level Alerts"
+    },
+    "405": {
+      "cwe": "CWE-1321",
+      "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+    },
+    "406": {
+      "cwe": "CWE-1322",
+      "name": "Use of Blocking Code in Single-threaded, Non-blocking Context"
+    },
+    "407": {
+      "cwe": "CWE-1323",
+      "name": "Improper Management of Sensitive Trace Data"
+    },
+    "408": {
+      "cwe": "CWE-1324",
+      "name": "Sensitive Information Accessible by Physical Probing of JTAG Interface"
+    },
+    "409": {
+      "cwe": "CWE-1325",
+      "name": "Improperly Controlled Sequential Memory Allocation"
+    },
+    "410": {
+      "cwe": "CWE-1326",
+      "name": "Missing Immutable Root of Trust in Hardware"
+    },
+    "411": {
+      "cwe": "CWE-1327",
+      "name": "Binding to an Unrestricted IP Address"
+    },
+    "412": {
+      "cwe": "CWE-1328",
+      "name": "Security Version Number Mutable to Older Versions"
+    },
+    "413": {
+      "cwe": "CWE-1329",
+      "name": "Reliance on Component That is Not Updateable"
+    },
+    "414": {
+      "cwe": "CWE-1330",
+      "name": "Remanent Data Readable after Memory Erase"
+    },
+    "415": {
+      "cwe": "CWE-1331",
+      "name": "Improper Isolation of Shared Resources in Network On Chip (NoC)"
+    },
+    "416": {
+      "cwe": "CWE-1332",
+      "name": "Improper Handling of Faults that Lead to Instruction Skips"
+    },
+    "417": {
+      "cwe": "CWE-1333",
+      "name": "Inefficient Regular Expression Complexity"
+    },
+    "418": {
+      "cwe": "CWE-1334",
+      "name": "Unauthorized Error Injection Can Degrade Hardware Redundancy"
+    },
+    "419": {
+      "cwe": "CWE-1335",
+      "name": "Incorrect Bitwise Shift of Integer"
+    },
+    "420": {
+      "cwe": "CWE-1336",
+      "name": "Improper Neutralization of Special Elements Used in a Template Engine"
+    },
+    "421": {
+      "cwe": "CWE-1338",
+      "name": "Improper Protections Against Hardware Overheating"
+    },
+    "422": {
+      "cwe": "CWE-1339",
+      "name": "Insufficient Precision or Accuracy of a Real Number"
+    },
+    "423": {
+      "cwe": "CWE-1341",
+      "name": "Multiple Releases of Same Resource or Handle"
+    },
+    "424": {
+      "cwe": "CWE-1342",
+      "name": "Information Exposure through Microarchitectural State after Transient Execution"
+    },
+    "425": {
+      "cwe": "CWE-135",
+      "name": "Incorrect Calculation of Multi-Byte String Length"
+    },
+    "426": {
+      "cwe": "CWE-1351",
+      "name": "Improper Handling of Hardware Behavior in Exceptionally Cold Environments"
+    },
+    "427": {
+      "cwe": "CWE-1357",
+      "name": "Reliance on Uncontrolled Component"
+    },
+    "428": {
+      "cwe": "CWE-1384",
+      "name": "Improper Handling of Physical or Environmental Conditions"
+    },
+    "429": {
+      "cwe": "CWE-1385",
+      "name": "Missing Origin Validation in WebSockets"
+    },
+    "430": {
+      "cwe": "CWE-1386",
+      "name": "Insecure Operation on Windows Junction / Mount Point"
+    },
+    "431": {
+      "cwe": "CWE-14",
+      "name": "Compiler Removal of Code to Clear Buffers"
+    },
+    "432": {
+      "cwe": "CWE-140",
+      "name": "Improper Neutralization of Delimiters"
+    },
+    "433": {
+      "cwe": "CWE-141",
+      "name": "Improper Neutralization of Parameter/Argument Delimiters"
+    },
+    "434": {
+      "cwe": "CWE-142",
+      "name": "Improper Neutralization of Value Delimiters"
+    },
+    "435": {
+      "cwe": "CWE-143",
+      "name": "Improper Neutralization of Record Delimiters"
+    },
+    "436": {
+      "cwe": "CWE-144",
+      "name": "Improper Neutralization of Line Delimiters"
+    },
+    "437": {
+      "cwe": "CWE-145",
+      "name": "Improper Neutralization of Section Delimiters"
+    },
+    "438": {
+      "cwe": "CWE-146",
+      "name": "Improper Neutralization of Expression/Command Delimiters"
+    },
+    "439": {
+      "cwe": "CWE-147",
+      "name": "Improper Neutralization of Input Terminators"
+    },
+    "440": {
+      "cwe": "CWE-148",
+      "name": "Improper Neutralization of Input Leaders"
+    },
+    "441": {
+      "cwe": "CWE-149",
+      "name": "Improper Neutralization of Quoting Syntax"
+    },
+    "442": {
+      "cwe": "CWE-15",
+      "name": "External Control of System or Configuration Setting"
+    },
+    "443": {
+      "cwe": "CWE-151",
+      "name": "Improper Neutralization of Comment Delimiters"
+    },
+    "444": {
+      "cwe": "CWE-152",
+      "name": "Improper Neutralization of Macro Symbols"
+    },
+    "445": {
+      "cwe": "CWE-153",
+      "name": "Improper Neutralization of Substitution Characters"
+    },
+    "446": {
+      "cwe": "CWE-154",
+      "name": "Improper Neutralization of Variable Name Delimiters"
+    },
+    "447": {
+      "cwe": "CWE-155",
+      "name": "Improper Neutralization of Wildcards or Matching Symbols"
+    },
+    "448": {
+      "cwe": "CWE-156",
+      "name": "Improper Neutralization of Whitespace"
+    },
+    "449": {
+      "cwe": "CWE-157",
+      "name": "Failure to Sanitize Paired Delimiters"
+    },
+    "450": {
+      "cwe": "CWE-158",
+      "name": "Improper Neutralization of Null Byte or NUL Character"
+    },
+    "451": {
+      "cwe": "CWE-159",
+      "name": "Improper Handling of Invalid Use of Special Elements"
+    },
+    "452": {
+      "cwe": "CWE-160",
+      "name": "Improper Neutralization of Leading Special Elements"
+    },
+    "453": {
+      "cwe": "CWE-240",
+      "name": "Improper Handling of Inconsistent Structural Elements"
+    },
+    "454": {
+      "cwe": "CWE-161",
+      "name": "Improper Neutralization of Multiple Leading Special Elements"
+    },
+    "455": {
+      "cwe": "CWE-162",
+      "name": "Improper Neutralization of Trailing Special Elements"
+    },
+    "456": {
+      "cwe": "CWE-163",
+      "name": "Improper Neutralization of Multiple Trailing Special Elements"
+    },
+    "457": {
+      "cwe": "CWE-164",
+      "name": "Improper Neutralization of Internal Special Elements"
+    },
+    "458": {
+      "cwe": "CWE-165",
+      "name": "Improper Neutralization of Multiple Internal Special Elements"
+    },
+    "459": {
+      "cwe": "CWE-166",
+      "name": "Improper Handling of Missing Special Element"
+    },
+    "460": {
+      "cwe": "CWE-167",
+      "name": "Improper Handling of Additional Special Element"
+    },
+    "461": {
+      "cwe": "CWE-168",
+      "name": "Improper Handling of Inconsistent Special Elements"
+    },
+    "462": {
+      "cwe": "CWE-172",
+      "name": "Encoding Error"
+    },
+    "463": {
+      "cwe": "CWE-173",
+      "name": "Improper Handling of Alternate Encoding"
+    },
+    "464": {
+      "cwe": "CWE-174",
+      "name": "Double Decoding of the Same Data"
+    },
+    "465": {
+      "cwe": "CWE-175",
+      "name": "Improper Handling of Mixed Encoding"
+    },
+    "466": {
+      "cwe": "CWE-176",
+      "name": "Improper Handling of Unicode Encoding"
+    },
+    "467": {
+      "cwe": "CWE-178",
+      "name": "Improper Handling of Case Sensitivity"
+    },
+    "468": {
+      "cwe": "CWE-179",
+      "name": "Incorrect Behavior Order: Early Validation"
+    },
+    "469": {
+      "cwe": "CWE-180",
+      "name": "Incorrect Behavior Order: Validate Before Canonicalize"
+    },
+    "470": {
+      "cwe": "CWE-181",
+      "name": "Incorrect Behavior Order: Validate Before Filter"
+    },
+    "471": {
+      "cwe": "CWE-182",
+      "name": "Collapse of Data into Unsafe Value"
+    },
+    "472": {
+      "cwe": "CWE-183",
+      "name": "Permissive List of Allowed Inputs"
+    },
+    "473": {
+      "cwe": "CWE-185",
+      "name": "Incorrect Regular Expression"
+    },
+    "474": {
+      "cwe": "CWE-186",
+      "name": "Overly Restrictive Regular Expression"
+    },
+    "475": {
+      "cwe": "CWE-187",
+      "name": "Partial String Comparison"
+    },
+    "476": {
+      "cwe": "CWE-188",
+      "name": "Reliance on Data/Memory Layout"
+    },
+    "477": {
+      "cwe": "CWE-214",
+      "name": "Invocation of Process Using Visible Sensitive Information"
+    },
+    "478": {
+      "cwe": "CWE-192",
+      "name": "Integer Coercion Error"
+    },
+    "479": {
+      "cwe": "CWE-194",
+      "name": "Unexpected Sign Extension"
+    },
+    "480": {
+      "cwe": "CWE-195",
+      "name": "Signed to Unsigned Conversion Error"
+    },
+    "481": {
+      "cwe": "CWE-196",
+      "name": "Unsigned to Signed Conversion Error"
+    },
+    "482": {
+      "cwe": "CWE-197",
+      "name": "Numeric Truncation Error"
+    },
+    "483": {
+      "cwe": "CWE-198",
+      "name": "Use of Incorrect Byte Ordering"
+    },
+    "484": {
+      "cwe": "CWE-202",
+      "name": "Exposure of Sensitive Information Through Data Queries"
+    },
+    "485": {
+      "cwe": "CWE-204",
+      "name": "Observable Response Discrepancy"
+    },
+    "486": {
+      "cwe": "CWE-205",
+      "name": "Observable Behavioral Discrepancy"
+    },
+    "487": {
+      "cwe": "CWE-206",
+      "name": "Observable Internal Behavioral Discrepancy"
+    },
+    "488": {
+      "cwe": "CWE-207",
+      "name": "Observable Behavioral Discrepancy With Equivalent Products"
+    },
+    "489": {
+      "cwe": "CWE-210",
+      "name": "Self-generated Error Message Containing Sensitive Information"
+    },
+    "490": {
+      "cwe": "CWE-211",
+      "name": "Externally-Generated Error Message Containing Sensitive Information"
+    },
+    "491": {
+      "cwe": "CWE-212",
+      "name": "Improper Removal of Sensitive Information Before Storage or Transfer"
+    },
+    "492": {
+      "cwe": "CWE-213",
+      "name": "Exposure of Sensitive Information Due to Incompatible Policies"
+    },
+    "493": {
+      "cwe": "CWE-216",
+      "name": "DEPRECATED: Containment Errors (Container Errors)"
+    },
+    "494": {
+      "cwe": "CWE-217",
+      "name": "DEPRECATED: Failure to Protect Stored Data from Modification"
+    },
+    "495": {
+      "cwe": "CWE-218",
+      "name": "DEPRECATED: Failure to provide confidentiality for stored data"
+    },
+    "496": {
+      "cwe": "CWE-219",
+      "name": "Storage of File with Sensitive Data Under Web Root"
+    },
+    "497": {
+      "cwe": "CWE-220",
+      "name": "Storage of File With Sensitive Data Under FTP Root"
+    },
+    "498": {
+      "cwe": "CWE-221",
+      "name": "Information Loss or Omission"
+    },
+    "499": {
+      "cwe": "CWE-222",
+      "name": "Truncation of Security-relevant Information"
+    },
+    "500": {
+      "cwe": "CWE-224",
+      "name": "Obscured Security-relevant Information by Alternate Name"
+    },
+    "501": {
+      "cwe": "CWE-225",
+      "name": "DEPRECATED: General Information Management Problems"
+    },
+    "502": {
+      "cwe": "CWE-226",
+      "name": "Sensitive Information in Resource Not Removed Before Reuse"
+    },
+    "503": {
+      "cwe": "CWE-228",
+      "name": "Improper Handling of Syntactically Invalid Structure"
+    },
+    "504": {
+      "cwe": "CWE-229",
+      "name": "Improper Handling of Values"
+    },
+    "505": {
+      "cwe": "CWE-230",
+      "name": "Improper Handling of Missing Values"
+    },
+    "506": {
+      "cwe": "CWE-231",
+      "name": "Improper Handling of Extra Values"
+    },
+    "507": {
+      "cwe": "CWE-232",
+      "name": "Improper Handling of Undefined Values"
+    },
+    "508": {
+      "cwe": "CWE-233",
+      "name": "Improper Handling of Parameters"
+    },
+    "509": {
+      "cwe": "CWE-234",
+      "name": "Failure to Handle Missing Parameter"
+    },
+    "510": {
+      "cwe": "CWE-235",
+      "name": "Improper Handling of Extra Parameters"
+    },
+    "511": {
+      "cwe": "CWE-236",
+      "name": "Improper Handling of Undefined Parameters"
+    },
+    "512": {
+      "cwe": "CWE-237",
+      "name": "Improper Handling of Structural Elements"
+    },
+    "513": {
+      "cwe": "CWE-238",
+      "name": "Improper Handling of Incomplete Structural Elements"
+    },
+    "514": {
+      "cwe": "CWE-239",
+      "name": "Failure to Handle Incomplete Element"
+    },
+    "515": {
+      "cwe": "CWE-24",
+      "name": "Path Traversal: '../filedir'"
+    },
+    "516": {
+      "cwe": "CWE-241",
+      "name": "Improper Handling of Unexpected Data Type"
+    },
+    "517": {
+      "cwe": "CWE-243",
+      "name": "Creation of chroot Jail Without Changing Working Directory"
+    },
+    "518": {
+      "cwe": "CWE-244",
+      "name": "Improper Clearing of Heap Memory Before Release ('Heap Inspection')"
+    },
+    "519": {
+      "cwe": "CWE-245",
+      "name": "J2EE Bad Practices: Direct Management of Connections"
+    },
+    "520": {
+      "cwe": "CWE-246",
+      "name": "J2EE Bad Practices: Direct Use of Sockets"
+    },
+    "521": {
+      "cwe": "CWE-247",
+      "name": "DEPRECATED: Reliance on DNS Lookups in a Security Decision"
+    },
+    "522": {
+      "cwe": "CWE-248",
+      "name": "Uncaught Exception"
+    },
+    "523": {
+      "cwe": "CWE-249",
+      "name": "DEPRECATED: Often Misused: Path Manipulation"
+    },
+    "524": {
+      "cwe": "CWE-25",
+      "name": "Path Traversal: '/../filedir'"
+    },
+    "525": {
+      "cwe": "CWE-252",
+      "name": "Unchecked Return Value"
+    },
+    "526": {
+      "cwe": "CWE-253",
+      "name": "Incorrect Check of Function Return Value"
+    },
+    "527": {
+      "cwe": "CWE-258",
+      "name": "Empty Password in Configuration File"
+    },
+    "528": {
+      "cwe": "CWE-26",
+      "name": "Path Traversal: '/dir/../filename'"
+    },
+    "529": {
+      "cwe": "CWE-262",
+      "name": "Not Using Password Aging"
+    },
+    "530": {
+      "cwe": "CWE-263",
+      "name": "Password Aging with Long Expiration"
+    },
+    "531": {
+      "cwe": "CWE-267",
+      "name": "Privilege Defined With Unsafe Actions"
+    },
+    "532": {
+      "cwe": "CWE-268",
+      "name": "Privilege Chaining"
+    },
+    "533": {
+      "cwe": "CWE-27",
+      "name": "Path Traversal: 'dir/../../filename'"
+    },
+    "534": {
+      "cwe": "CWE-270",
+      "name": "Privilege Context Switching Error"
+    },
+    "535": {
+      "cwe": "CWE-271",
+      "name": "Privilege Dropping / Lowering Errors"
+    },
+    "536": {
+      "cwe": "CWE-272",
+      "name": "Least Privilege Violation"
+    },
+    "537": {
+      "cwe": "CWE-273",
+      "name": "Improper Check for Dropped Privileges"
+    },
+    "538": {
+      "cwe": "CWE-274",
+      "name": "Improper Handling of Insufficient Privileges"
+    },
+    "539": {
+      "cwe": "CWE-276",
+      "name": "Incorrect Default Permissions"
+    },
+    "540": {
+      "cwe": "CWE-277",
+      "name": "Insecure Inherited Permissions"
+    },
+    "541": {
+      "cwe": "CWE-278",
+      "name": "Insecure Preserved Inherited Permissions"
+    },
+    "542": {
+      "cwe": "CWE-279",
+      "name": "Incorrect Execution-Assigned Permissions"
+    },
+    "543": {
+      "cwe": "CWE-28",
+      "name": "Path Traversal: '..\\filedir'"
+    },
+    "544": {
+      "cwe": "CWE-281",
+      "name": "Improper Preservation of Permissions"
+    },
+    "545": {
+      "cwe": "CWE-282",
+      "name": "Improper Ownership Management"
+    },
+    "546": {
+      "cwe": "CWE-283",
+      "name": "Unverified Ownership"
+    },
+    "547": {
+      "cwe": "CWE-286",
+      "name": "Incorrect User Management"
+    },
+    "548": {
+      "cwe": "CWE-289",
+      "name": "Authentication Bypass by Alternate Name"
+    },
+    "549": {
+      "cwe": "CWE-29",
+      "name": "Path Traversal: '\\..\\filename'"
+    },
+    "550": {
+      "cwe": "CWE-290",
+      "name": "Authentication Bypass by Spoofing"
+    },
+    "551": {
+      "cwe": "CWE-291",
+      "name": "Reliance on IP Address for Authentication"
+    },
+    "552": {
+      "cwe": "CWE-292",
+      "name": "DEPRECATED: Trusting Self-reported DNS Name"
+    },
+    "553": {
+      "cwe": "CWE-293",
+      "name": "Using Referer Field for Authentication"
+    },
+    "554": {
+      "cwe": "CWE-294",
+      "name": "Authentication Bypass by Capture-replay"
+    },
+    "555": {
+      "cwe": "CWE-297",
+      "name": "Improper Validation of Certificate with Host Mismatch"
+    },
+    "556": {
+      "cwe": "CWE-298",
+      "name": "Improper Validation of Certificate Expiration"
+    },
+    "557": {
+      "cwe": "CWE-299",
+      "name": "Improper Check for Certificate Revocation"
+    },
+    "558": {
+      "cwe": "CWE-30",
+      "name": "Path Traversal: '\\dir\\..\\filename'"
+    },
+    "559": {
+      "cwe": "CWE-301",
+      "name": "Reflection Attack in an Authentication Protocol"
+    },
+    "560": {
+      "cwe": "CWE-302",
+      "name": "Authentication Bypass by Assumed-Immutable Data"
+    },
+    "561": {
+      "cwe": "CWE-303",
+      "name": "Incorrect Implementation of Authentication Algorithm"
+    },
+    "562": {
+      "cwe": "CWE-308",
+      "name": "Use of Single-factor Authentication"
+    },
+    "563": {
+      "cwe": "CWE-309",
+      "name": "Use of Password System for Primary Authentication"
+    },
+    "564": {
+      "cwe": "CWE-31",
+      "name": "Path Traversal: 'dir\\..\\..\\filename'"
+    },
+    "565": {
+      "cwe": "CWE-313",
+      "name": "Cleartext Storage in a File or on Disk"
+    },
+    "566": {
+      "cwe": "CWE-314",
+      "name": "Cleartext Storage in the Registry"
+    },
+    "567": {
+      "cwe": "CWE-315",
+      "name": "Cleartext Storage of Sensitive Information in a Cookie"
+    },
+    "568": {
+      "cwe": "CWE-316",
+      "name": "Cleartext Storage of Sensitive Information in Memory"
+    },
+    "569": {
+      "cwe": "CWE-317",
+      "name": "Cleartext Storage of Sensitive Information in GUI"
+    },
+    "570": {
+      "cwe": "CWE-318",
+      "name": "Cleartext Storage of Sensitive Information in Executable"
+    },
+    "571": {
+      "cwe": "CWE-32",
+      "name": "Path Traversal: '...' (Triple Dot)"
+    },
+    "572": {
+      "cwe": "CWE-329",
+      "name": "Generation of Predictable IV with CBC Mode"
+    },
+    "573": {
+      "cwe": "CWE-33",
+      "name": "Path Traversal: '....' (Multiple Dot)"
+    },
+    "574": {
+      "cwe": "CWE-331",
+      "name": "Insufficient Entropy"
+    },
+    "575": {
+      "cwe": "CWE-332",
+      "name": "Insufficient Entropy in PRNG"
+    },
+    "576": {
+      "cwe": "CWE-333",
+      "name": "Improper Handling of Insufficient Entropy in TRNG"
+    },
+    "577": {
+      "cwe": "CWE-334",
+      "name": "Small Space of Random Values"
+    },
+    "578": {
+      "cwe": "CWE-335",
+      "name": "Incorrect Usage of Seeds in Pseudo-Random Number Generator (PRNG)"
+    },
+    "579": {
+      "cwe": "CWE-336",
+      "name": "Same Seed in Pseudo-Random Number Generator (PRNG)"
+    },
+    "580": {
+      "cwe": "CWE-337",
+      "name": "Predictable Seed in Pseudo-Random Number Generator (PRNG)"
+    },
+    "581": {
+      "cwe": "CWE-339",
+      "name": "Small Seed Space in PRNG"
+    },
+    "582": {
+      "cwe": "CWE-34",
+      "name": "Path Traversal: '....//'"
+    },
+    "583": {
+      "cwe": "CWE-340",
+      "name": "Generation of Predictable Numbers or Identifiers"
+    },
+    "584": {
+      "cwe": "CWE-341",
+      "name": "Predictable from Observable State"
+    },
+    "585": {
+      "cwe": "CWE-342",
+      "name": "Predictable Exact Value from Previous Values"
+    },
+    "586": {
+      "cwe": "CWE-343",
+      "name": "Predictable Value Range from Previous Values"
+    },
+    "587": {
+      "cwe": "CWE-344",
+      "name": "Use of Invariant Value in Dynamically Changing Context"
+    },
+    "588": {
+      "cwe": "CWE-346",
+      "name": "Origin Validation Error"
+    },
+    "589": {
+      "cwe": "CWE-347",
+      "name": "Improper Verification of Cryptographic Signature"
+    },
+    "590": {
+      "cwe": "CWE-348",
+      "name": "Use of Less Trusted Source"
+    },
+    "591": {
+      "cwe": "CWE-349",
+      "name": "Acceptance of Extraneous Untrusted Data With Trusted Data"
+    },
+    "592": {
+      "cwe": "CWE-755",
+      "name": "Improper Handling of Exceptional Conditions"
+    },
+    "593": {
+      "cwe": "CWE-351",
+      "name": "Insufficient Type Distinction"
+    },
+    "594": {
+      "cwe": "CWE-353",
+      "name": "Missing Support for Integrity Check"
+    },
+    "595": {
+      "cwe": "CWE-354",
+      "name": "Improper Validation of Integrity Check Value"
+    },
+    "596": {
+      "cwe": "CWE-356",
+      "name": "Product UI does not Warn User of Unsafe Actions"
+    },
+    "597": {
+      "cwe": "CWE-358",
+      "name": "Improperly Implemented Security Check for Standard"
+    },
+    "598": {
+      "cwe": "CWE-36",
+      "name": "Absolute Path Traversal"
+    },
+    "599": {
+      "cwe": "CWE-363",
+      "name": "Race Condition Enabling Link Following"
+    },
+    "600": {
+      "cwe": "CWE-364",
+      "name": "Signal Handler Race Condition"
+    },
+    "601": {
+      "cwe": "CWE-365",
+      "name": "DEPRECATED: Race Condition in Switch"
+    },
+    "602": {
+      "cwe": "CWE-366",
+      "name": "Race Condition within a Thread"
+    },
+    "603": {
+      "cwe": "CWE-368",
+      "name": "Context Switching Race Condition"
+    },
+    "604": {
+      "cwe": "CWE-369",
+      "name": "Divide By Zero"
+    },
+    "605": {
+      "cwe": "CWE-37",
+      "name": "Path Traversal: '/absolute/pathname/here'"
+    },
+    "606": {
+      "cwe": "CWE-370",
+      "name": "Missing Check for Certificate Revocation after Initial Check"
+    },
+    "607": {
+      "cwe": "CWE-372",
+      "name": "Incomplete Internal State Distinction"
+    },
+    "608": {
+      "cwe": "CWE-373",
+      "name": "DEPRECATED: State Synchronization Error"
+    },
+    "609": {
+      "cwe": "CWE-374",
+      "name": "Passing Mutable Objects to an Untrusted Method"
+    },
+    "610": {
+      "cwe": "CWE-756",
+      "name": "Missing Custom Error Page"
+    },
+    "611": {
+      "cwe": "CWE-375",
+      "name": "Returning a Mutable Object to an Untrusted Caller"
+    },
+    "612": {
+      "cwe": "CWE-378",
+      "name": "Creation of Temporary File With Insecure Permissions"
+    },
+    "613": {
+      "cwe": "CWE-379",
+      "name": "Creation of Temporary File in Directory with Insecure Permissions"
+    },
+    "614": {
+      "cwe": "CWE-38",
+      "name": "Path Traversal: '\\absolute\\pathname\\here'"
+    },
+    "615": {
+      "cwe": "CWE-382",
+      "name": "J2EE Bad Practices: Use of System.exit()"
+    },
+    "616": {
+      "cwe": "CWE-383",
+      "name": "J2EE Bad Practices: Direct Use of Threads"
+    },
+    "617": {
+      "cwe": "CWE-385",
+      "name": "Covert Timing Channel"
+    },
+    "618": {
+      "cwe": "CWE-386",
+      "name": "Symbolic Name not Mapping to Correct Object"
+    },
+    "619": {
+      "cwe": "CWE-39",
+      "name": "Path Traversal: 'C:dirname'"
+    },
+    "620": {
+      "cwe": "CWE-390",
+      "name": "Detection of Error Condition Without Action"
+    },
+    "621": {
+      "cwe": "CWE-392",
+      "name": "Missing Report of Error Condition"
+    },
+    "622": {
+      "cwe": "CWE-393",
+      "name": "Return of Wrong Status Code"
+    },
+    "623": {
+      "cwe": "CWE-394",
+      "name": "Unexpected Status Code or Return Value"
+    },
+    "624": {
+      "cwe": "CWE-395",
+      "name": "Use of NullPointerException Catch to Detect NULL Pointer Dereference"
+    },
+    "625": {
+      "cwe": "CWE-396",
+      "name": "Declaration of Catch for Generic Exception"
+    },
+    "626": {
+      "cwe": "CWE-397",
+      "name": "Declaration of Throws for Generic Exception"
+    },
+    "627": {
+      "cwe": "CWE-40",
+      "name": "Path Traversal: '\\\\UNC\\share\\name\\' (Windows UNC Share)"
+    },
+    "628": {
+      "cwe": "CWE-401",
+      "name": "Missing Release of Memory after Effective Lifetime"
+    },
+    "629": {
+      "cwe": "CWE-402",
+      "name": "Transmission of Private Resources into a New Sphere ('Resource Leak')"
+    },
+    "630": {
+      "cwe": "CWE-403",
+      "name": "Exposure of File Descriptor to Unintended Control Sphere ('File Descriptor Leak')"
+    },
+    "631": {
+      "cwe": "CWE-404",
+      "name": "Improper Resource Shutdown or Release"
+    },
+    "632": {
+      "cwe": "CWE-405",
+      "name": "Asymmetric Resource Consumption (Amplification)"
+    },
+    "633": {
+      "cwe": "CWE-406",
+      "name": "Insufficient Control of Network Message Volume (Network Amplification)"
+    },
+    "634": {
+      "cwe": "CWE-407",
+      "name": "Inefficient Algorithmic Complexity"
+    },
+    "635": {
+      "cwe": "CWE-408",
+      "name": "Incorrect Behavior Order: Early Amplification"
+    },
+    "636": {
+      "cwe": "CWE-41",
+      "name": "Improper Resolution of Path Equivalence"
+    },
+    "637": {
+      "cwe": "CWE-410",
+      "name": "Insufficient Resource Pool"
+    },
+    "638": {
+      "cwe": "CWE-412",
+      "name": "Unrestricted Externally Accessible Lock"
+    },
+    "639": {
+      "cwe": "CWE-413",
+      "name": "Improper Resource Locking"
+    },
+    "640": {
+      "cwe": "CWE-414",
+      "name": "Missing Lock Check"
+    },
+    "641": {
+      "cwe": "CWE-419",
+      "name": "Unprotected Primary Channel"
+    },
+    "642": {
+      "cwe": "CWE-42",
+      "name": "Path Equivalence: 'filename.' (Trailing Dot)"
+    },
+    "643": {
+      "cwe": "CWE-420",
+      "name": "Unprotected Alternate Channel"
+    },
+    "644": {
+      "cwe": "CWE-421",
+      "name": "Race Condition During Access to Alternate Channel"
+    },
+    "645": {
+      "cwe": "CWE-422",
+      "name": "Unprotected Windows Messaging Channel ('Shatter')"
+    },
+    "646": {
+      "cwe": "CWE-423",
+      "name": "DEPRECATED: Proxied Trusted Channel"
+    },
+    "647": {
+      "cwe": "CWE-424",
+      "name": "Improper Protection of Alternate Path"
+    },
+    "648": {
+      "cwe": "CWE-428",
+      "name": "Unquoted Search Path or Element"
+    },
+    "649": {
+      "cwe": "CWE-43",
+      "name": "Path Equivalence: 'filename....' (Multiple Trailing Dot)"
+    },
+    "650": {
+      "cwe": "CWE-430",
+      "name": "Deployment of Wrong Handler"
+    },
+    "651": {
+      "cwe": "CWE-431",
+      "name": "Missing Handler"
+    },
+    "652": {
+      "cwe": "CWE-432",
+      "name": "Dangerous Signal Handler not Disabled During Sensitive Operations"
+    },
+    "653": {
+      "cwe": "CWE-433",
+      "name": "Unparsed Raw Web Content Delivery"
+    },
+    "654": {
+      "cwe": "CWE-435",
+      "name": "Improper Interaction Between Multiple Correctly-Behaving Entities"
+    },
+    "655": {
+      "cwe": "CWE-436",
+      "name": "Interpretation Conflict"
+    },
+    "656": {
+      "cwe": "CWE-437",
+      "name": "Incomplete Model of Endpoint Features"
+    },
+    "657": {
+      "cwe": "CWE-439",
+      "name": "Behavioral Change in New Version or Environment"
+    },
+    "658": {
+      "cwe": "CWE-44",
+      "name": "Path Equivalence: 'file.name' (Internal Dot)"
+    },
+    "659": {
+      "cwe": "CWE-440",
+      "name": "Expected Behavior Violation"
+    },
+    "660": {
+      "cwe": "CWE-441",
+      "name": "Unintended Proxy or Intermediary ('Confused Deputy')"
+    },
+    "661": {
+      "cwe": "CWE-443",
+      "name": "DEPRECATED: HTTP response splitting"
+    },
+    "662": {
+      "cwe": "CWE-446",
+      "name": "UI Discrepancy for Security Feature"
+    },
+    "663": {
+      "cwe": "CWE-447",
+      "name": "Unimplemented or Unsupported Feature in UI"
+    },
+    "664": {
+      "cwe": "CWE-448",
+      "name": "Obsolete Feature in UI"
+    },
+    "665": {
+      "cwe": "CWE-449",
+      "name": "The UI Performs the Wrong Action"
+    },
+    "666": {
+      "cwe": "CWE-45",
+      "name": "Path Equivalence: 'file...name' (Multiple Internal Dot)"
+    },
+    "667": {
+      "cwe": "CWE-450",
+      "name": "Multiple Interpretations of UI Input"
+    },
+    "668": {
+      "cwe": "CWE-453",
+      "name": "Insecure Default Variable Initialization"
+    },
+    "669": {
+      "cwe": "CWE-454",
+      "name": "External Initialization of Trusted Variables or Data Stores"
+    },
+    "670": {
+      "cwe": "CWE-455",
+      "name": "Non-exit on Failed Initialization"
+    },
+    "671": {
+      "cwe": "CWE-456",
+      "name": "Missing Initialization of a Variable"
+    },
+    "672": {
+      "cwe": "CWE-458",
+      "name": "DEPRECATED: Incorrect Initialization"
+    },
+    "673": {
+      "cwe": "CWE-459",
+      "name": "Incomplete Cleanup"
+    },
+    "674": {
+      "cwe": "CWE-46",
+      "name": "Path Equivalence: 'filename ' (Trailing Space)"
+    },
+    "675": {
+      "cwe": "CWE-460",
+      "name": "Improper Cleanup on Thrown Exception"
+    },
+    "676": {
+      "cwe": "CWE-462",
+      "name": "Duplicate Key in Associative List (Alist)"
+    },
+    "677": {
+      "cwe": "CWE-463",
+      "name": "Deletion of Data Structure Sentinel"
+    },
+    "678": {
+      "cwe": "CWE-464",
+      "name": "Addition of Data Structure Sentinel"
+    },
+    "679": {
+      "cwe": "CWE-466",
+      "name": "Return of Pointer Value Outside of Expected Range"
+    },
+    "680": {
+      "cwe": "CWE-467",
+      "name": "Use of sizeof() on a Pointer Type"
+    },
+    "681": {
+      "cwe": "CWE-468",
+      "name": "Incorrect Pointer Scaling"
+    },
+    "682": {
+      "cwe": "CWE-469",
+      "name": "Use of Pointer Subtraction to Determine Size"
+    },
+    "683": {
+      "cwe": "CWE-47",
+      "name": "Path Equivalence: ' filename' (Leading Space)"
+    },
+    "684": {
+      "cwe": "CWE-470",
+      "name": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection')"
+    },
+    "685": {
+      "cwe": "CWE-472",
+      "name": "External Control of Assumed-Immutable Web Parameter"
+    },
+    "686": {
+      "cwe": "CWE-473",
+      "name": "PHP External Variable Modification"
+    },
+    "687": {
+      "cwe": "CWE-474",
+      "name": "Use of Function with Inconsistent Implementations"
+    },
+    "688": {
+      "cwe": "CWE-475",
+      "name": "Undefined Behavior for Input to API"
+    },
+    "689": {
+      "cwe": "CWE-477",
+      "name": "Use of Obsolete Function"
+    },
+    "690": {
+      "cwe": "CWE-478",
+      "name": "Missing Default Case in Switch Statement"
+    },
+    "691": {
+      "cwe": "CWE-479",
+      "name": "Signal Handler Use of a Non-reentrant Function"
+    },
+    "692": {
+      "cwe": "CWE-48",
+      "name": "Path Equivalence: 'file name' (Internal Whitespace)"
+    },
+    "693": {
+      "cwe": "CWE-480",
+      "name": "Use of Incorrect Operator"
+    },
+    "694": {
+      "cwe": "CWE-481",
+      "name": "Assigning instead of Comparing"
+    },
+    "695": {
+      "cwe": "CWE-482",
+      "name": "Comparing instead of Assigning"
+    },
+    "696": {
+      "cwe": "CWE-483",
+      "name": "Incorrect Block Delimitation"
+    },
+    "697": {
+      "cwe": "CWE-484",
+      "name": "Omitted Break Statement in Switch"
+    },
+    "698": {
+      "cwe": "CWE-486",
+      "name": "Comparison of Classes by Name"
+    },
+    "699": {
+      "cwe": "CWE-487",
+      "name": "Reliance on Package-level Scope"
+    },
+    "700": {
+      "cwe": "CWE-488",
+      "name": "Exposure of Data Element to Wrong Session"
+    },
+    "701": {
+      "cwe": "CWE-49",
+      "name": "Path Equivalence: 'filename/' (Trailing Slash)"
+    },
+    "702": {
+      "cwe": "CWE-491",
+      "name": "Public cloneable() Method Without Final ('Object Hijack')"
+    },
+    "703": {
+      "cwe": "CWE-492",
+      "name": "Use of Inner Class Containing Sensitive Data"
+    },
+    "704": {
+      "cwe": "CWE-493",
+      "name": "Critical Public Variable Without Final Modifier"
+    },
+    "705": {
+      "cwe": "CWE-495",
+      "name": "Private Data Structure Returned From A Public Method"
+    },
+    "706": {
+      "cwe": "CWE-496",
+      "name": "Public Data Assigned to Private Array-Typed Field"
+    },
+    "707": {
+      "cwe": "CWE-497",
+      "name": "Exposure of Sensitive System Information to an Unauthorized Control Sphere"
+    },
+    "708": {
+      "cwe": "CWE-498",
+      "name": "Cloneable Class Containing Sensitive Information"
+    },
+    "709": {
+      "cwe": "CWE-499",
+      "name": "Serializable Class Containing Sensitive Data"
+    },
+    "710": {
+      "cwe": "CWE-5",
+      "name": "J2EE Misconfiguration: Data Transmission Without Encryption"
+    },
+    "711": {
+      "cwe": "CWE-50",
+      "name": "Path Equivalence: '//multiple/leading/slash'"
+    },
+    "712": {
+      "cwe": "CWE-500",
+      "name": "Public Static Field Not Marked Final"
+    },
+    "713": {
+      "cwe": "CWE-501",
+      "name": "Trust Boundary Violation"
+    },
+    "714": {
+      "cwe": "CWE-507",
+      "name": "Trojan Horse"
+    },
+    "715": {
+      "cwe": "CWE-508",
+      "name": "Non-Replicating Malicious Code"
+    },
+    "716": {
+      "cwe": "CWE-51",
+      "name": "Path Equivalence: '/multiple//internal/slash'"
+    },
+    "717": {
+      "cwe": "CWE-510",
+      "name": "Trapdoor"
+    },
+    "718": {
+      "cwe": "CWE-511",
+      "name": "Logic/Time Bomb"
+    },
+    "719": {
+      "cwe": "CWE-512",
+      "name": "Spyware"
+    },
+    "720": {
+      "cwe": "CWE-514",
+      "name": "Covert Channel"
+    },
+    "721": {
+      "cwe": "CWE-515",
+      "name": "Covert Storage Channel"
+    },
+    "722": {
+      "cwe": "CWE-516",
+      "name": "DEPRECATED: Covert Timing Channel"
+    },
+    "723": {
+      "cwe": "CWE-52",
+      "name": "Path Equivalence: '/multiple/trailing/slash//'"
+    },
+    "724": {
+      "cwe": "CWE-520",
+      "name": ".NET Misconfiguration: Use of Impersonation"
+    },
+    "725": {
+      "cwe": "CWE-521",
+      "name": "Weak Password Requirements"
+    },
+    "726": {
+      "cwe": "CWE-524",
+      "name": "Use of Cache Containing Sensitive Information"
+    },
+    "727": {
+      "cwe": "CWE-526",
+      "name": "Exposure of Sensitive Information Through Environmental Variables"
+    },
+    "728": {
+      "cwe": "CWE-527",
+      "name": "Exposure of Version-Control Repository to an Unauthorized Control Sphere"
+    },
+    "729": {
+      "cwe": "CWE-528",
+      "name": "Exposure of Core Dump File to an Unauthorized Control Sphere"
+    },
+    "730": {
+      "cwe": "CWE-529",
+      "name": "Exposure of Access Control List Files to an Unauthorized Control Sphere"
+    },
+    "731": {
+      "cwe": "CWE-53",
+      "name": "Path Equivalence: '\\multiple\\\\internal\\backslash'"
+    },
+    "732": {
+      "cwe": "CWE-530",
+      "name": "Exposure of Backup File to an Unauthorized Control Sphere"
+    },
+    "733": {
+      "cwe": "CWE-531",
+      "name": "Inclusion of Sensitive Information in Test Code"
+    },
+    "734": {
+      "cwe": "CWE-532",
+      "name": "Insertion of Sensitive Information into Log File"
+    },
+    "735": {
+      "cwe": "CWE-533",
+      "name": "DEPRECATED: Information Exposure Through Server Log Files"
+    },
+    "736": {
+      "cwe": "CWE-534",
+      "name": "DEPRECATED: Information Exposure Through Debug Log Files"
+    },
+    "737": {
+      "cwe": "CWE-535",
+      "name": "Exposure of Information Through Shell Error Message"
+    },
+    "738": {
+      "cwe": "CWE-536",
+      "name": "Servlet Runtime Error Message Containing Sensitive Information"
+    },
+    "739": {
+      "cwe": "CWE-537",
+      "name": "Java Runtime Error Message Containing Sensitive Information"
+    },
+    "740": {
+      "cwe": "CWE-539",
+      "name": "Use of Persistent Cookies Containing Sensitive Information"
+    },
+    "741": {
+      "cwe": "CWE-54",
+      "name": "Path Equivalence: 'filedir\\' (Trailing Backslash)"
+    },
+    "742": {
+      "cwe": "CWE-540",
+      "name": "Inclusion of Sensitive Information in Source Code"
+    },
+    "743": {
+      "cwe": "CWE-541",
+      "name": "Inclusion of Sensitive Information in an Include File"
+    },
+    "744": {
+      "cwe": "CWE-542",
+      "name": "DEPRECATED: Information Exposure Through Cleanup Log Files"
+    },
+    "745": {
+      "cwe": "CWE-543",
+      "name": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context"
+    },
+    "746": {
+      "cwe": "CWE-544",
+      "name": "Missing Standardized Error Handling Mechanism"
+    },
+    "747": {
+      "cwe": "CWE-545",
+      "name": "DEPRECATED: Use of Dynamic Class Loading"
+    },
+    "748": {
+      "cwe": "CWE-546",
+      "name": "Suspicious Comment"
+    },
+    "749": {
+      "cwe": "CWE-547",
+      "name": "Use of Hard-coded, Security-relevant Constants"
+    },
+    "750": {
+      "cwe": "CWE-549",
+      "name": "Missing Password Field Masking"
+    },
+    "751": {
+      "cwe": "CWE-55",
+      "name": "Path Equivalence: '/./' (Single Dot Directory)"
+    },
+    "752": {
+      "cwe": "CWE-550",
+      "name": "Server-generated Error Message Containing Sensitive Information"
+    },
+    "753": {
+      "cwe": "CWE-551",
+      "name": "Incorrect Behavior Order: Authorization Before Parsing and Canonicalization"
+    },
+    "754": {
+      "cwe": "CWE-552",
+      "name": "Files or Directories Accessible to External Parties"
+    },
+    "755": {
+      "cwe": "CWE-553",
+      "name": "Command Shell in Externally Accessible Directory"
+    },
+    "756": {
+      "cwe": "CWE-554",
+      "name": "ASP.NET Misconfiguration: Not Using Input Validation Framework"
+    },
+    "757": {
+      "cwe": "CWE-555",
+      "name": "J2EE Misconfiguration: Plaintext Password in Configuration File"
+    },
+    "758": {
+      "cwe": "CWE-556",
+      "name": "ASP.NET Misconfiguration: Use of Identity Impersonation"
+    },
+    "759": {
+      "cwe": "CWE-558",
+      "name": "Use of getlogin() in Multithreaded Application"
+    },
+    "760": {
+      "cwe": "CWE-56",
+      "name": "Path Equivalence: 'filedir*' (Wildcard)"
+    },
+    "761": {
+      "cwe": "CWE-560",
+      "name": "Use of umask() with chmod-style Argument"
+    },
+    "762": {
+      "cwe": "CWE-561",
+      "name": "Dead Code"
+    },
+    "763": {
+      "cwe": "CWE-562",
+      "name": "Return of Stack Variable Address"
+    },
+    "764": {
+      "cwe": "CWE-563",
+      "name": "Assignment to Variable without Use"
+    },
+    "765": {
+      "cwe": "CWE-564",
+      "name": "SQL Injection: Hibernate"
+    },
+    "766": {
+      "cwe": "CWE-565",
+      "name": "Reliance on Cookies without Validation and Integrity Checking"
+    },
+    "767": {
+      "cwe": "CWE-566",
+      "name": "Authorization Bypass Through User-Controlled SQL Primary Key"
+    },
+    "768": {
+      "cwe": "CWE-567",
+      "name": "Unsynchronized Access to Shared Data in a Multithreaded Context"
+    },
+    "769": {
+      "cwe": "CWE-568",
+      "name": "finalize() Method Without super.finalize()"
+    },
+    "770": {
+      "cwe": "CWE-57",
+      "name": "Path Equivalence: 'fakedir/../realdir/filename'"
+    },
+    "771": {
+      "cwe": "CWE-570",
+      "name": "Expression is Always False"
+    },
+    "772": {
+      "cwe": "CWE-571",
+      "name": "Expression is Always True"
+    },
+    "773": {
+      "cwe": "CWE-572",
+      "name": "Call to Thread run() instead of start()"
+    },
+    "774": {
+      "cwe": "CWE-573",
+      "name": "Improper Following of Specification by Caller"
+    },
+    "775": {
+      "cwe": "CWE-574",
+      "name": "EJB Bad Practices: Use of Synchronization Primitives"
+    },
+    "776": {
+      "cwe": "CWE-575",
+      "name": "EJB Bad Practices: Use of AWT Swing"
+    },
+    "777": {
+      "cwe": "CWE-576",
+      "name": "EJB Bad Practices: Use of Java I/O"
+    },
+    "778": {
+      "cwe": "CWE-577",
+      "name": "EJB Bad Practices: Use of Sockets"
+    },
+    "779": {
+      "cwe": "CWE-578",
+      "name": "EJB Bad Practices: Use of Class Loader"
+    },
+    "780": {
+      "cwe": "CWE-579",
+      "name": "J2EE Bad Practices: Non-serializable Object Stored in Session"
+    },
+    "781": {
+      "cwe": "CWE-58",
+      "name": "Path Equivalence: Windows 8.3 Filename"
+    },
+    "782": {
+      "cwe": "CWE-580",
+      "name": "clone() Method Without super.clone()"
+    },
+    "783": {
+      "cwe": "CWE-581",
+      "name": "Object Model Violation: Just One of Equals and Hashcode Defined"
+    },
+    "784": {
+      "cwe": "CWE-582",
+      "name": "Array Declared Public, Final, and Static"
+    },
+    "785": {
+      "cwe": "CWE-583",
+      "name": "finalize() Method Declared Public"
+    },
+    "786": {
+      "cwe": "CWE-584",
+      "name": "Return Inside Finally Block"
+    },
+    "787": {
+      "cwe": "CWE-585",
+      "name": "Empty Synchronized Block"
+    },
+    "788": {
+      "cwe": "CWE-586",
+      "name": "Explicit Call to Finalize()"
+    },
+    "789": {
+      "cwe": "CWE-587",
+      "name": "Assignment of a Fixed Address to a Pointer"
+    },
+    "790": {
+      "cwe": "CWE-588",
+      "name": "Attempt to Access Child of a Non-structure Pointer"
+    },
+    "791": {
+      "cwe": "CWE-589",
+      "name": "Call to Non-ubiquitous API"
+    },
+    "792": {
+      "cwe": "CWE-59",
+      "name": "Improper Link Resolution Before File Access ('Link Following')"
+    },
+    "793": {
+      "cwe": "CWE-590",
+      "name": "Free of Memory not on the Heap"
+    },
+    "794": {
+      "cwe": "CWE-591",
+      "name": "Sensitive Data Storage in Improperly Locked Memory"
+    },
+    "795": {
+      "cwe": "CWE-592",
+      "name": "DEPRECATED: Authentication Bypass Issues"
+    },
+    "796": {
+      "cwe": "CWE-593",
+      "name": "Authentication Bypass: OpenSSL CTX Object Modified after SSL Objects are Created"
+    },
+    "797": {
+      "cwe": "CWE-594",
+      "name": "J2EE Framework: Saving Unserializable Objects to Disk"
+    },
+    "798": {
+      "cwe": "CWE-595",
+      "name": "Comparison of Object References Instead of Object Contents"
+    },
+    "799": {
+      "cwe": "CWE-596",
+      "name": "DEPRECATED: Incorrect Semantic Object Comparison"
+    },
+    "800": {
+      "cwe": "CWE-597",
+      "name": "Use of Wrong Operator in String Comparison"
+    },
+    "801": {
+      "cwe": "CWE-598",
+      "name": "Use of GET Request Method With Sensitive Query Strings"
+    },
+    "802": {
+      "cwe": "CWE-599",
+      "name": "Missing Validation of OpenSSL Certificate"
+    },
+    "803": {
+      "cwe": "CWE-6",
+      "name": "J2EE Misconfiguration: Insufficient Session-ID Length"
+    },
+    "804": {
+      "cwe": "CWE-600",
+      "name": "Uncaught Exception in Servlet"
+    },
+    "805": {
+      "cwe": "CWE-603",
+      "name": "Use of Client-Side Authentication"
+    },
+    "806": {
+      "cwe": "CWE-605",
+      "name": "Multiple Binds to the Same Port"
+    },
+    "807": {
+      "cwe": "CWE-606",
+      "name": "Unchecked Input for Loop Condition"
+    },
+    "808": {
+      "cwe": "CWE-607",
+      "name": "Public Static Final Field References Mutable Object"
+    },
+    "809": {
+      "cwe": "CWE-608",
+      "name": "Struts: Non-private Field in ActionForm Class"
+    },
+    "810": {
+      "cwe": "CWE-609",
+      "name": "Double-Checked Locking"
+    },
+    "811": {
+      "cwe": "CWE-612",
+      "name": "Improper Authorization of Index Containing Sensitive Information"
+    },
+    "812": {
+      "cwe": "CWE-614",
+      "name": "Sensitive Cookie in HTTPS Session Without 'Secure' Attribute"
+    },
+    "813": {
+      "cwe": "CWE-615",
+      "name": "Inclusion of Sensitive Information in Source Code Comments"
+    },
+    "814": {
+      "cwe": "CWE-616",
+      "name": "Incomplete Identification of Uploaded File Variables (PHP)"
+    },
+    "815": {
+      "cwe": "CWE-618",
+      "name": "Exposed Unsafe ActiveX Method"
+    },
+    "816": {
+      "cwe": "CWE-619",
+      "name": "Dangling Database Cursor ('Cursor Injection')"
+    },
+    "817": {
+      "cwe": "CWE-62",
+      "name": "UNIX Hard Link"
+    },
+    "818": {
+      "cwe": "CWE-621",
+      "name": "Variable Extraction Error"
+    },
+    "819": {
+      "cwe": "CWE-622",
+      "name": "Improper Validation of Function Hook Arguments"
+    },
+    "820": {
+      "cwe": "CWE-623",
+      "name": "Unsafe ActiveX Control Marked Safe For Scripting"
+    },
+    "821": {
+      "cwe": "CWE-624",
+      "name": "Executable Regular Expression Error"
+    },
+    "822": {
+      "cwe": "CWE-625",
+      "name": "Permissive Regular Expression"
+    },
+    "823": {
+      "cwe": "CWE-626",
+      "name": "Null Byte Interaction Error (Poison Null Byte)"
+    },
+    "824": {
+      "cwe": "CWE-627",
+      "name": "Dynamic Variable Evaluation"
+    },
+    "825": {
+      "cwe": "CWE-628",
+      "name": "Function Call with Incorrectly Specified Arguments"
+    },
+    "826": {
+      "cwe": "CWE-636",
+      "name": "Not Failing Securely ('Failing Open')"
+    },
+    "827": {
+      "cwe": "CWE-637",
+      "name": "Unnecessary Complexity in Protection Mechanism (Not Using 'Economy of Mechanism')"
+    },
+    "828": {
+      "cwe": "CWE-638",
+      "name": "Not Using Complete Mediation"
+    },
+    "829": {
+      "cwe": "CWE-64",
+      "name": "Windows Shortcut Following (.LNK)"
+    },
+    "830": {
+      "cwe": "CWE-641",
+      "name": "Improper Restriction of Names for Files and Other Resources"
+    },
+    "831": {
+      "cwe": "CWE-643",
+      "name": "Improper Neutralization of Data within XPath Expressions ('XPath Injection')"
+    },
+    "832": {
+      "cwe": "CWE-645",
+      "name": "Overly Restrictive Account Lockout Mechanism"
+    },
+    "833": {
+      "cwe": "CWE-646",
+      "name": "Reliance on File Name or Extension of Externally-Supplied File"
+    },
+    "834": {
+      "cwe": "CWE-647",
+      "name": "Use of Non-Canonical URL Paths for Authorization Decisions"
+    },
+    "835": {
+      "cwe": "CWE-648",
+      "name": "Incorrect Use of Privileged APIs"
+    },
+    "836": {
+      "cwe": "CWE-649",
+      "name": "Reliance on Obfuscation or Encryption of Security-Relevant Inputs without Integrity Checking"
+    },
+    "837": {
+      "cwe": "CWE-65",
+      "name": "Windows Hard Link"
+    },
+    "838": {
+      "cwe": "CWE-650",
+      "name": "Trusting HTTP Permission Methods on the Server Side"
+    },
+    "839": {
+      "cwe": "CWE-651",
+      "name": "Exposure of WSDL File Containing Sensitive Information"
+    },
+    "840": {
+      "cwe": "CWE-652",
+      "name": "Improper Neutralization of Data within XQuery Expressions ('XQuery Injection')"
+    },
+    "841": {
+      "cwe": "CWE-653",
+      "name": "Improper Isolation or Compartmentalization"
+    },
+    "842": {
+      "cwe": "CWE-654",
+      "name": "Reliance on a Single Factor in a Security Decision"
+    },
+    "843": {
+      "cwe": "CWE-655",
+      "name": "Insufficient Psychological Acceptability"
+    },
+    "844": {
+      "cwe": "CWE-66",
+      "name": "Improper Handling of File Names that Identify Virtual Resources"
+    },
+    "845": {
+      "cwe": "CWE-662",
+      "name": "Improper Synchronization"
+    },
+    "846": {
+      "cwe": "CWE-663",
+      "name": "Use of a Non-reentrant Function in a Concurrent Context"
+    },
+    "847": {
+      "cwe": "CWE-664",
+      "name": "Improper Control of a Resource Through its Lifetime"
+    },
+    "848": {
+      "cwe": "CWE-665",
+      "name": "Improper Initialization"
+    },
+    "849": {
+      "cwe": "CWE-666",
+      "name": "Operation on Resource in Wrong Phase of Lifetime"
+    },
+    "850": {
+      "cwe": "CWE-667",
+      "name": "Improper Locking"
+    },
+    "851": {
+      "cwe": "CWE-668",
+      "name": "Exposure of Resource to Wrong Sphere"
+    },
+    "852": {
+      "cwe": "CWE-669",
+      "name": "Incorrect Resource Transfer Between Spheres"
+    },
+    "853": {
+      "cwe": "CWE-67",
+      "name": "Improper Handling of Windows Device Names"
+    },
+    "854": {
+      "cwe": "CWE-670",
+      "name": "Always-Incorrect Control Flow Implementation"
+    },
+    "855": {
+      "cwe": "CWE-671",
+      "name": "Lack of Administrator Control over Security"
+    },
+    "856": {
+      "cwe": "CWE-672",
+      "name": "Operation on a Resource after Expiration or Release"
+    },
+    "857": {
+      "cwe": "CWE-673",
+      "name": "External Influence of Sphere Definition"
+    },
+    "858": {
+      "cwe": "CWE-675",
+      "name": "Multiple Operations on Resource in Single-Operation Context"
+    },
+    "859": {
+      "cwe": "CWE-676",
+      "name": "Use of Potentially Dangerous Function"
+    },
+    "860": {
+      "cwe": "CWE-680",
+      "name": "Integer Overflow to Buffer Overflow"
+    },
+    "861": {
+      "cwe": "CWE-681",
+      "name": "Incorrect Conversion between Numeric Types"
+    },
+    "862": {
+      "cwe": "CWE-682",
+      "name": "Incorrect Calculation"
+    },
+    "863": {
+      "cwe": "CWE-683",
+      "name": "Function Call With Incorrect Order of Arguments"
+    },
+    "864": {
+      "cwe": "CWE-684",
+      "name": "Incorrect Provision of Specified Functionality"
+    },
+    "865": {
+      "cwe": "CWE-685",
+      "name": "Function Call With Incorrect Number of Arguments"
+    },
+    "866": {
+      "cwe": "CWE-686",
+      "name": "Function Call With Incorrect Argument Type"
+    },
+    "867": {
+      "cwe": "CWE-687",
+      "name": "Function Call With Incorrectly Specified Argument Value"
+    },
+    "868": {
+      "cwe": "CWE-688",
+      "name": "Function Call With Incorrect Variable or Reference as Argument"
+    },
+    "869": {
+      "cwe": "CWE-689",
+      "name": "Permission Race Condition During Resource Copy"
+    },
+    "870": {
+      "cwe": "CWE-69",
+      "name": "Improper Handling of Windows ::DATA Alternate Data Stream"
+    },
+    "871": {
+      "cwe": "CWE-690",
+      "name": "Unchecked Return Value to NULL Pointer Dereference"
+    },
+    "872": {
+      "cwe": "CWE-691",
+      "name": "Insufficient Control Flow Management"
+    },
+    "873": {
+      "cwe": "CWE-692",
+      "name": "Incomplete Denylist to Cross-Site Scripting"
+    },
+    "874": {
+      "cwe": "CWE-693",
+      "name": "Protection Mechanism Failure"
+    },
+    "875": {
+      "cwe": "CWE-694",
+      "name": "Use of Multiple Resources with Duplicate Identifier"
+    },
+    "876": {
+      "cwe": "CWE-695",
+      "name": "Use of Low-Level Functionality"
+    },
+    "877": {
+      "cwe": "CWE-696",
+      "name": "Incorrect Behavior Order"
+    },
+    "878": {
+      "cwe": "CWE-698",
+      "name": "Execution After Redirect (EAR)"
+    },
+    "879": {
+      "cwe": "CWE-7",
+      "name": "J2EE Misconfiguration: Missing Custom Error Page"
+    },
+    "880": {
+      "cwe": "CWE-704",
+      "name": "Incorrect Type Conversion or Cast"
+    },
+    "881": {
+      "cwe": "CWE-705",
+      "name": "Incorrect Control Flow Scoping"
+    },
+    "882": {
+      "cwe": "CWE-707",
+      "name": "Improper Neutralization"
+    },
+    "883": {
+      "cwe": "CWE-708",
+      "name": "Incorrect Ownership Assignment"
+    },
+    "884": {
+      "cwe": "CWE-71",
+      "name": "DEPRECATED: Apple '.DS_Store'"
+    },
+    "885": {
+      "cwe": "CWE-710",
+      "name": "Improper Adherence to Coding Standards"
+    },
+    "886": {
+      "cwe": "CWE-72",
+      "name": "Improper Handling of Apple HFS+ Alternate Data Stream Path"
+    },
+    "887": {
+      "cwe": "CWE-73",
+      "name": "External Control of File Name or Path"
+    },
+    "888": {
+      "cwe": "CWE-733",
+      "name": "Compiler Optimization Removal or Modification of Security-critical Code"
+    },
+    "889": {
+      "cwe": "CWE-74",
+      "name": "Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')"
+    },
+    "890": {
+      "cwe": "CWE-754",
+      "name": "Improper Check for Unusual or Exceptional Conditions"
+    },
+    "891": {
+      "cwe": "CWE-757",
+      "name": "Selection of Less-Secure Algorithm During Negotiation ('Algorithm Downgrade')"
+    },
+    "892": {
+      "cwe": "CWE-758",
+      "name": "Reliance on Undefined, Unspecified, or Implementation-Defined Behavior"
+    },
+    "893": {
+      "cwe": "CWE-759",
+      "name": "Use of a One-Way Hash without a Salt"
+    },
+    "894": {
+      "cwe": "CWE-76",
+      "name": "Improper Neutralization of Equivalent Special Elements"
+    },
+    "895": {
+      "cwe": "CWE-760",
+      "name": "Use of a One-Way Hash with a Predictable Salt"
+    },
+    "896": {
+      "cwe": "CWE-761",
+      "name": "Free of Pointer not at Start of Buffer"
+    },
+    "897": {
+      "cwe": "CWE-762",
+      "name": "Mismatched Memory Management Routines"
+    },
+    "898": {
+      "cwe": "CWE-763",
+      "name": "Release of Invalid Pointer or Reference"
+    },
+    "899": {
+      "cwe": "CWE-764",
+      "name": "Multiple Locks of a Critical Resource"
+    },
+    "900": {
+      "cwe": "CWE-765",
+      "name": "Multiple Unlocks of a Critical Resource"
+    },
+    "901": {
+      "cwe": "CWE-766",
+      "name": "Critical Data Element Declared Public"
+    },
+    "902": {
+      "cwe": "CWE-767",
+      "name": "Access to Critical Private Variable via Public Method"
+    },
+    "903": {
+      "cwe": "CWE-768",
+      "name": "Incorrect Short Circuit Evaluation"
+    },
+    "904": {
+      "cwe": "CWE-769",
+      "name": "DEPRECATED: Uncontrolled File Descriptor Consumption"
+    },
+    "905": {
+      "cwe": "CWE-771",
+      "name": "Missing Reference to Active Allocated Resource"
+    },
+    "906": {
+      "cwe": "CWE-772",
+      "name": "Missing Release of Resource after Effective Lifetime"
+    },
+    "907": {
+      "cwe": "CWE-773",
+      "name": "Missing Reference to Active File Descriptor or Handle"
+    },
+    "908": {
+      "cwe": "CWE-774",
+      "name": "Allocation of File Descriptors or Handles Without Limits or Throttling"
+    },
+    "909": {
+      "cwe": "CWE-775",
+      "name": "Missing Release of File Descriptor or Handle after Effective Lifetime"
+    },
+    "910": {
+      "cwe": "CWE-777",
+      "name": "Regular Expression without Anchors"
+    },
+    "911": {
+      "cwe": "CWE-779",
+      "name": "Logging of Excessive Data"
+    },
+    "912": {
+      "cwe": "CWE-805",
+      "name": "Buffer Access with Incorrect Length Value"
+    },
+    "913": {
+      "cwe": "CWE-780",
+      "name": "Use of RSA Algorithm without OAEP"
+    },
+    "914": {
+      "cwe": "CWE-781",
+      "name": "Improper Address Validation in IOCTL with METHOD_NEITHER I/O Control Code"
+    },
+    "915": {
+      "cwe": "CWE-782",
+      "name": "Exposed IOCTL with Insufficient Access Control"
+    },
+    "916": {
+      "cwe": "CWE-783",
+      "name": "Operator Precedence Logic Error"
+    },
+    "917": {
+      "cwe": "CWE-785",
+      "name": "Use of Path Manipulation Function without Maximum-sized Buffer"
+    },
+    "918": {
+      "cwe": "CWE-786",
+      "name": "Access of Memory Location Before Start of Buffer"
+    },
+    "919": {
+      "cwe": "CWE-788",
+      "name": "Access of Memory Location After End of Buffer"
+    },
+    "920": {
+      "cwe": "CWE-789",
+      "name": "Memory Allocation with Excessive Size Value"
+    },
+    "921": {
+      "cwe": "CWE-790",
+      "name": "Improper Filtering of Special Elements"
+    },
+    "922": {
+      "cwe": "CWE-791",
+      "name": "Incomplete Filtering of Special Elements"
+    },
+    "923": {
+      "cwe": "CWE-792",
+      "name": "Incomplete Filtering of One or More Instances of Special Elements"
+    },
+    "924": {
+      "cwe": "CWE-793",
+      "name": "Only Filtering One Instance of a Special Element"
+    },
+    "925": {
+      "cwe": "CWE-794",
+      "name": "Incomplete Filtering of Multiple Instances of Special Elements"
+    },
+    "926": {
+      "cwe": "CWE-795",
+      "name": "Only Filtering Special Elements at a Specified Location"
+    },
+    "927": {
+      "cwe": "CWE-796",
+      "name": "Only Filtering Special Elements Relative to a Marker"
+    },
+    "928": {
+      "cwe": "CWE-797",
+      "name": "Only Filtering Special Elements at an Absolute Position"
+    },
+    "929": {
+      "cwe": "CWE-8",
+      "name": "J2EE Misconfiguration: Entity Bean Declared Remote"
+    },
+    "930": {
+      "cwe": "CWE-804",
+      "name": "Guessable CAPTCHA"
+    },
+    "931": {
+      "cwe": "CWE-806",
+      "name": "Buffer Access Using Size of Source Buffer"
+    },
+    "932": {
+      "cwe": "CWE-81",
+      "name": "Improper Neutralization of Script in an Error Message Web Page"
+    },
+    "933": {
+      "cwe": "CWE-82",
+      "name": "Improper Neutralization of Script in Attributes of IMG Tags in a Web Page"
+    },
+    "934": {
+      "cwe": "CWE-820",
+      "name": "Missing Synchronization"
+    },
+    "935": {
+      "cwe": "CWE-821",
+      "name": "Incorrect Synchronization"
+    },
+    "936": {
+      "cwe": "CWE-822",
+      "name": "Untrusted Pointer Dereference"
+    },
+    "937": {
+      "cwe": "CWE-823",
+      "name": "Use of Out-of-range Pointer Offset"
+    },
+    "938": {
+      "cwe": "CWE-824",
+      "name": "Access of Uninitialized Pointer"
+    },
+    "939": {
+      "cwe": "CWE-825",
+      "name": "Expired Pointer Dereference"
+    },
+    "940": {
+      "cwe": "CWE-826",
+      "name": "Premature Release of Resource During Expected Lifetime"
+    },
+    "941": {
+      "cwe": "CWE-827",
+      "name": "Improper Control of Document Type Definition"
+    },
+    "942": {
+      "cwe": "CWE-828",
+      "name": "Signal Handler with Functionality that is not Asynchronous-Safe"
+    },
+    "943": {
+      "cwe": "CWE-83",
+      "name": "Improper Neutralization of Script in Attributes in a Web Page"
+    },
+    "944": {
+      "cwe": "CWE-830",
+      "name": "Inclusion of Web Functionality from an Untrusted Source"
+    },
+    "945": {
+      "cwe": "CWE-831",
+      "name": "Signal Handler Function Associated with Multiple Signals"
+    },
+    "946": {
+      "cwe": "CWE-832",
+      "name": "Unlock of a Resource that is not Locked"
+    },
+    "947": {
+      "cwe": "CWE-833",
+      "name": "Deadlock"
+    },
+    "948": {
+      "cwe": "CWE-834",
+      "name": "Excessive Iteration"
+    },
+    "949": {
+      "cwe": "CWE-835",
+      "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+    },
+    "950": {
+      "cwe": "CWE-836",
+      "name": "Use of Password Hash Instead of Password for Authentication"
+    },
+    "951": {
+      "cwe": "CWE-837",
+      "name": "Improper Enforcement of a Single, Unique Action"
+    },
+    "952": {
+      "cwe": "CWE-838",
+      "name": "Inappropriate Encoding for Output Context"
+    },
+    "953": {
+      "cwe": "CWE-839",
+      "name": "Numeric Range Comparison Without Minimum Check"
+    },
+    "954": {
+      "cwe": "CWE-84",
+      "name": "Improper Neutralization of Encoded URI Schemes in a Web Page"
+    },
+    "955": {
+      "cwe": "CWE-842",
+      "name": "Placement of User into Incorrect Group"
+    },
+    "956": {
+      "cwe": "CWE-85",
+      "name": "Doubled Character XSS Manipulations"
+    },
+    "957": {
+      "cwe": "CWE-86",
+      "name": "Improper Neutralization of Invalid Characters in Identifiers in Web Pages"
+    },
+    "958": {
+      "cwe": "CWE-87",
+      "name": "Improper Neutralization of Alternate XSS Syntax"
+    },
+    "959": {
+      "cwe": "CWE-88",
+      "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+    },
+    "960": {
+      "cwe": "CWE-9",
+      "name": "J2EE Misconfiguration: Weak Access Permissions for EJB Methods"
+    },
+    "961": {
+      "cwe": "CWE-908",
+      "name": "Use of Uninitialized Resource"
+    },
+    "962": {
+      "cwe": "CWE-909",
+      "name": "Missing Initialization of Resource"
+    },
+    "963": {
+      "cwe": "CWE-910",
+      "name": "Use of Expired File Descriptor"
+    },
+    "964": {
+      "cwe": "CWE-911",
+      "name": "Improper Update of Reference Count"
+    },
+    "965": {
+      "cwe": "CWE-912",
+      "name": "Hidden Functionality"
+    },
+    "966": {
+      "cwe": "CWE-913",
+      "name": "Improper Control of Dynamically-Managed Code Resources"
+    },
+    "967": {
+      "cwe": "CWE-914",
+      "name": "Improper Control of Dynamically-Identified Variables"
+    },
+    "968": {
+      "cwe": "CWE-915",
+      "name": "Improperly Controlled Modification of Dynamically-Determined Object Attributes"
+    },
+    "969": {
+      "cwe": "CWE-916",
+      "name": "Use of Password Hash With Insufficient Computational Effort"
+    },
+    "970": {
+      "cwe": "CWE-917",
+      "name": "Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')"
+    },
+    "971": {
+      "cwe": "CWE-92",
+      "name": "DEPRECATED: Improper Sanitization of Custom Special Characters"
+    },
+    "972": {
+      "cwe": "CWE-920",
+      "name": "Improper Restriction of Power Consumption"
+    },
+    "973": {
+      "cwe": "CWE-923",
+      "name": "Improper Restriction of Communication Channel to Intended Endpoints"
+    },
+    "974": {
+      "cwe": "CWE-924",
+      "name": "Improper Enforcement of Message Integrity During Transmission in a Communication Channel"
+    },
+    "975": {
+      "cwe": "CWE-925",
+      "name": "Improper Verification of Intent by Broadcast Receiver"
+    },
+    "976": {
+      "cwe": "CWE-927",
+      "name": "Use of Implicit Intent for Sensitive Communication"
+    },
+    "977": {
+      "cwe": "CWE-939",
+      "name": "Improper Authorization in Handler for Custom URL Scheme"
+    },
+    "978": {
+      "cwe": "CWE-940",
+      "name": "Improper Verification of Source of a Communication Channel"
+    },
+    "979": {
+      "cwe": "CWE-942",
+      "name": "Permissive Cross-domain Policy with Untrusted Domains"
+    },
+    "980": {
+      "cwe": "CWE-943",
+      "name": "Improper Neutralization of Special Elements in Data Query Logic"
+    },
+    "981": {
+      "cwe": "CWE-95",
+      "name": "Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+    },
+    "982": {
+      "cwe": "CWE-96",
+      "name": "Improper Neutralization of Directives in Statically Saved Code ('Static Code Injection')"
+    },
+    "983": {
+      "cwe": "CWE-97",
+      "name": "Improper Neutralization of Server-Side Includes (SSI) Within a Web Page"
+    },
+    "984": {
+      "cwe": null,
+      "name": "Accessing Functionality Not Properly Constrained by ACLs"
+    },
+    "985": {
+      "cwe": null,
+      "name": "Buffer Overflow via Environment Variables"
+    },
+    "986": {
+      "cwe": null,
+      "name": "Overflow Buffers"
+    },
+    "987": {
+      "cwe": null,
+      "name": "Altered Installed BIOS"
+    },
+    "988": {
+      "cwe": null,
+      "name": "Server Side Include (SSI) Injection"
+    },
+    "989": {
+      "cwe": null,
+      "name": "Session Sidejacking"
+    },
+    "990": {
+      "cwe": null,
+      "name": "Cross Zone Scripting"
+    },
+    "991": {
+      "cwe": null,
+      "name": "HTTP Request Splitting"
+    },
+    "992": {
+      "cwe": null,
+      "name": "DEPRECATED: XSS through Log Files"
+    },
+    "993": {
+      "cwe": null,
+      "name": "Cross Site Tracing"
+    },
+    "994": {
+      "cwe": null,
+      "name": "Command Line Execution through SQL Injection"
+    },
+    "995": {
+      "cwe": null,
+      "name": "Object Relational Mapping Injection"
+    },
+    "996": {
+      "cwe": null,
+      "name": "Cause Web Server Misclassification"
+    },
+    "997": {
+      "cwe": null,
+      "name": "SQL Injection through SOAP Parameter Tampering"
+    },
+    "998": {
+      "cwe": null,
+      "name": "JSON Hijacking (aka JavaScript Hijacking)"
+    },
+    "999": {
+      "cwe": null,
+      "name": "Brute Force"
+    },
+    "1000": {
+      "cwe": null,
+      "name": "Interface Manipulation"
+    },
+    "1001": {
+      "cwe": null,
+      "name": "Authentication Abuse"
+    },
+    "1002": {
+      "cwe": null,
+      "name": "Authentication Bypass"
+    },
+    "1003": {
+      "cwe": null,
+      "name": "Excavation"
+    },
+    "1004": {
+      "cwe": null,
+      "name": "Interception"
+    },
+    "1005": {
+      "cwe": null,
+      "name": "Choosing Message Identifier"
+    },
+    "1006": {
+      "cwe": null,
+      "name": "Double Encoding"
+    },
+    "1007": {
+      "cwe": null,
+      "name": "Exploit Non-Production Interfaces"
+    },
+    "1008": {
+      "cwe": null,
+      "name": "Privilege Abuse"
+    },
+    "1009": {
+      "cwe": null,
+      "name": "Buffer Manipulation"
+    },
+    "1010": {
+      "cwe": null,
+      "name": "Configuration/Environment Manipulation"
+    },
+    "1011": {
+      "cwe": null,
+      "name": "Shared Resource Manipulation"
+    },
+    "1012": {
+      "cwe": null,
+      "name": "Flooding"
+    },
+    "1013": {
+      "cwe": null,
+      "name": "Path Traversal"
+    },
+    "1014": {
+      "cwe": null,
+      "name": "Directory Indexing"
+    },
+    "1015": {
+      "cwe": null,
+      "name": "Integer Attacks"
+    },
+    "1016": {
+      "cwe": null,
+      "name": "Pointer Manipulation"
+    },
+    "1017": {
+      "cwe": null,
+      "name": "Subverting Environment Variable Values"
+    },
+    "1018": {
+      "cwe": null,
+      "name": "Excessive Allocation"
+    },
+    "1019": {
+      "cwe": null,
+      "name": "Resource Leak Exposure"
+    },
+    "1020": {
+      "cwe": null,
+      "name": "Symlink Attack"
+    },
+    "1021": {
+      "cwe": null,
+      "name": "Try All Common Switches"
+    },
+    "1022": {
+      "cwe": null,
+      "name": "Email Injection"
+    },
+    "1023": {
+      "cwe": null,
+      "name": "Hardware Component Substitution"
+    },
+    "1024": {
+      "cwe": null,
+      "name": "Format String Injection"
+    },
+    "1025": {
+      "cwe": null,
+      "name": "LDAP Injection"
+    },
+    "1026": {
+      "cwe": null,
+      "name": "Parameter Injection"
+    },
+    "1027": {
+      "cwe": null,
+      "name": "Reflection Injection"
+    },
+    "1028": {
+      "cwe": null,
+      "name": "Relative Path Traversal"
+    },
+    "1029": {
+      "cwe": null,
+      "name": "Client-side Injection-induced Buffer Overflow"
+    },
+    "1030": {
+      "cwe": null,
+      "name": "Bypassing of Intermediate Forms in Multiple-Form Sets"
+    },
+    "1031": {
+      "cwe": null,
+      "name": "DNS Cache Poisoning"
+    },
+    "1032": {
+      "cwe": null,
+      "name": "Detect Unpublicized Web Pages"
+    },
+    "1033": {
+      "cwe": null,
+      "name": "Detect Unpublicized Web Services"
+    },
+    "1034": {
+      "cwe": null,
+      "name": "Checksum Spoofing"
+    },
+    "1035": {
+      "cwe": null,
+      "name": "XML Schema Poisoning"
+    },
+    "1036": {
+      "cwe": null,
+      "name": "XML Ping of the Death"
+    },
+    "1037": {
+      "cwe": null,
+      "name": "Content Spoofing"
+    },
+    "1038": {
+      "cwe": null,
+      "name": "Explore for Predictable Temporary File Names"
+    },
+    "1039": {
+      "cwe": null,
+      "name": "Command Delimiters"
+    },
+    "1040": {
+      "cwe": null,
+      "name": "Collect Data from Common Resource Locations"
+    },
+    "1041": {
+      "cwe": null,
+      "name": "Identity Spoofing"
+    },
+    "1042": {
+      "cwe": null,
+      "name": "Input Data Manipulation"
+    },
+    "1043": {
+      "cwe": null,
+      "name": "Resource Location Spoofing"
+    },
+    "1044": {
+      "cwe": null,
+      "name": "Screen Temporary Files for Sensitive Information"
+    },
+    "1045": {
+      "cwe": null,
+      "name": "Client-Server Protocol Manipulation"
+    },
+    "1046": {
+      "cwe": null,
+      "name": "Sniffing Attacks"
+    },
+    "1047": {
+      "cwe": null,
+      "name": "Sniffing Network Traffic"
+    },
+    "1048": {
+      "cwe": null,
+      "name": "Redirect Access to Libraries"
+    },
+    "1049": {
+      "cwe": null,
+      "name": "Dictionary-based Password Attack"
+    },
+    "1050": {
+      "cwe": null,
+      "name": "Exploit Script-Based APIs"
+    },
+    "1051": {
+      "cwe": null,
+      "name": "Infrastructure Manipulation"
+    },
+    "1052": {
+      "cwe": null,
+      "name": "Manipulating Hidden Fields"
+    },
+    "1053": {
+      "cwe": null,
+      "name": "Spear Phishing"
+    },
+    "1054": {
+      "cwe": null,
+      "name": "Mobile Phishing"
+    },
+    "1055": {
+      "cwe": null,
+      "name": "Exponential Data Expansion"
+    },
+    "1056": {
+      "cwe": null,
+      "name": "File Manipulation"
+    },
+    "1057": {
+      "cwe": null,
+      "name": "Force the System to Reset Values"
+    },
+    "1058": {
+      "cwe": null,
+      "name": "White Box Reverse Engineering"
+    },
+    "1059": {
+      "cwe": null,
+      "name": "Windows ::DATA Alternate Data Stream"
+    },
+    "1060": {
+      "cwe": null,
+      "name": "Footprinting"
+    },
+    "1061": {
+      "cwe": null,
+      "name": "Using Malicious Files"
+    },
+    "1062": {
+      "cwe": null,
+      "name": "Web Application Fingerprinting"
+    },
+    "1063": {
+      "cwe": null,
+      "name": "DEPRECATED: Variable Manipulation"
+    },
+    "1064": {
+      "cwe": null,
+      "name": "Action Spoofing"
+    },
+    "1065": {
+      "cwe": null,
+      "name": "Flash Parameter Injection"
+    },
+    "1066": {
+      "cwe": null,
+      "name": "Code Inclusion"
+    },
+    "1067": {
+      "cwe": null,
+      "name": "DEPRECATED: Catching exception throw/signal from privileged block"
+    },
+    "1068": {
+      "cwe": null,
+      "name": "Create files with the same name as files protected with a higher classification"
+    },
+    "1069": {
+      "cwe": null,
+      "name": "Cross-Site Flashing"
+    },
+    "1070": {
+      "cwe": null,
+      "name": "Calling Micro-Services Directly"
+    },
+    "1071": {
+      "cwe": null,
+      "name": "XSS Targeting Non-Script Elements"
+    },
+    "1072": {
+      "cwe": null,
+      "name": "Exploiting Incorrectly Configured Access Control Security Levels"
+    },
+    "1073": {
+      "cwe": null,
+      "name": "Flash File Overlay"
+    },
+    "1074": {
+      "cwe": null,
+      "name": "Flash Injection"
+    },
+    "1075": {
+      "cwe": null,
+      "name": "IMAP/SMTP Command Injection"
+    },
+    "1076": {
+      "cwe": null,
+      "name": "Software Integrity Attack"
+    },
+    "1077": {
+      "cwe": null,
+      "name": "Malicious Software Download"
+    },
+    "1078": {
+      "cwe": null,
+      "name": "Malicious Software Update"
+    },
+    "1079": {
+      "cwe": null,
+      "name": "Exploiting Trust in Client"
+    },
+    "1080": {
+      "cwe": null,
+      "name": "Malicious Automated Software Update via Redirection"
+    },
+    "1081": {
+      "cwe": null,
+      "name": "Reverse Engineering"
+    },
+    "1082": {
+      "cwe": null,
+      "name": "Black Box Reverse Engineering"
+    },
+    "1083": {
+      "cwe": null,
+      "name": "Embedding Scripts within Scripts"
+    },
+    "1084": {
+      "cwe": null,
+      "name": "Reverse Engineer an Executable to Expose Assumed Hidden Functionality"
+    },
+    "1085": {
+      "cwe": null,
+      "name": "Read Sensitive Constants Within an Executable"
+    },
+    "1086": {
+      "cwe": null,
+      "name": "Protocol Analysis"
+    },
+    "1087": {
+      "cwe": null,
+      "name": "PHP Remote File Inclusion"
+    },
+    "1088": {
+      "cwe": null,
+      "name": "Fake the Source of Data"
+    },
+    "1089": {
+      "cwe": null,
+      "name": "Principal Spoof"
+    },
+    "1090": {
+      "cwe": null,
+      "name": "Session Credential Falsification through Forging"
+    },
+    "1091": {
+      "cwe": null,
+      "name": "DEPRECATED: ICMP Echo Request Ping"
+    },
+    "1092": {
+      "cwe": null,
+      "name": "XSS Targeting Error Pages"
+    },
+    "1093": {
+      "cwe": null,
+      "name": "XSS Using Alternate Syntax"
+    },
+    "1094": {
+      "cwe": null,
+      "name": "Inducing Account Lockout"
+    },
+    "1095": {
+      "cwe": null,
+      "name": "Encryption Brute Forcing"
+    },
+    "1096": {
+      "cwe": null,
+      "name": "Removal of filters: Input filters, output filters, data masking"
+    },
+    "1097": {
+      "cwe": null,
+      "name": "Serialized Data External Linking"
+    },
+    "1098": {
+      "cwe": null,
+      "name": "Create Malicious Client"
+    },
+    "1099": {
+      "cwe": null,
+      "name": "Manipulate Registry Information"
+    },
+    "1100": {
+      "cwe": null,
+      "name": "Lifting Sensitive Data Embedded in Cache"
+    },
+    "1101": {
+      "cwe": null,
+      "name": "DEPRECATED: Lifting credential(s)/key material embedded in client distributions (thick or thin)"
+    },
+    "1102": {
+      "cwe": null,
+      "name": "Signing Malicious Code"
+    },
+    "1103": {
+      "cwe": null,
+      "name": "DEPRECATED: Infrastructure-based footprinting"
+    },
+    "1104": {
+      "cwe": null,
+      "name": "Removing Important Client Functionality"
+    },
+    "1105": {
+      "cwe": null,
+      "name": "Removing/short-circuiting 'Purse' logic: removing/mutating 'cash' decrements"
+    },
+    "1106": {
+      "cwe": null,
+      "name": "Exploitation of Trusted Identifiers"
+    },
+    "1107": {
+      "cwe": null,
+      "name": "DEPRECATED: Leveraging web tools (e.g. Mozilla's GreaseMonkey, Firebug) to change application behavior"
+    },
+    "1108": {
+      "cwe": null,
+      "name": "Functionality Misuse"
+    },
+    "1109": {
+      "cwe": null,
+      "name": "DEPRECATED: Directory Traversal"
+    },
+    "1110": {
+      "cwe": null,
+      "name": "DEPRECATED: Fuzzing for garnering J2EE/.NET-based stack traces, for application mapping"
+    },
+    "1111": {
+      "cwe": null,
+      "name": "Fuzzing for application mapping"
+    },
+    "1112": {
+      "cwe": null,
+      "name": "Communication Channel Manipulation"
+    },
+    "1113": {
+      "cwe": null,
+      "name": "Exploiting Incorrectly Configured SSL/TLS"
+    },
+    "1114": {
+      "cwe": null,
+      "name": "Spoofing of UDDI/ebXML Messages"
+    },
+    "1115": {
+      "cwe": null,
+      "name": "XML Routing Detour Attacks"
+    },
+    "1116": {
+      "cwe": null,
+      "name": "Data Serialization External Entities Blowup"
+    },
+    "1117": {
+      "cwe": null,
+      "name": "iFrame Overlay"
+    },
+    "1118": {
+      "cwe": null,
+      "name": "Fingerprinting"
+    },
+    "1119": {
+      "cwe": null,
+      "name": "Session Credential Falsification through Manipulation"
+    },
+    "1120": {
+      "cwe": null,
+      "name": "Sustained Client Engagement"
+    },
+    "1121": {
+      "cwe": null,
+      "name": "DTD Injection"
+    },
+    "1122": {
+      "cwe": null,
+      "name": "Serialized Data Parameter Blowup"
+    },
+    "1123": {
+      "cwe": null,
+      "name": "File Content Injection"
+    },
+    "1124": {
+      "cwe": null,
+      "name": "Serialized Data with Nested Payloads"
+    },
+    "1125": {
+      "cwe": null,
+      "name": "Oversized Serialized Data Payloads"
+    },
+    "1126": {
+      "cwe": null,
+      "name": "Hijacking a privileged process"
+    },
+    "1127": {
+      "cwe": null,
+      "name": "DEPRECATED: Implementing a callback to system routine (old AWT Queue)"
+    },
+    "1128": {
+      "cwe": null,
+      "name": "Escaping a Sandbox by Calling Code in Another Language"
+    },
+    "1129": {
+      "cwe": null,
+      "name": "DEPRECATED: Using URL/codebase / G.A.C. (code source) to convince sandbox of privilege"
+    },
+    "1130": {
+      "cwe": null,
+      "name": "DEPRECATED: Subversion of Authorization Checks: Cache Filtering, Programmatic Security, etc."
+    },
+    "1131": {
+      "cwe": null,
+      "name": "Filter Failure through Buffer Overflow"
+    },
+    "1132": {
+      "cwe": null,
+      "name": "Resource Injection"
+    },
+    "1133": {
+      "cwe": null,
+      "name": "DEPRECATED: Code Injection"
+    },
+    "1134": {
+      "cwe": null,
+      "name": "Code Injection"
+    },
+    "1135": {
+      "cwe": null,
+      "name": "XSS Targeting HTML Attributes"
+    },
+    "1136": {
+      "cwe": null,
+      "name": "XSS Targeting URI Placeholders"
+    },
+    "1137": {
+      "cwe": null,
+      "name": "XSS Using Doubled Characters"
+    },
+    "1138": {
+      "cwe": null,
+      "name": "DEPRECATED: XSS Using Flash"
+    },
+    "1139": {
+      "cwe": null,
+      "name": "XSS Using Invalid Characters"
+    },
+    "1140": {
+      "cwe": null,
+      "name": "Command Injection"
+    },
+    "1141": {
+      "cwe": null,
+      "name": "DEPRECATED: Linux Terminal Injection"
+    },
+    "1142": {
+      "cwe": null,
+      "name": "Forced Deadlock"
+    },
+    "1143": {
+      "cwe": null,
+      "name": "XML Injection"
+    },
+    "1144": {
+      "cwe": null,
+      "name": "Local Code Inclusion"
+    },
+    "1145": {
+      "cwe": null,
+      "name": "Remote Code Inclusion"
+    },
+    "1146": {
+      "cwe": null,
+      "name": "DEPRECATED: DTD Injection in a SOAP Message"
+    },
+    "1147": {
+      "cwe": null,
+      "name": "SOAP Array Overflow"
+    },
+    "1148": {
+      "cwe": null,
+      "name": "DEPRECATED: Abuse of Transaction Data Structure"
+    },
+    "1149": {
+      "cwe": null,
+      "name": "DEPRECATED: Passively Sniffing and Capturing Application Code Bound for an Authorized Client During Dynamic Update"
+    },
+    "1150": {
+      "cwe": null,
+      "name": "DEPRECATED: Passively Sniffing and Capturing Application Code Bound for an Authorized Client During Patching"
+    },
+    "1151": {
+      "cwe": null,
+      "name": "Leveraging Race Conditions"
+    },
+    "1152": {
+      "cwe": null,
+      "name": "DEPRECATED: Passively Sniffing and Capturing Application Code Bound for an Authorized Client During Initial Distribution"
+    },
+    "1153": {
+      "cwe": null,
+      "name": "Fuzzing for garnering other adjacent user/sensitive data"
+    },
+    "1154": {
+      "cwe": null,
+      "name": "Force Use of Corrupted Files"
+    },
+    "1155": {
+      "cwe": null,
+      "name": "DEPRECATED: Environment Variable Manipulation"
+    },
+    "1156": {
+      "cwe": null,
+      "name": "DEPRECATED: Global variable manipulation"
+    },
+    "1157": {
+      "cwe": null,
+      "name": "DEPRECATED: Manipulate Canonicalization"
+    },
+    "1158": {
+      "cwe": null,
+      "name": "Leverage Alternate Encoding"
+    },
+    "1159": {
+      "cwe": null,
+      "name": "Audit Log Manipulation"
+    },
+    "1160": {
+      "cwe": null,
+      "name": "DEPRECATED: Registry Manipulation"
+    },
+    "1161": {
+      "cwe": null,
+      "name": "Leveraging Race Conditions via Symbolic Links"
+    },
+    "1162": {
+      "cwe": null,
+      "name": "Modification of Registry Run Keys"
+    },
+    "1163": {
+      "cwe": null,
+      "name": "Schema Poisoning"
+    },
+    "1164": {
+      "cwe": null,
+      "name": "Protocol Manipulation"
+    },
+    "1165": {
+      "cwe": null,
+      "name": "HTTP Response Smuggling"
+    },
+    "1166": {
+      "cwe": null,
+      "name": "HTTP Verb Tampering"
+    },
+    "1167": {
+      "cwe": null,
+      "name": "DNS Rebinding"
+    },
+    "1168": {
+      "cwe": null,
+      "name": "Inter-component Protocol Manipulation"
+    },
+    "1169": {
+      "cwe": null,
+      "name": "Data Interchange Protocol Manipulation"
+    },
+    "1170": {
+      "cwe": null,
+      "name": "Web Services Protocol Manipulation"
+    },
+    "1171": {
+      "cwe": null,
+      "name": "SOAP Manipulation"
+    },
+    "1172": {
+      "cwe": null,
+      "name": "Fuzzing"
+    },
+    "1173": {
+      "cwe": null,
+      "name": "DEPRECATED: SOAP Parameter Tampering"
+    },
+    "1174": {
+      "cwe": null,
+      "name": "ICMP Echo Request Ping"
+    },
+    "1175": {
+      "cwe": null,
+      "name": "TCP SYN Scan"
+    },
+    "1176": {
+      "cwe": null,
+      "name": "Leveraging Time-of-Check and Time-of-Use (TOCTOU) Race Conditions"
+    },
+    "1177": {
+      "cwe": null,
+      "name": "Enumerate Mail Exchange (MX) Records"
+    },
+    "1178": {
+      "cwe": null,
+      "name": "Host Discovery"
+    },
+    "1179": {
+      "cwe": null,
+      "name": "Traceroute Route Enumeration"
+    },
+    "1180": {
+      "cwe": null,
+      "name": "ICMP Address Mask Request"
+    },
+    "1181": {
+      "cwe": null,
+      "name": "Timestamp Request"
+    },
+    "1182": {
+      "cwe": null,
+      "name": "ICMP Information Request"
+    },
+    "1183": {
+      "cwe": null,
+      "name": "TCP ACK Ping"
+    },
+    "1184": {
+      "cwe": null,
+      "name": "UDP Ping"
+    },
+    "1185": {
+      "cwe": null,
+      "name": "TCP SYN Ping"
+    },
+    "1186": {
+      "cwe": null,
+      "name": "Using Leading 'Ghost' Character Sequences to Bypass Input Filters"
+    },
+    "1187": {
+      "cwe": null,
+      "name": "Hijacking a Privileged Thread of Execution"
+    },
+    "1188": {
+      "cwe": null,
+      "name": "Port Scanning"
+    },
+    "1189": {
+      "cwe": null,
+      "name": "TCP Connect Scan"
+    },
+    "1190": {
+      "cwe": null,
+      "name": "TCP FIN Scan"
+    },
+    "1191": {
+      "cwe": null,
+      "name": "TCP Xmas Scan"
+    },
+    "1192": {
+      "cwe": null,
+      "name": "TCP Null Scan"
+    },
+    "1193": {
+      "cwe": null,
+      "name": "TCP ACK Scan"
+    },
+    "1194": {
+      "cwe": null,
+      "name": "TCP Window Scan"
+    },
+    "1195": {
+      "cwe": null,
+      "name": "TCP RPC Scan"
+    },
+    "1196": {
+      "cwe": null,
+      "name": "UDP Scan"
+    },
+    "1197": {
+      "cwe": null,
+      "name": "Network Topology Mapping"
+    },
+    "1198": {
+      "cwe": null,
+      "name": "Accessing/Intercepting/Modifying HTTP Cookies"
+    },
+    "1199": {
+      "cwe": null,
+      "name": "Scanning for Vulnerable Software"
+    },
+    "1200": {
+      "cwe": null,
+      "name": "DEPRECATED: OS Fingerprinting"
+    },
+    "1201": {
+      "cwe": null,
+      "name": "Active OS Fingerprinting"
+    },
+    "1202": {
+      "cwe": null,
+      "name": "Passive OS Fingerprinting"
+    },
+    "1203": {
+      "cwe": null,
+      "name": "DEPRECATED: IP Fingerprinting Probes"
+    },
+    "1204": {
+      "cwe": null,
+      "name": "DEPRECATED: TCP/IP Fingerprinting Probes"
+    },
+    "1205": {
+      "cwe": null,
+      "name": "DEPRECATED: ICMP Fingerprinting Probes"
+    },
+    "1206": {
+      "cwe": null,
+      "name": "IP ID Sequencing Probe"
+    },
+    "1207": {
+      "cwe": null,
+      "name": "IP 'ID' Echoed Byte-Order Probe"
+    },
+    "1208": {
+      "cwe": null,
+      "name": "IP (DF) 'Don't Fragment Bit' Echoing Probe"
+    },
+    "1209": {
+      "cwe": null,
+      "name": "XSS Through HTTP Query Strings"
+    },
+    "1210": {
+      "cwe": null,
+      "name": "TCP Timestamp Probe"
+    },
+    "1211": {
+      "cwe": null,
+      "name": "TCP Flood"
+    },
+    "1212": {
+      "cwe": null,
+      "name": "TCP Sequence Number Probe"
+    },
+    "1213": {
+      "cwe": null,
+      "name": "TCP (ISN) Greatest Common Divisor Probe"
+    },
+    "1214": {
+      "cwe": null,
+      "name": "TCP (ISN) Counter Rate Probe"
+    },
+    "1215": {
+      "cwe": null,
+      "name": "TCP (ISN) Sequence Predictability Probe"
+    },
+    "1216": {
+      "cwe": null,
+      "name": "TCP Congestion Control Flag (ECN) Probe"
+    },
+    "1217": {
+      "cwe": null,
+      "name": "TCP Initial Window Size Probe"
+    },
+    "1218": {
+      "cwe": null,
+      "name": "TCP Options Probe"
+    },
+    "1219": {
+      "cwe": null,
+      "name": "TCP 'RST' Flag Checksum Probe"
+    },
+    "1220": {
+      "cwe": null,
+      "name": "ICMP Error Message Quoting Probe"
+    },
+    "1221": {
+      "cwe": null,
+      "name": "HTTP Request Smuggling"
+    },
+    "1222": {
+      "cwe": null,
+      "name": "ICMP Error Message Echoing Integrity Probe"
+    },
+    "1223": {
+      "cwe": null,
+      "name": "ICMP IP Total Length Field Probe"
+    },
+    "1224": {
+      "cwe": null,
+      "name": "ICMP IP 'ID' Field Error Message Probe"
+    },
+    "1225": {
+      "cwe": null,
+      "name": "HTTP Response Splitting"
+    },
+    "1226": {
+      "cwe": null,
+      "name": "Leverage Executable Code in Non-Executable Files"
+    },
+    "1227": {
+      "cwe": null,
+      "name": "Using Unpublished Interfaces"
+    },
+    "1228": {
+      "cwe": null,
+      "name": "Retrieve Embedded Sensitive Data"
+    },
+    "1229": {
+      "cwe": null,
+      "name": "Leveraging/Manipulating Configuration File Search Paths"
+    },
+    "1230": {
+      "cwe": null,
+      "name": "Harvesting Information via API Event Monitoring"
+    },
+    "1231": {
+      "cwe": null,
+      "name": "Application API Message Manipulation via Man-in-the-Middle"
+    },
+    "1232": {
+      "cwe": null,
+      "name": "Transaction or Event Tampering via Application API Manipulation"
+    },
+    "1233": {
+      "cwe": null,
+      "name": "Application API Navigation Remapping"
+    },
+    "1234": {
+      "cwe": null,
+      "name": "Navigation Remapping To Propagate Malicious Content"
+    },
+    "1235": {
+      "cwe": null,
+      "name": "Application API Button Hijacking"
+    },
+    "1236": {
+      "cwe": null,
+      "name": "Content Spoofing Via Application API Manipulation"
+    },
+    "1237": {
+      "cwe": null,
+      "name": "Manipulating Opaque Client-based Data Tokens"
+    },
+    "1238": {
+      "cwe": null,
+      "name": "Bypassing Physical Security"
+    },
+    "1239": {
+      "cwe": null,
+      "name": "Bypassing Physical Locks"
+    },
+    "1240": {
+      "cwe": null,
+      "name": "Lock Bumping"
+    },
+    "1241": {
+      "cwe": null,
+      "name": "Lock Picking"
+    },
+    "1242": {
+      "cwe": null,
+      "name": "Using a Snap Gun Lock to Force a Lock"
+    },
+    "1243": {
+      "cwe": null,
+      "name": "Bypassing Electronic Locks and Access Controls"
+    },
+    "1244": {
+      "cwe": null,
+      "name": "DEPRECATED: Bypassing Card or Badge-Based Systems"
+    },
+    "1245": {
+      "cwe": null,
+      "name": "DEPRECATED: XML Client-Side Attack"
+    },
+    "1246": {
+      "cwe": null,
+      "name": "Cloning Magnetic Strip Cards"
+    },
+    "1247": {
+      "cwe": null,
+      "name": "Magnetic Strip Card Brute Force Attacks"
+    },
+    "1248": {
+      "cwe": null,
+      "name": "Cloning RFID Cards or Chips"
+    },
+    "1249": {
+      "cwe": null,
+      "name": "Using Alternative IP Address Encodings"
+    },
+    "1250": {
+      "cwe": null,
+      "name": "Manipulating Writeable Terminal Devices"
+    },
+    "1251": {
+      "cwe": null,
+      "name": "RFID Chip Deactivation or Destruction"
+    },
+    "1252": {
+      "cwe": null,
+      "name": "Physically Hacking Hardware"
+    },
+    "1253": {
+      "cwe": null,
+      "name": "Bypassing ATA Password Security"
+    },
+    "1254": {
+      "cwe": null,
+      "name": "DEPRECATED: Social Information Gathering Attacks"
+    },
+    "1255": {
+      "cwe": null,
+      "name": "DEPRECATED: Social Information Gathering via Research"
+    },
+    "1256": {
+      "cwe": null,
+      "name": "Dumpster Diving"
+    },
+    "1257": {
+      "cwe": null,
+      "name": "Pretexting"
+    },
+    "1258": {
+      "cwe": null,
+      "name": "DEPRECATED: Information Gathering from Traditional Sources"
+    },
+    "1259": {
+      "cwe": null,
+      "name": "DEPRECATED: Information Gathering from Non-Traditional Sources"
+    },
+    "1260": {
+      "cwe": null,
+      "name": "Signature Spoofing by Key Recreation"
+    },
+    "1261": {
+      "cwe": null,
+      "name": "Using Meta-characters in E-mail Headers to Inject Malicious Payloads"
+    },
+    "1262": {
+      "cwe": null,
+      "name": "Information Elicitation"
+    },
+    "1263": {
+      "cwe": null,
+      "name": "DEPRECATED: Pretexting"
+    },
+    "1264": {
+      "cwe": null,
+      "name": "Pretexting via Customer Service"
+    },
+    "1265": {
+      "cwe": null,
+      "name": "Pretexting via Tech Support"
+    },
+    "1266": {
+      "cwe": null,
+      "name": "Pretexting via Delivery Person"
+    },
+    "1267": {
+      "cwe": null,
+      "name": "Pretexting via Phone"
+    },
+    "1268": {
+      "cwe": null,
+      "name": "Manipulate Human Behavior"
+    },
+    "1269": {
+      "cwe": null,
+      "name": "Influence Perception"
+    },
+    "1270": {
+      "cwe": null,
+      "name": "Influence Perception of Reciprocation"
+    },
+    "1271": {
+      "cwe": null,
+      "name": "DEPRECATED: Target Influence via Perception of Concession"
+    },
+    "1272": {
+      "cwe": null,
+      "name": "MIME Conversion"
+    },
+    "1273": {
+      "cwe": null,
+      "name": "Influence Perception of Scarcity"
+    },
+    "1274": {
+      "cwe": null,
+      "name": "Influence Perception of Authority"
+    },
+    "1275": {
+      "cwe": null,
+      "name": "Influence Perception of Commitment and Consistency"
+    },
+    "1276": {
+      "cwe": null,
+      "name": "Influence Perception of Liking"
+    },
+    "1277": {
+      "cwe": null,
+      "name": "Influence Perception of Consensus or Social Proof"
+    },
+    "1278": {
+      "cwe": null,
+      "name": "Target Influence via Framing"
+    },
+    "1279": {
+      "cwe": null,
+      "name": "Influence via Incentives"
+    },
+    "1280": {
+      "cwe": null,
+      "name": "Influence via Psychological Principles"
+    },
+    "1281": {
+      "cwe": null,
+      "name": "Influence via Modes of Thinking"
+    },
+    "1282": {
+      "cwe": null,
+      "name": "Target Influence via Eye Cues"
+    },
+    "1283": {
+      "cwe": null,
+      "name": "Exploiting Multiple Input Interpretation Layers"
+    },
+    "1284": {
+      "cwe": null,
+      "name": "DEPRECATED:  Target Influence via Micro-Expressions"
+    },
+    "1285": {
+      "cwe": null,
+      "name": "DEPRECATED:  Target Influence via Neuro-Linguistic Programming (NLP)"
+    },
+    "1286": {
+      "cwe": null,
+      "name": "DEPRECATED:  Target Influence via Voice in NLP"
+    },
+    "1287": {
+      "cwe": null,
+      "name": "Target Influence via The Human Buffer Overflow"
+    },
+    "1288": {
+      "cwe": null,
+      "name": "UDP Flood"
+    },
+    "1289": {
+      "cwe": null,
+      "name": "Modification During Manufacture"
+    },
+    "1290": {
+      "cwe": null,
+      "name": "Manipulation During Distribution"
+    },
+    "1291": {
+      "cwe": null,
+      "name": "Overflow Binary Resource File"
+    },
+    "1292": {
+      "cwe": null,
+      "name": "Hardware Integrity Attack"
+    },
+    "1293": {
+      "cwe": null,
+      "name": "Malicious Logic Insertion"
+    },
+    "1294": {
+      "cwe": null,
+      "name": "Infected Software"
+    },
+    "1295": {
+      "cwe": null,
+      "name": "Malicious Logic Inserted Into Product Software by Authorized Developer"
+    },
+    "1296": {
+      "cwe": null,
+      "name": "Development Alteration"
+    },
+    "1297": {
+      "cwe": null,
+      "name": "Malicious Logic Insertion into Product Software via Configuration Management Manipulation"
+    },
+    "1298": {
+      "cwe": null,
+      "name": "Malicious Logic Insertion into Product Software via Inclusion of 3rd Party Component Dependency"
+    },
+    "1299": {
+      "cwe": null,
+      "name": "Provide Counterfeit Component"
+    },
+    "1300": {
+      "cwe": null,
+      "name": "Design Alteration"
+    },
+    "1301": {
+      "cwe": null,
+      "name": "Embed Virus into DLL"
+    },
+    "1302": {
+      "cwe": null,
+      "name": "DEPRECATED: Malware Propagation via USB Stick"
+    },
+    "1303": {
+      "cwe": null,
+      "name": "Buffer Overflow via Symbolic Links"
+    },
+    "1304": {
+      "cwe": null,
+      "name": "DEPRECATED: Malware Propagation via USB U3 Autorun"
+    },
+    "1305": {
+      "cwe": null,
+      "name": "DEPRECATED: Malware Propagation via Infected Peripheral Device"
+    },
+    "1306": {
+      "cwe": null,
+      "name": "Infected Hardware"
+    },
+    "1307": {
+      "cwe": null,
+      "name": "DEPRECATED: Malicious Logic Insertion via Counterfeit Hardware"
+    },
+    "1308": {
+      "cwe": null,
+      "name": "DEPRECATED: Modification of Existing Components with Counterfeit Hardware"
+    },
+    "1309": {
+      "cwe": null,
+      "name": "DEPRECATED: Malicious Logic Insertion via Inclusion of Counterfeit Hardware Components"
+    },
+    "1310": {
+      "cwe": null,
+      "name": "Infected Memory"
+    },
+    "1311": {
+      "cwe": null,
+      "name": "USB Memory Attacks"
+    },
+    "1312": {
+      "cwe": null,
+      "name": "Flash Memory Attacks"
+    },
+    "1313": {
+      "cwe": null,
+      "name": "Creating a Rogue Certification Authority Certificate"
+    },
+    "1314": {
+      "cwe": null,
+      "name": "Overflow Variables and Tags"
+    },
+    "1315": {
+      "cwe": null,
+      "name": "HTTP Parameter Pollution (HPP)"
+    },
+    "1316": {
+      "cwe": null,
+      "name": "Web Services API Signature Forgery Leveraging Hash Function Extension Weakness"
+    },
+    "1317": {
+      "cwe": null,
+      "name": "Cross-Domain Search Timing"
+    },
+    "1318": {
+      "cwe": null,
+      "name": "Padding Oracle Crypto Attack"
+    },
+    "1319": {
+      "cwe": null,
+      "name": "Evercookie"
+    },
+    "1320": {
+      "cwe": null,
+      "name": "Transparent Proxy Abuse"
+    },
+    "1321": {
+      "cwe": null,
+      "name": "Leveraging Active Adversary in the Middle Attacks to Bypass Same Origin Policy"
+    },
+    "1322": {
+      "cwe": null,
+      "name": "Cross Site Identification"
+    },
+    "1323": {
+      "cwe": null,
+      "name": "Generic Cross-Browser Cross-Domain Theft"
+    },
+    "1324": {
+      "cwe": null,
+      "name": "HTTP DoS"
+    },
+    "1325": {
+      "cwe": null,
+      "name": "Buffer Overflow via Parameter Expansion"
+    },
+    "1326": {
+      "cwe": null,
+      "name": "ICMP Flood"
+    },
+    "1327": {
+      "cwe": null,
+      "name": "Expanding Control over the Operating System from the Database"
+    },
+    "1328": {
+      "cwe": null,
+      "name": "Browser Fingerprinting"
+    },
+    "1329": {
+      "cwe": null,
+      "name": "Signature Spoof"
+    },
+    "1330": {
+      "cwe": null,
+      "name": "Signature Spoofing by Key Theft"
+    },
+    "1331": {
+      "cwe": null,
+      "name": "Signature Spoofing by Improper Validation"
+    },
+    "1332": {
+      "cwe": null,
+      "name": "Signature Spoofing by Misrepresentation"
+    },
+    "1333": {
+      "cwe": null,
+      "name": "Signature Spoofing by Mixing Signed and Unsigned Content"
+    },
+    "1334": {
+      "cwe": null,
+      "name": "Modification of Windows Service Configuration"
+    },
+    "1335": {
+      "cwe": null,
+      "name": "Malicious Root Certificate"
+    },
+    "1336": {
+      "cwe": null,
+      "name": "Passing Local Filenames to Functions That Expect a URL"
+    },
+    "1337": {
+      "cwe": null,
+      "name": "Escaping Virtualization"
+    },
+    "1338": {
+      "cwe": null,
+      "name": "Contradictory Destinations in Traffic Routing Schemes"
+    },
+    "1339": {
+      "cwe": null,
+      "name": "HTTP Flood"
+    },
+    "1340": {
+      "cwe": null,
+      "name": "SSL Flood"
+    },
+    "1341": {
+      "cwe": null,
+      "name": "Password Brute Forcing"
+    },
+    "1342": {
+      "cwe": null,
+      "name": "Amplification"
+    },
+    "1343": {
+      "cwe": null,
+      "name": "Quadratic Data Expansion"
+    },
+    "1344": {
+      "cwe": null,
+      "name": "Regular Expression Exponential Blowup"
+    },
+    "1345": {
+      "cwe": null,
+      "name": "SOAP Array Blowup"
+    },
+    "1346": {
+      "cwe": null,
+      "name": "TCP Fragmentation"
+    },
+    "1347": {
+      "cwe": null,
+      "name": "UDP Fragmentation"
+    },
+    "1348": {
+      "cwe": null,
+      "name": "ICMP Fragmentation"
+    },
+    "1349": {
+      "cwe": null,
+      "name": "File Discovery"
+    },
+    "1350": {
+      "cwe": null,
+      "name": "Probe iOS Screenshots"
+    },
+    "1351": {
+      "cwe": null,
+      "name": "Malware-Directed Internal Reconnaissance"
+    },
+    "1352": {
+      "cwe": null,
+      "name": "Android Intent Intercept"
+    },
+    "1353": {
+      "cwe": null,
+      "name": "Blue Boxing"
+    },
+    "1354": {
+      "cwe": null,
+      "name": "Password Recovery Exploitation"
+    },
+    "1355": {
+      "cwe": null,
+      "name": "WebView Injection"
+    },
+    "1356": {
+      "cwe": null,
+      "name": "Android Activity Hijack"
+    },
+    "1357": {
+      "cwe": null,
+      "name": "Intent Spoof"
+    },
+    "1358": {
+      "cwe": null,
+      "name": "WebView Exposure"
+    },
+    "1359": {
+      "cwe": null,
+      "name": "Task Impersonation"
+    },
+    "1360": {
+      "cwe": null,
+      "name": "Scheme Squatting"
+    },
+    "1361": {
+      "cwe": null,
+      "name": "Tapjacking"
+    },
+    "1362": {
+      "cwe": null,
+      "name": "Physical Theft"
+    },
+    "1363": {
+      "cwe": null,
+      "name": "Shoulder Surfing"
+    },
+    "1364": {
+      "cwe": null,
+      "name": "Postfix, Null Terminate, and Backslash"
+    },
+    "1365": {
+      "cwe": null,
+      "name": "Kerberoasting"
+    },
+    "1366": {
+      "cwe": null,
+      "name": "Poison Web Service Registry"
+    },
+    "1367": {
+      "cwe": null,
+      "name": "SaaS User Request Forgery"
+    },
+    "1368": {
+      "cwe": null,
+      "name": "Infiltration of Software Development Environment"
+    },
+    "1369": {
+      "cwe": null,
+      "name": "Hardware Component Substitution During Baselining"
+    },
+    "1370": {
+      "cwe": null,
+      "name": "Documentation Alteration to Circumvent Dial-down"
+    },
+    "1371": {
+      "cwe": null,
+      "name": "Documentation Alteration to Produce Under-performing Systems"
+    },
+    "1372": {
+      "cwe": null,
+      "name": "Documentation Alteration to Cause Errors in System Design"
+    },
+    "1373": {
+      "cwe": null,
+      "name": "Embedding NULL Bytes"
+    },
+    "1374": {
+      "cwe": null,
+      "name": "Counterfeit Hardware Component Inserted During Product Assembly"
+    },
+    "1375": {
+      "cwe": null,
+      "name": "Hardware Design Specifications Are Altered"
+    },
+    "1376": {
+      "cwe": null,
+      "name": "Malicious Hardware Component Replacement"
+    },
+    "1377": {
+      "cwe": null,
+      "name": "Malicious Software Implanted"
+    },
+    "1378": {
+      "cwe": null,
+      "name": "Rogue Integration Procedures"
+    },
+    "1379": {
+      "cwe": null,
+      "name": "XML Flood"
+    },
+    "1380": {
+      "cwe": null,
+      "name": "Malicious Manual Software Update"
+    },
+    "1381": {
+      "cwe": null,
+      "name": "Malicious Hardware Update"
+    },
+    "1382": {
+      "cwe": null,
+      "name": "Malicious Gray Market Hardware"
+    },
+    "1383": {
+      "cwe": null,
+      "name": "Data Injected During Configuration"
+    },
+    "1384": {
+      "cwe": null,
+      "name": "Infiltration of Hardware Development Environment"
+    },
+    "1385": {
+      "cwe": null,
+      "name": "Open-Source Library Manipulation"
+    },
+    "1386": {
+      "cwe": null,
+      "name": "ASIC With Malicious Functionality"
+    },
+    "1387": {
+      "cwe": null,
+      "name": "Query System for Information"
+    },
+    "1388": {
+      "cwe": null,
+      "name": "Overread Buffers"
+    },
+    "1389": {
+      "cwe": null,
+      "name": "Application Fingerprinting"
+    },
+    "1390": {
+      "cwe": null,
+      "name": "Targeted Malware"
+    },
+    "1391": {
+      "cwe": null,
+      "name": "Counterfeit Websites"
+    },
+    "1392": {
+      "cwe": null,
+      "name": "Counterfeit Organizations"
+    },
+    "1393": {
+      "cwe": null,
+      "name": "Pull Data from System Resources"
+    },
+    "1394": {
+      "cwe": null,
+      "name": "Incomplete Data Deletion in a Multi-Tenant Environment"
+    },
+    "1395": {
+      "cwe": null,
+      "name": "Physical Destruction of Device or Component"
+    },
+    "1396": {
+      "cwe": null,
+      "name": "Contaminate Resource"
+    },
+    "1397": {
+      "cwe": null,
+      "name": "Rainbow Table Password Cracking"
+    },
+    "1398": {
+      "cwe": null,
+      "name": "Install New Service"
+    },
+    "1399": {
+      "cwe": null,
+      "name": "Modify Existing Service"
+    },
+    "1400": {
+      "cwe": null,
+      "name": "Install Rootkit"
+    },
+    "1401": {
+      "cwe": null,
+      "name": "Functionality Bypass"
+    },
+    "1402": {
+      "cwe": null,
+      "name": "Remote Services with Stolen Credentials"
+    },
+    "1403": {
+      "cwe": null,
+      "name": "Replace File Extension Handlers"
+    },
+    "1404": {
+      "cwe": null,
+      "name": "DEPRECATED: Schedule Software To Run"
+    },
+    "1405": {
+      "cwe": null,
+      "name": "Replace Trusted Executable"
+    },
+    "1406": {
+      "cwe": null,
+      "name": "Orbital Jamming"
+    },
+    "1407": {
+      "cwe": null,
+      "name": "DEPRECATED: Removing/short-circuiting 'guard logic'"
+    },
+    "1408": {
+      "cwe": null,
+      "name": "Use of Known Domain Credentials"
+    },
+    "1409": {
+      "cwe": null,
+      "name": "Windows Admin Shares with Stolen Credentials"
+    },
+    "1410": {
+      "cwe": null,
+      "name": "Modify Shared File"
+    },
+    "1411": {
+      "cwe": null,
+      "name": "Add Malicious File to Shared Webroot"
+    },
+    "1412": {
+      "cwe": null,
+      "name": "Run Software at Logon"
+    },
+    "1413": {
+      "cwe": null,
+      "name": "Password Spraying"
+    },
+    "1414": {
+      "cwe": null,
+      "name": "DEPRECATED: Dump Password Hashes"
+    },
+    "1415": {
+      "cwe": null,
+      "name": "DEPRECATED: Obtain Data via Utilities"
+    },
+    "1416": {
+      "cwe": null,
+      "name": "Capture Credentials via Keylogger"
+    },
+    "1417": {
+      "cwe": null,
+      "name": "Collect Data as Provided by Users"
+    },
+    "1418": {
+      "cwe": null,
+      "name": "Utilizing REST's Trust in the System Resource to Obtain Sensitive Data"
+    },
+    "1419": {
+      "cwe": null,
+      "name": "DEPRECATED: Signature-Based Avoidance"
+    },
+    "1420": {
+      "cwe": null,
+      "name": "Block Logging to Central Repository"
+    },
+    "1421": {
+      "cwe": null,
+      "name": "Artificially Inflate File Sizes"
+    },
+    "1422": {
+      "cwe": null,
+      "name": "Process Footprinting"
+    },
+    "1423": {
+      "cwe": null,
+      "name": "Services Footprinting"
+    },
+    "1424": {
+      "cwe": null,
+      "name": "Account Footprinting"
+    },
+    "1425": {
+      "cwe": null,
+      "name": "Group Permission Footprinting"
+    },
+    "1426": {
+      "cwe": null,
+      "name": "Owner Footprinting"
+    },
+    "1427": {
+      "cwe": null,
+      "name": "Disable Security Software"
+    },
+    "1428": {
+      "cwe": null,
+      "name": "Replace Winlogon Helper DLL"
+    },
+    "1429": {
+      "cwe": null,
+      "name": "Homograph Attack via Homoglyphs"
+    },
+    "1430": {
+      "cwe": null,
+      "name": "Restful Privilege Elevation"
+    },
+    "1431": {
+      "cwe": null,
+      "name": "System Footprinting"
+    },
+    "1432": {
+      "cwe": null,
+      "name": "Security Software Footprinting"
+    },
+    "1433": {
+      "cwe": null,
+      "name": "Route Disabling"
+    },
+    "1434": {
+      "cwe": null,
+      "name": "Disabling Network Hardware"
+    },
+    "1435": {
+      "cwe": null,
+      "name": "BGP Route Disabling"
+    },
+    "1436": {
+      "cwe": null,
+      "name": "DNS Domain Seizure"
+    },
+    "1437": {
+      "cwe": null,
+      "name": "Object Injection"
+    },
+    "1438": {
+      "cwe": null,
+      "name": "Cross Frame Scripting (XFS)"
+    },
+    "1439": {
+      "cwe": null,
+      "name": "DOM-Based XSS"
+    },
+    "1440": {
+      "cwe": null,
+      "name": "DNS Blocking"
+    },
+    "1441": {
+      "cwe": null,
+      "name": "Session Credential Falsification through Prediction"
+    },
+    "1442": {
+      "cwe": null,
+      "name": "IP Address Blocking"
+    },
+    "1443": {
+      "cwe": null,
+      "name": "Reflected XSS"
+    },
+    "1444": {
+      "cwe": null,
+      "name": "Token Impersonation"
+    },
+    "1445": {
+      "cwe": null,
+      "name": "Stored XSS"
+    },
+    "1446": {
+      "cwe": null,
+      "name": "Session Hijacking"
+    },
+    "1447": {
+      "cwe": null,
+      "name": "Traffic Injection"
+    },
+    "1448": {
+      "cwe": null,
+      "name": "Connection Reset"
+    },
+    "1449": {
+      "cwe": null,
+      "name": "TCP RST Injection"
+    },
+    "1450": {
+      "cwe": null,
+      "name": "Absolute Path Traversal"
+    },
+    "1451": {
+      "cwe": null,
+      "name": "DNS Spoofing"
+    },
+    "1452": {
+      "cwe": null,
+      "name": "Terrestrial Jamming"
+    },
+    "1453": {
+      "cwe": null,
+      "name": "Argument Injection"
+    },
+    "1454": {
+      "cwe": null,
+      "name": "Reusing Session IDs (aka Session Replay)"
+    },
+    "1455": {
+      "cwe": null,
+      "name": "Credential Stuffing"
+    },
+    "1456": {
+      "cwe": null,
+      "name": "Jamming"
+    },
+    "1457": {
+      "cwe": null,
+      "name": "DEPRECATED: Degradation"
+    },
+    "1458": {
+      "cwe": null,
+      "name": "Blockage"
+    },
+    "1459": {
+      "cwe": null,
+      "name": "Wi-Fi Jamming"
+    },
+    "1460": {
+      "cwe": null,
+      "name": "Cellular Jamming"
+    },
+    "1461": {
+      "cwe": null,
+      "name": "Weakening of Cellular Encryption"
+    },
+    "1462": {
+      "cwe": null,
+      "name": "Obstruction"
+    },
+    "1463": {
+      "cwe": null,
+      "name": "Cryptanalysis of Cellular Encryption"
+    },
+    "1464": {
+      "cwe": null,
+      "name": "Cellular Traffic Intercept"
+    },
+    "1465": {
+      "cwe": null,
+      "name": "Session Fixation"
+    },
+    "1466": {
+      "cwe": null,
+      "name": "Cellular Data Injection"
+    },
+    "1467": {
+      "cwe": null,
+      "name": "BitSquatting"
+    },
+    "1468": {
+      "cwe": null,
+      "name": "WiFi MAC Address Tracking"
+    },
+    "1469": {
+      "cwe": null,
+      "name": "WiFi SSID Tracking"
+    },
+    "1470": {
+      "cwe": null,
+      "name": "Rooting SIM Cards"
+    },
+    "1471": {
+      "cwe": null,
+      "name": "Evil Twin Wi-Fi Attack"
+    },
+    "1472": {
+      "cwe": null,
+      "name": "Establish Rogue Location"
+    },
+    "1473": {
+      "cwe": null,
+      "name": "Cellular Rogue Base Station"
+    },
+    "1474": {
+      "cwe": null,
+      "name": "Cellular Broadcast Message Request"
+    },
+    "1475": {
+      "cwe": null,
+      "name": "Signal Strength Tracking"
+    },
+    "1476": {
+      "cwe": null,
+      "name": "Probe Audio and Video Peripherals"
+    },
+    "1477": {
+      "cwe": null,
+      "name": "Cross Site Request Forgery"
+    },
+    "1478": {
+      "cwe": null,
+      "name": "Drop Encryption Level"
+    },
+    "1479": {
+      "cwe": null,
+      "name": "Analysis of Packet Timing and Sizes"
+    },
+    "1480": {
+      "cwe": null,
+      "name": "Electromagnetic Side-Channel Attack"
+    },
+    "1481": {
+      "cwe": null,
+      "name": "Compromising Emanations Attack"
+    },
+    "1482": {
+      "cwe": null,
+      "name": "Hardware Fault Injection"
+    },
+    "1483": {
+      "cwe": null,
+      "name": "Mobile Device Fault Injection"
+    },
+    "1484": {
+      "cwe": null,
+      "name": "Smudge Attack"
+    },
+    "1485": {
+      "cwe": null,
+      "name": "Counterfeit GPS Signals"
+    },
+    "1486": {
+      "cwe": null,
+      "name": "Carry-Off GPS Attack"
+    },
+    "1487": {
+      "cwe": null,
+      "name": "Unauthorized Use of Device Resources"
+    },
+    "1488": {
+      "cwe": null,
+      "name": "Cross-Site Scripting (XSS)"
+    },
+    "1489": {
+      "cwe": null,
+      "name": "TypoSquatting"
+    },
+    "1490": {
+      "cwe": null,
+      "name": "SoundSquatting"
+    },
+    "1491": {
+      "cwe": null,
+      "name": "Alternative Execution Due to Deceptive Filenames"
+    },
+    "1492": {
+      "cwe": null,
+      "name": "Hiding Malicious Data or Code within Files"
+    },
+    "1493": {
+      "cwe": null,
+      "name": "Collect Data from Clipboard"
+    },
+    "1494": {
+      "cwe": null,
+      "name": "Altered Component Firmware"
+    },
+    "1495": {
+      "cwe": null,
+      "name": "Probe System Files"
+    },
+    "1496": {
+      "cwe": null,
+      "name": "Using Slashes and URL Encoding Combined to Bypass Validation Logic"
+    },
+    "1497": {
+      "cwe": null,
+      "name": "Inclusion of Code in Existing Process"
+    },
+    "1498": {
+      "cwe": null,
+      "name": "Replace Binaries"
+    },
+    "1499": {
+      "cwe": null,
+      "name": "Identify Shared Files/Directories on System"
+    },
+    "1500": {
+      "cwe": null,
+      "name": "Use of Captured Hashes (Pass The Hash)"
+    },
+    "1501": {
+      "cwe": null,
+      "name": "Use of Captured Tickets (Pass The Ticket)"
+    },
+    "1502": {
+      "cwe": null,
+      "name": "Peripheral Footprinting"
+    },
+    "1503": {
+      "cwe": null,
+      "name": "Collect Data from Registries"
+    },
+    "1504": {
+      "cwe": null,
+      "name": "Collect Data from Screen Capture"
+    },
+    "1505": {
+      "cwe": null,
+      "name": "Adding a Space to a File Extension"
+    },
+    "1506": {
+      "cwe": null,
+      "name": "Sniff Application Code"
+    },
+    "1507": {
+      "cwe": null,
+      "name": "Upload a Web Shell to a Web Server"
+    },
+    "1508": {
+      "cwe": null,
+      "name": "Eavesdropping"
+    },
+    "1509": {
+      "cwe": null,
+      "name": "Use of Known Kerberos Credentials"
+    },
+    "1510": {
+      "cwe": null,
+      "name": "Use of Known Windows Credentials"
+    },
+    "1511": {
+      "cwe": null,
+      "name": "Credential Prompt Impersonation"
+    },
+    "1512": {
+      "cwe": null,
+      "name": "Avoid Security Tool Identification by Adding Data"
+    },
+    "1513": {
+      "cwe": null,
+      "name": "Voice Phishing"
+    },
+    "1514": {
+      "cwe": null,
+      "name": "Malicious Automated Software Update via Spoofing"
+    },
+    "1515": {
+      "cwe": null,
+      "name": "SQL Injection"
+    },
+    "1516": {
+      "cwe": null,
+      "name": "Root/Jailbreak Detection Evasion via Hooking"
+    },
+    "1517": {
+      "cwe": null,
+      "name": "Root/Jailbreak Detection Evasion via Debugging"
+    },
+    "1518": {
+      "cwe": null,
+      "name": "Adversary in the Browser (AiTB)"
+    },
+    "1519": {
+      "cwe": null,
+      "name": "Exploitation of Transient Instruction Execution"
+    },
+    "1520": {
+      "cwe": null,
+      "name": "Server Side Request Forgery"
+    },
+    "1521": {
+      "cwe": null,
+      "name": "Exploitation of Thunderbolt Protection Flaws"
+    },
+    "1522": {
+      "cwe": null,
+      "name": "BlueSmacking"
+    },
+    "1523": {
+      "cwe": null,
+      "name": "Bluetooth Impersonation AttackS (BIAS)"
+    },
+    "1524": {
+      "cwe": null,
+      "name": "Key Negotiation of Bluetooth Attack (KNOB)"
+    },
+    "1525": {
+      "cwe": null,
+      "name": "Alteration of a Software Update"
+    },
+    "1526": {
+      "cwe": null,
+      "name": "String Format Overflow in syslog()"
+    },
+    "1527": {
+      "cwe": null,
+      "name": "Software Development Tools Maliciously Altered"
+    },
+    "1528": {
+      "cwe": null,
+      "name": "Requirements for ASIC Functionality Maliciously Altered"
+    },
+    "1529": {
+      "cwe": null,
+      "name": "Malicious Code Implanted During Chip Programming"
+    },
+    "1530": {
+      "cwe": null,
+      "name": "Developer Signing Maliciously Altered Software"
+    },
+    "1531": {
+      "cwe": null,
+      "name": "Design for FPGA Maliciously Altered"
+    },
+    "1532": {
+      "cwe": null,
+      "name": "Retrieve Data from Decommissioned Devices"
+    },
+    "1533": {
+      "cwe": null,
+      "name": "NoSQL Injection"
+    },
+    "1534": {
+      "cwe": null,
+      "name": "Server Functionality Compromise"
+    },
+    "1535": {
+      "cwe": null,
+      "name": "System Build Data Maliciously Altered"
+    },
+    "1536": {
+      "cwe": null,
+      "name": "Exploitation of Improperly Configured or Implemented Memory Protections"
+    },
+    "1537": {
+      "cwe": null,
+      "name": "Subvert Code-signing Facilities"
+    },
+    "1538": {
+      "cwe": null,
+      "name": "Exploitation of Improperly Controlled Registers"
+    },
+    "1539": {
+      "cwe": null,
+      "name": "Exploitation of Improperly Controlled Hardware Security Identifiers"
+    },
+    "1540": {
+      "cwe": null,
+      "name": "Target Programs with Elevated Privileges"
+    },
+    "1541": {
+      "cwe": null,
+      "name": "Blind SQL Injection"
+    },
+    "1542": {
+      "cwe": null,
+      "name": "Try Common or Default Usernames and Passwords"
+    },
+    "1543": {
+      "cwe": null,
+      "name": "Using Unicode Encoding to Bypass Validation Logic"
+    },
+    "1544": {
+      "cwe": null,
+      "name": "URL Encoding"
+    },
+    "1545": {
+      "cwe": null,
+      "name": "User-Controlled Filename"
+    },
+    "1546": {
+      "cwe": null,
+      "name": "Manipulating State"
+    },
+    "1547": {
+      "cwe": null,
+      "name": "Manipulating Writeable Configuration Files"
+    },
+    "1548": {
+      "cwe": null,
+      "name": "Manipulating Web Input to File System Calls"
+    },
+    "1549": {
+      "cwe": null,
+      "name": "Manipulating User-Controlled Variables"
+    },
+    "1550": {
+      "cwe": null,
+      "name": "Using Escaped Slashes in Alternate Encoding"
+    },
+    "1551": {
+      "cwe": null,
+      "name": "Using Slashes in Alternate Encoding"
+    },
+    "1552": {
+      "cwe": null,
+      "name": "Buffer Overflow in an API Call"
+    },
+    "1553": {
+      "cwe": null,
+      "name": "Using UTF-8 Encoding to Bypass Validation Logic"
+    },
+    "1554": {
+      "cwe": null,
+      "name": "Web Logs Tampering"
+    },
+    "1555": {
+      "cwe": null,
+      "name": "DEPRECATED: Violating Implicit Assumptions Regarding XML Content (aka XML Denial of Service (XDoS))"
+    },
+    "1556": {
+      "cwe": null,
+      "name": "XPath Injection"
+    },
+    "1557": {
+      "cwe": null,
+      "name": "XQuery Injection"
+    },
+    "1558": {
+      "cwe": null,
+      "name": "AJAX Footprinting"
+    },
+    "1559": {
+      "cwe": null,
+      "name": "XSS Through HTTP Headers"
+    },
+    "1560": {
+      "cwe": null,
+      "name": "Forceful Browsing"
+    },
+    "1561": {
+      "cwe": null,
+      "name": "OS Command Injection"
+    },
+    "1562": {
+      "cwe": null,
+      "name": "Pharming"
+    },
+    "1563": {
+      "cwe": null,
+      "name": "Buffer Overflow in Local Command-Line Utilities"
+    },
+    "1564": {
+      "cwe": null,
+      "name": "Reflection Attack in Authentication Protocol"
+    },
+    "1565": {
+      "cwe": null,
+      "name": "DEPRECATED: XSS in IMG Tags"
+    },
+    "1566": {
+      "cwe": null,
+      "name": "Forced Integer Overflow"
+    },
+    "1567": {
+      "cwe": null,
+      "name": "Log Injection-Tampering-Forging"
+    },
+    "1568": {
+      "cwe": null,
+      "name": "Adversary in the Middle (AiTM)"
+    },
+    "1569": {
+      "cwe": null,
+      "name": "WSDL Scanning"
+    },
+    "1570": {
+      "cwe": null,
+      "name": "Block Access to Libraries"
+    },
+    "1571": {
+      "cwe": null,
+      "name": "Cryptanalysis"
+    },
+    "1572": {
+      "cwe": null,
+      "name": "DEPRECATED: XML Parser Attack"
+    },
+    "1573": {
+      "cwe": "CWE-1389",
+      "name": "Incorrect Parsing of Numbers with Different Radices"
+    },
+    "1574": {
+      "cwe": "CWE-1390",
+      "name": "Weak Authentication"
+    },
+    "1575": {
+      "cwe": "CWE-1391",
+      "name": "Use of Weak Credentials"
+    },
+    "1576": {
+      "cwe": "CWE-1392",
+      "name": "Use of Default Credentials"
+    },
+    "1577": {
+      "cwe": "CWE-1393",
+      "name": "Use of Default Password"
+    },
+    "1578": {
+      "cwe": "CWE-1394",
+      "name": "Use of Default Cryptographic Key"
+    },
+    "1579": {
+      "cwe": null,
+      "name": "Exploitation of Firmware or ROM Code with Unpatchable Vulnerabilities"
+    },
+    "1580": {
+      "cwe": null,
+      "name": "Metadata Spoofing"
+    },
+    "1581": {
+      "cwe": null,
+      "name": "Spoof Open-Source Software Metadata"
+    },
+    "1582": {
+      "cwe": null,
+      "name": "Spoof Version Control System Commit Metadata"
+    },
+    "1583": {
+      "cwe": null,
+      "name": "StarJacking"
+    },
+    "1584": {
+      "cwe": null,
+      "name": "System Location Discovery"
+    },
+    "1585": {
+      "cwe": null,
+      "name": "Repo Jacking"
+    },
+    "1586": {
+      "cwe": null,
+      "name": "Load Value Injection"
+    },
+    "1587": {
+      "cwe": null,
+      "name": "DHCP Spoofing"
+    },
+    "1588": {
+      "cwe": null,
+      "name": "Install Malicious Extension"
+    },
+    "1589": {
+      "cwe": null,
+      "name": "Browser in the Middle (BiTM)"
+    },
+    "1590": {
+      "cwe": null,
+      "name": "Network Boundary Bridging"
+    },
+    "1591": {
+      "cwe": null,
+      "name": "Eavesdropping on a Monitor"
+    },
+    "1592": {
+      "cwe": null,
+      "name": "Exploiting Incorrect Chaining or Granularity of Hardware Debug Components"
+    },
+    "1593": {
+      "cwe": "CWE-1395",
+      "name": "Dependency on Vulnerable Third-Party Component"
+    },
+    "1594": {
+      "cwe": "CWE-1419",
+      "name": "Incorrect Initialization of Resource"
+    },
+    "1595": {
+      "cwe": null,
+      "name": "LLM01: Prompt Injection"
+    },
+    "1596": {
+      "cwe": null,
+      "name": "LLM02: Insecure Output Handling"
+    },
+    "1597": {
+      "cwe": null,
+      "name": "LLM03: Training Data Poisoning"
+    },
+    "1598": {
+      "cwe": null,
+      "name": "LLM04: Model Denial of Service"
+    },
+    "1599": {
+      "cwe": null,
+      "name": "LLM05: Supply Chain Vulnerabilities"
+    },
+    "1600": {
+      "cwe": null,
+      "name": "LLM06: Sensitive Information Disclosure"
+    },
+    "1601": {
+      "cwe": null,
+      "name": "LLM07: Insecure Plugin Design"
+    },
+    "1602": {
+      "cwe": null,
+      "name": "LLM08: Excessive Agency"
+    },
+    "1603": {
+      "cwe": null,
+      "name": "LLM09: Overreliance"
+    },
+    "1604": {
+      "cwe": null,
+      "name": "LLM10: Model Theft"
+    },
+    "1606": {
+      "cwe": "CWE-1420",
+      "name": "Exposure of Sensitive Information during Transient Execution"
+    },
+    "1607": {
+      "cwe": "CWE-1423",
+      "name": "Exposure of Sensitive Information caused by Shared Microarchitectural Predictor State that Influences Transient Execution"
+    },
+    "1608": {
+      "cwe": "CWE-1421",
+      "name": "Exposure of Sensitive Information in Shared Microarchitectural Structures during Transient Execution"
+    },
+    "1609": {
+      "cwe": "CWE-1422",
+      "name": "Exposure of Sensitive Information caused by Incorrect Data Forwarding during Transient Execution"
+    },
+    "1610": {
+      "cwe": "CWE-1426",
+      "name": "Improper Validation of Generative AI Output"
+    },
+    "1611": {
+      "cwe": "CWE-1427",
+      "name": "Improper Neutralization of Input Used for LLM Prompting"
+    },
+    "1613": {
+      "cwe": "CWE-1429",
+      "name": "Missing Security-Relevant Feedback for Unexecuted Operations in Hardware Interface"
+    },
+    "1614": {
+      "cwe": "CWE-1431",
+      "name": "Driving Intermediate Cryptographic State/Results to Hardware Module Outputs"
+    },
+    "1615": {
+      "cwe": "CWE-1428",
+      "name": "Reliance on HTTP instead of HTTPS"
+    },
+    "1617": {
+      "cwe": "CWE-1434",
+      "name": "Insecure Setting of Generative AI/ML Model Inference Parameters"
+    },
+    "1619": {
+      "cwe": null,
+      "name": "LLM01:2025 Prompt Injection"
+    },
+    "1620": {
+      "cwe": null,
+      "name": "LLM02:2025 Sensitive Information Disclosure"
+    },
+    "1621": {
+      "cwe": null,
+      "name": "LLM03:2025 Supply Chain"
+    },
+    "1622": {
+      "cwe": null,
+      "name": "LLM04:2025 Data and Model Poisoning"
+    },
+    "1623": {
+      "cwe": null,
+      "name": "LLM05:2025 Improper Output Handling"
+    },
+    "1624": {
+      "cwe": null,
+      "name": "LLM06:2025 Excessive Agency"
+    },
+    "1625": {
+      "cwe": null,
+      "name": "LLM07:2025 System Prompt Leakage"
+    },
+    "1626": {
+      "cwe": null,
+      "name": "LLM08:2025 Vector and Embedding Weaknesses"
+    },
+    "1627": {
+      "cwe": null,
+      "name": "LLM09:2025 Misinformation"
+    },
+    "1628": {
+      "cwe": null,
+      "name": "LLM10:2025 Unbounded Consumption"
+    },
+    "1629": {
+      "cwe": null,
+      "name": "ASI01: Agent Goal Hijack"
+    },
+    "1630": {
+      "cwe": null,
+      "name": "ASI02: Tool Misuse and Exploitation"
+    },
+    "1631": {
+      "cwe": null,
+      "name": "ASI03: Identity and Privilege Abuse"
+    },
+    "1632": {
+      "cwe": null,
+      "name": "ASI04: Agentic Supply Chain Vulnerabilities"
+    },
+    "1633": {
+      "cwe": null,
+      "name": "ASI05: Unexpected Code Execution (RCE)"
+    },
+    "1634": {
+      "cwe": null,
+      "name": "ASI06: Memory & Context Poisoning"
+    },
+    "1635": {
+      "cwe": null,
+      "name": "ASI07: Insecure Inter-Agent Communication"
+    },
+    "1636": {
+      "cwe": null,
+      "name": "ASI08: Cascading Failures"
+    },
+    "1637": {
+      "cwe": null,
+      "name": "ASI09: Human-Agent Trust Exploitation"
+    },
+    "1638": {
+      "cwe": null,
+      "name": "ASI10: Rogue Agents"
+    },
+    "1641": {
+      "cwe": "CWE-1474",
+      "name": "Non-Equivalent Data Transformation"
+    },
+    "1642": {
+      "cwe": "CWE-1461",
+      "name": "Hardware Simulation / Synthesis Mismatch"
+    },
+    "1643": {
+      "cwe": "CWE-1466",
+      "name": "Improper Session Invalidation after Authentication Credential Change"
+    },
+    "1644": {
+      "cwe": "CWE-1465",
+      "name": "Improper Session Invalidation after User Logout"
+    },
+    "1645": {
+      "cwe": "CWE-1473",
+      "name": "Improper Expiration of Cached Data"
+    },
+    "1646": {
+      "cwe": "CWE-1467",
+      "name": "Use of Singular Authentication Artifact for Multiple User Sessions"
+    },
+    "1647": {
+      "cwe": "CWE-1464",
+      "name": "Improper Session Invalidation"
+    },
+    "1648": {
+      "cwe": "CWE-1469",
+      "name": "Improper Check for Credential Expiration"
+    },
+    "1649": {
+      "cwe": "CWE-1463",
+      "name": "Insufficient Session Timeout Value"
+    },
+    "1650": {
+      "cwe": "CWE-1470",
+      "name": "Improper External Identity Verification"
+    },
+    "1651": {
+      "cwe": "CWE-1462",
+      "name": "Improper Session Management"
+    },
+    "1652": {
+      "cwe": "CWE-1472",
+      "name": "Generation of Credential with Long Expiration"
+    },
+    "1653": {
+      "cwe": "CWE-1471",
+      "name": "Insufficiently Controlled Parser Differential"
+    },
+    "1654": {
+      "cwe": "CWE-1476",
+      "name": "Improper Request Propagation before Data Reception in Write Transactions in a Bus Architecture"
+    },
+    "1655": {
+      "cwe": "CWE-1475",
+      "name": "Incomplete Data/State Propagation"
+    }
+  }
+}

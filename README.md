@@ -252,6 +252,32 @@ const { blocked, results } = await publishRecords(entries, {
 })
 ```
 
+### HackerOne weaknesses
+
+HackerOne's REST API reports a finding's weakness as HackerOne's own numeric
+`weakness_id`, not as a CWE number (weakness 26 is "Improper Access Control",
+CWE-284). The taxonomy is shared by every program, so the mapping ships with
+the package as data:
+
+```js
+import { hackerOneWeakness, hackerOneWeaknessProblemType } from '@ulisesgascon/openjs-cna-tools/hackerone'
+
+hackerOneWeakness(26)
+// { cwe: 'CWE-284', name: 'Improper Access Control - Generic' }
+hackerOneWeakness(75)
+// { cwe: null, name: 'Privilege Escalation' }   (a CAPEC entry on HackerOne's side)
+hackerOneWeakness(999999)
+// null                                          (unknown id)
+
+// Ready-made problemTypes[] entry, or null when there is no CWE to put on the record.
+hackerOneWeaknessProblemType(26)
+```
+
+`lib/hackerone/weaknesses.json` is regenerated with
+`node scripts/build-hackerone-weaknesses.js <dump.json>` from the GraphQL
+response the HackerOne web app loads for a report's weakness picker; the
+script documents the shape it expects.
+
 ### Record helpers
 
 Converters only know their own source. The parts of a record that are about
