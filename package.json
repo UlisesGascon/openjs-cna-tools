@@ -1,6 +1,6 @@
 {
   "name": "@ulisesgascon/openjs-cna-tools",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "EXPERIMENTAL fork of the OpenJS Foundation CNA tools: CLI and library for the OpenJS CNA API",
   "type": "module",
   "license": "MIT",
