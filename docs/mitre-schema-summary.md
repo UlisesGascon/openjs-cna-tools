@@ -116,6 +116,12 @@ and `lessThan` (e.g. whether they share a major). That's editorial.
   - An `anyOf` block pairs each `baseScore` band (none / low / medium / high /
     critical) with the matching `baseSeverity` enum value, so a score-band
     mismatch is a schema violation.
+- The CVSS v3.0 import (`imports/cvss/cvss-v3.0.json`) mirrors the v3.1 one
+  with `version` enum `["3.0"]` and a `CVSS:3.0/` vector prefix.
+- Not enforced by the schema: that `baseScore` is the score the vector
+  actually yields. MITRE stores whatever is submitted. The reviewer covers
+  this with `cvss-score-matches-vector` (tier `openjs-extra`), backed by the
+  calculator in `lib/cvss.js`.
 
 ## `credits`
 

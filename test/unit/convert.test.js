@@ -356,6 +356,31 @@ describe('mapAdvisoryToRecord — CVSS metrics', () => {
     const c = mapAdvisoryToRecord(advisory)
     assert.equal(c.containers.cna.metrics, undefined)
   })
+
+  it('computes baseScore and baseSeverity from the v3.1 vector when GHSA omits the score', () => {
+    const advisory = sampleAdvisory()
+    advisory.cvss = { vector_string: 'CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H' }
+    const c = mapAdvisoryToRecord(advisory)
+    assert.equal(c.containers.cna.metrics[0].cvssV3_1.baseScore, 7.5)
+    assert.equal(c.containers.cna.metrics[0].cvssV3_1.baseSeverity, 'HIGH')
+  })
+
+  it('keeps the score GHSA provides even when it disagrees with the vector', () => {
+    const advisory = sampleAdvisory()
+    advisory.cvss.score = 9.9
+    const c = mapAdvisoryToRecord(advisory)
+    assert.equal(c.containers.cna.metrics[0].cvssV3_1.baseScore, 9.9)
+  })
+
+  it('passes an unparseable v3 vector through without a score', () => {
+    const advisory = sampleAdvisory()
+    advisory.cvss = { vector_string: 'CVSS:3.1/AV:N/AC:L' }
+    const c = mapAdvisoryToRecord(advisory)
+    assert.deepEqual(c.containers.cna.metrics[0].cvssV3_1, {
+      version: '3.1',
+      vectorString: 'CVSS:3.1/AV:N/AC:L'
+    })
+  })
 })
 
 describe('mapAdvisoryToRecord — problemTypes (CWE)', () => {
