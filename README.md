@@ -29,11 +29,12 @@ For project maintainers under the OpenJS CNA who need to reserve, publish, updat
 |---|---|
 | `openjs-cna-experimental reserve` | Reserve a CVE id and print it on stdout. |
 | `openjs-cna-experimental publish <cve-id> -f container.json` | Publish a v5.2 CNA Container. Runs the reviewer first by default. |
+| `openjs-cna-experimental publish -f a.json -f b.json …` | Batch publish. Reviews every record first and sends nothing unless all pass, then publishes each in order. `--skip-published` makes reruns idempotent, `--json` prints one result per record. |
 | `openjs-cna-experimental update <cve-id> -f container.json` | Update a published CVE record. Same review semantics as `publish`. |
 | `openjs-cna-experimental get <cve-id>` | Fetch a published CVE's container from MITRE. |
 | `openjs-cna-experimental list` | List every CVE id in the bucket. |
 | `openjs-cna-experimental convert <advisory-url>` | Turn a GitHub Security Advisory into a draft CNA Container. Accepts published per-repo URLs (`https://github.com/<owner>/<repo>/security/advisories/<GHSA>`) and global-database URLs (`https://github.com/advisories/<GHSA>`) for public ones. |
-| `openjs-cna-experimental review <container.json>` | Run the offline reviewer against a container. Defaults to showing a preview + issues. Exits non-zero on blockers. |
+| `openjs-cna-experimental review <container.json> [more.json …]` | Run the offline reviewer against one or more records. Defaults to showing a preview + issues. Exits non-zero on blockers. With several files `--json` emits an array. |
 | `openjs-cna-experimental preview <container.json>` | Print a compact summary of a container — title, description, affected, CVSS, CWE, credits, refs, etc. |
 | `openjs-cna-experimental llm-review-prompt <record.json>` | Print a prompt for an LLM-driven editorial review of the record's title and description. The tool does not call an LLM; paste the prompt into the LLM of your choice. |
 | `openjs-cna-experimental health` | Unauthenticated liveness check against the CNA API. |
@@ -138,6 +139,35 @@ Useful flags:
 - `--no-preview` (on `review`): drop the container summary; print issues only. Useful in CI.
 - `--tier mitre-common|openjs-extra` (on `review`): filter the printed issues to a single tier without changing the exit code.
 - `--yes` / `OPENJS_CNA_YES=1`: accept confirmation prompts non-interactively.
+- `--skip-published` (on batch `publish`): ask the CNA first (`get-cve`, one sequential call per id) and skip ids that already have a published record, so a rerun after a partial failure only sends what is missing. Only a record-shaped answer counts as published; a failed or empty lookup sends the record, since a second publish fails loudly at the CNA while a wrong skip would silently send nothing.
+
+Publishing a release with several CVEs from CI:
+
+```sh
+# Every record carries cveMetadata.cveId. Review all, send nothing on any
+# blocker, otherwise publish each in order; exit 1 if anything failed.
+openjs-cna-experimental review  records/*.json --no-preview
+openjs-cna-experimental publish -f records/*.json --yes --skip-published --json > publish-result.json
+```
+
+How a batch behaves, and what to expect on a retry:
+
+- **Everything is sequential.** Records are reviewed, checked and published
+  one at a time, in the order given. There is no concurrency against the
+  CNA API.
+- **Without `--skip-published` the batch assumes a green field.** No lookup
+  is made; every record is sent. An id that was already published fails at
+  the CNA with its `correlation_id` / `run_id`, the remaining records still
+  go out, and the exit code is 1. Nothing is ever published twice, MITRE
+  rejects the second publish.
+- **With `--skip-published` the batch is a safe retry.** Each id is looked
+  up first with `get-cve`; ids that already have a published record are
+  reported as `skipped`, the rest are sent, and the exit code only reflects
+  what was sent. Use it whenever a run may repeat a previous one: a manual
+  re-run after a partial failure, or a pipeline that triggers more than
+  once for the same release. The lookups roughly double the run time.
+- **Review blockers stop everything.** If any record has a blocker nothing
+  is sent, with or without `--skip-published`.
 
 ### Troubleshooting
 
@@ -198,6 +228,29 @@ calculateBaseScore('CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N')
 Only the base metric group is scored; temporal and environmental components
 are kept in the vector string and ignored. `parseCvssVector`, `roundUp` and
 `severityFromScore` are exported as well. CVSS 4.0 is not supported yet.
+
+### Batch review and publish
+
+The CLI's multi-file mode is a thin wrapper over two library functions:
+
+```js
+import { reviewRecords, publishRecords } from '@ulisesgascon/openjs-cna-tools/batch'
+
+const entries = files.map((file) => ({ file, record: JSON.parse(readFileSync(file, 'utf8')) }))
+
+// [{ file, cveId, ready, summary, issues }] — a record without
+// cveMetadata.cveId gets a `cve-id-present` blocker.
+const review = reviewRecords(entries, { strict: true })
+
+// Reviews again, sends nothing if any record has a blocker, then publishes
+// each one; `results` is [{ file, cveId, status, correlationId, runId, error }]
+// with status published | skipped | failed.
+const { blocked, results } = await publishRecords(entries, {
+  client: cna,
+  skipPublished: true,
+  onProgress: (event) => console.error(event.cveId, event.status)
+})
+```
 
 ### Record helpers
 

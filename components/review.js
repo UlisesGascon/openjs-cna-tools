@@ -1,17 +1,24 @@
-// openjs-cna-experimental review <container.json> [--no-strict] [--no-preview] [--tier <name>] [--json]
+// openjs-cna-experimental review <record.json> [<record.json>…] [--no-strict] [--no-preview] [--tier <name>] [--json]
 //
-// Runs the offline reviewer against a CNA Container. Strict by default
-// (warnings block); --no-strict surfaces them as warnings. Renders the
-// preview before the issues list unless --no-preview. --tier filters the
-// printed issues to a single severity tier (mitre-common / openjs-extra)
+// Runs the offline reviewer against one or more CVE Records. Strict by
+// default (warnings block); --no-strict surfaces them as warnings. Renders
+// the preview before the issues list unless --no-preview. --tier filters
+// the printed issues to a single severity tier (mitre-common / openjs-extra)
 // without changing the exit code, which always reflects the full review.
+//
+// With several files every record is reviewed (no early stop), each block
+// is headed by the file and CVE id, --json emits an array, and the exit
+// code is 1 when any record has a blocker. A record without
+// cveMetadata.cveId is a blocker in batch mode, since batch publish needs
+// the id from the record.
 
 import { parseComponentArgs, buildCli, readFileOrStdin } from '../lib/component-utils.js'
 import { reviewRecord } from '../lib/review/index.js'
+import { reviewRecords } from '../lib/batch.js'
 import { renderPreview } from '../lib/preview.js'
 
 export const command = 'review'
-export const describe = 'Review a v5.2 CNA Container against best-practice rules.'
+export const describe = 'Review one or more v5.2 CVE Records against best-practice rules.'
 
 const VALID_TIERS = new Set(['mitre-common', 'openjs-extra'])
 
@@ -24,7 +31,7 @@ export async function handler (argv) {
   if (parsed.values.help) return printHelp()
 
   const cli = buildCli(parsed)
-  const file = parsed.positionals[0]
+  const files = parsed.positionals
 
   // Validate the --tier filter early so a typo doesn't silently match
   // nothing and look like a clean review.
@@ -36,16 +43,15 @@ export async function handler (argv) {
     process.exit(64)
   }
 
-  const raw = await readFileOrStdin(file)
-  let container
-  try {
-    container = JSON.parse(raw)
-  } catch (e) {
-    process.stderr.write(`✖ Container is not valid JSON: ${e.message}\n`)
-    process.exit(64)
+  const strict = !parsed.values['no-strict']
+  const showPreview = !parsed.values['no-preview']
+
+  if (files.length > 1) {
+    return reviewMany(files, { cli, strict, showPreview, tierFilter, json: parsed.values.json })
   }
 
-  const report = reviewRecord(container, { strict: !parsed.values['no-strict'] })
+  const container = await readRecord(files[0])
+  const report = reviewRecord(container, { strict })
 
   if (parsed.values.json) {
     process.stdout.write(JSON.stringify(report, null, 2) + '\n')
@@ -53,12 +59,50 @@ export async function handler (argv) {
     // Preview goes first so the operator sees what they're about to ship
     // alongside what the reviewer caught. --no-preview drops it for
     // CI / pipeline use.
-    if (!parsed.values['no-preview']) renderPreview(container, cli)
+    if (showPreview) renderPreview(container, cli)
     printHumanReport(cli, report, { tierFilter })
   }
 
   // Exit code: 0 if ready, 1 if blockers (or strict + warnings).
   if (report.summary.blockers > 0) process.exit(1)
+}
+
+async function reviewMany (files, { cli, strict, showPreview, tierFilter, json }) {
+  const entries = []
+  for (const file of files) {
+    entries.push({ file, record: await readRecord(file) })
+  }
+  const review = reviewRecords(entries, { strict })
+
+  if (json) {
+    process.stdout.write(JSON.stringify(review, null, 2) + '\n')
+  } else {
+    review.forEach((item, index) => {
+      cli.log('')
+      cli.log(`── ${item.file}${item.cveId ? ` (${item.cveId})` : ''}`)
+      if (showPreview) renderPreview(entries[index].record, cli)
+      printHumanReport(cli, item, { tierFilter })
+    })
+    const blocked = review.filter((item) => !item.ready).length
+    cli.log('')
+    if (blocked) {
+      cli.error(`${blocked} of ${review.length} record(s) blocked`)
+    } else {
+      cli.ok(`${review.length} record(s) ready`)
+    }
+  }
+
+  if (review.some((item) => !item.ready)) process.exit(1)
+}
+
+async function readRecord (file) {
+  const raw = await readFileOrStdin(file)
+  try {
+    return JSON.parse(raw)
+  } catch (e) {
+    process.stderr.write(`✖ ${file ?? 'stdin'} is not valid JSON: ${e.message}\n`)
+    process.exit(64)
+  }
 }
 
 function printHumanReport (cli, report, { tierFilter } = {}) {
@@ -105,16 +149,19 @@ function printHumanReport (cli, report, { tierFilter } = {}) {
 
 function printHelp () {
   process.stderr.write(
-`openjs-cna-experimental review <container.json>
+`openjs-cna-experimental review <record.json> [<record.json>…]
 
-Run the offline reviewer against a CNA Container. Strict by default —
-warnings are treated as blockers because publishing to MITRE is
+Run the offline reviewer against one or more CVE Records. Strict by
+default — warnings are treated as blockers because publishing to MITRE is
 irreversible. Pass --no-strict to surface warnings as warnings.
+
+With several files every record is reviewed, --json emits an array with
+one entry per file, and the exit code is 1 when any record has a blocker.
 
 Options:
   --no-strict        surface warnings as warnings (default treats them as blockers)
   --json             emit a structured JSON report instead of the human view
-  --no-preview       skip the container preview (for CI / pipelines)
+  --no-preview       skip the record preview (for CI / pipelines)
   --tier <tier>      filter the printed issue list to a single tier
                      (mitre-common | openjs-extra). Summary counts still
                      reflect the full review; exit code is unaffected.
