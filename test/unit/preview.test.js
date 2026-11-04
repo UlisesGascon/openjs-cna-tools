@@ -70,6 +70,21 @@ describe('renderPreview — single-package advisory', () => {
     assert.ok(!/CWE/.test(text))
     assert.ok(!/Credits/.test(text))
   })
+
+  it('renders a cvssV3_0 metric', () => {
+    const cna = singleCna()
+    cna.metrics = [{
+      format: 'CVSS',
+      cvssV3_0: {
+        version: '3.0',
+        vectorString: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H',
+        baseScore: 7.5,
+        baseSeverity: 'HIGH'
+      }
+    }]
+    const text = renderPreview(wrap(cna), null)
+    assert.match(text, /CVSS 3\.0:.*7\.5 HIGH/)
+  })
 })
 
 describe('renderPreview — multi-package advisory', () => {

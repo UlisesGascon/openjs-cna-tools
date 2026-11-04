@@ -170,6 +170,44 @@ describe('reviewRecord — CVSS rules', () => {
     const report = reviewRecord(c)
     assert.ok(report.issues.some(i => i.rule === 'cvss-score-matches-band'))
   })
+
+  const cvssV30 = () => ({
+    format: 'CVSS',
+    cvssV3_0: {
+      version: '3.0',
+      vectorString: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H',
+      baseScore: 7.5,
+      baseSeverity: 'HIGH'
+    }
+  })
+
+  it('accepts a cvssV3_0 block as a present, parseable metric', () => {
+    const c = goodContainer()
+    c.containers.cna.metrics = [cvssV30()]
+    const report = reviewRecord(c)
+    const cvssRules = ['metrics-present', 'cvss-vector-parseable', 'cvss-score-matches-band']
+    assert.deepEqual(report.issues.filter(i => cvssRules.includes(i.rule)), [])
+  })
+
+  it('blocks a cvssV3_0 block whose vector carries another version prefix', () => {
+    const c = goodContainer()
+    c.containers.cna.metrics = [cvssV30()]
+    c.containers.cna.metrics[0].cvssV3_0.vectorString = 'CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H'
+    const report = reviewRecord(c)
+    const issue = report.issues.find(i => i.rule === 'cvss-vector-parseable')
+    assert.equal(issue?.severity, 'blocker')
+    assert.equal(issue?.path, 'metrics[].cvssV3_0.vectorString')
+    assert.match(issue?.message, /CVSS:3\.0\//)
+  })
+
+  it('checks the severity band of a cvssV3_0 block', () => {
+    const c = goodContainer()
+    c.containers.cna.metrics = [cvssV30()]
+    c.containers.cna.metrics[0].cvssV3_0.baseSeverity = 'LOW'
+    const report = reviewRecord(c)
+    const issue = report.issues.find(i => i.rule === 'cvss-score-matches-band')
+    assert.equal(issue?.path, 'metrics[].cvssV3_0')
+  })
 })
 
 describe('reviewRecord — affected rules', () => {

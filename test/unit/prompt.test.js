@@ -80,6 +80,21 @@ describe('buildAuditPrompt — structure', () => {
     assert.match(out, /CWE-674/)
   })
 
+  it('summarizes a cvssV3_0 metric', () => {
+    const r = sampleRecord()
+    r.containers.cna.metrics = [{
+      format: 'CVSS',
+      cvssV3_0: {
+        version: '3.0',
+        vectorString: 'CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H',
+        baseScore: 7.5,
+        baseSeverity: 'HIGH'
+      }
+    }]
+    const out = buildAuditPrompt(r)
+    assert.match(out, /\*\*CVSS 3\.0\*\*: 7\.5 HIGH/)
+  })
+
   it('asks for a Markdown response shape with Rating + Issues', () => {
     const out = buildAuditPrompt(sampleRecord())
     assert.match(out, /Respond in this exact Markdown shape/)
