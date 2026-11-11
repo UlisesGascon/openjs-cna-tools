@@ -272,6 +272,32 @@ describe('CnaClient high-level operations', () => {
     })
     assert.deepEqual(await client.listCves({ timeoutMs: 1000, intervalMs: 5 }), ['CVE-X'])
   })
+
+  it('listCves reduces MITRE record stubs to CVE ids', async () => {
+    const client = new CnaClient({
+      ...CREDS,
+      fetch: stubFetch([
+        okJson({ correlation_id: 'l3', status: 'queued' }),
+        okJson({
+          status: 'completed',
+          conclusion: 'success',
+          run_id: 3,
+          url: 'u',
+          result: [
+            { cveMetadata: { cveId: 'CVE-2026-123828', state: 'RESERVED' } },
+            { cveId: 'CVE-2026-123829' },
+            { cve_id: ' CVE-2026-123862 ' },
+            'CVE-2026-123863',
+            { cveMetadata: {} },
+            null
+          ]
+        })
+      ])
+    })
+    assert.deepEqual(await client.listCves({ timeoutMs: 1000, intervalMs: 5 }), [
+      'CVE-2026-123828', 'CVE-2026-123829', 'CVE-2026-123862', 'CVE-2026-123863'
+    ])
+  })
 })
 
 describe('CnaClient.poll', () => {
